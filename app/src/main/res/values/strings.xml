@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SkinScan</string>
+    <string name="next">Next</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="login_greeting">Hello there, login to continue!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="register_greeting">Hello there, join us to get started!</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="have_account">Already have an account?</string>
+</resources>
