@@ -1,102 +1,118 @@
 [
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\drawable_img_welcome1.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\drawable\\img_welcome1.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/drawable_img_buble.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/drawable/img_buble.xml"
+        "merged": "com.syafi.skinscan.app-debug-66:/drawable_ic_history.xml.flat",
+        "source": "com.syafi.skinscan.app-main-68:/drawable/ic_history.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/drawable_img_welcome2.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/drawable/img_welcome2.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\font_poppins_semibold.ttf.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\font\\poppins_semibold.ttf"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\font_poppins_bold.ttf.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\font\\poppins_bold.ttf"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\font_poppins_medium.ttf.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\font\\poppins_medium.ttf"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/xml_data_extraction_rules.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\drawable_img_welcome3.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\drawable\\img_welcome3.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.syafi.skinscan.app-debug-66:/drawable_ic_home.xml.flat",
+        "source": "com.syafi.skinscan.app-main-68:/drawable/ic_home.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.syafi.skinscan.app-debug-66:/drawable_ic_analyze.xml.flat",
+        "source": "com.syafi.skinscan.app-main-68:/drawable/ic_analyze.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.syafi.skinscan.app-debug-66:/drawable_ic_profile.xml.flat",
+        "source": "com.syafi.skinscan.app-main-68:/drawable/ic_profile.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/font_poppins_bold.ttf.flat",
-        "source": "com.syafi.skinscan.app-main-68:/font/poppins_bold.ttf"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/drawable_img_welcome3.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/drawable/img_welcome3.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/font_poppins_regular.ttf.flat",
-        "source": "com.syafi.skinscan.app-main-68:/font/poppins_regular.ttf"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/font_poppins_medium.ttf.flat",
-        "source": "com.syafi.skinscan.app-main-68:/font/poppins_medium.ttf"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\drawable_img_welcome2.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\drawable\\img_welcome2.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/drawable_img_welcome1.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/drawable/img_welcome1.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/drawable_ic_logo.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/drawable/ic_logo.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\drawable_ic_logo.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\drawable\\ic_logo.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/xml_backup_rules.xml.flat",
-        "source": "com.syafi.skinscan.app-main-68:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/font_poppins_semibold.ttf.flat",
-        "source": "com.syafi.skinscan.app-main-68:/font/poppins_semibold.ttf"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.syafi.skinscan.app-debug-66:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.syafi.skinscan.app-main-68:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\font_poppins_regular.ttf.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\font\\poppins_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\drawable_img_buble.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\drawable\\img_buble.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-66:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-68:\\xml\\data_extraction_rules.xml"
     }
 ]

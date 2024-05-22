@@ -84,15 +84,19 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 drawable abc_vector_test
+drawable ic_analyze
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
 drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
+drawable ic_history
+drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_logo
+drawable ic_profile
 drawable img_buble
 drawable img_welcome1
 drawable img_welcome2
@@ -219,6 +223,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 mipmap ic_launcher
 mipmap ic_launcher_round
+string analyze
 string androidx_startup
 string app_name
 string bottom_sheet_collapse_description
@@ -275,6 +280,8 @@ string dropdown_menu
 string email
 string expanded
 string have_account
+string history
+string home
 string in_progress
 string indeterminate
 string login
@@ -285,6 +292,7 @@ string navigation_menu
 string next
 string not_selected
 string password
+string profile
 string range_end
 string range_start
 string register

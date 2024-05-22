@@ -14,7 +14,7 @@ fun CustomScaffold(
     content: @Composable (PaddingValues) -> Unit
 ) {
     Scaffold(
-        bottomBar = {},
+        bottomBar = { if (showBottomBar) BottomNavigation(navController = navController) },
         floatingActionButton = {},
         content = content
     )

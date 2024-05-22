@@ -12,4 +12,8 @@
     <string name="name">Name</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="have_account">Already have an account?</string>
+    <string name="home">Home</string>
+    <string name="analyze">Analyze</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
 </resources>

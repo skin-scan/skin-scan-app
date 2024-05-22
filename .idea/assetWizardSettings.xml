@@ -307,8 +307,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="img_buble" />
-                            <entry key="sourceFile" value="C:\Users\USER\Downloads\textureimg_buble.svg" />
+                            <entry key="outputName" value="ic_analyze" />
+                            <entry key="sourceFile" value="C:\Users\USER\Downloads\iconanalyze.svg" />
                           </map>
                         </option>
                       </PersistentState>

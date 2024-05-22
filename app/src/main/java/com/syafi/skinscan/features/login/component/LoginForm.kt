@@ -37,8 +37,12 @@ fun LoginForm(navController: NavController) {
         CustomTextField(text = "", trailingIcon = Icons.Default.VisibilityOff)
         Spacer(modifier = Modifier.height(32.dp))
         
-        CustomButton(onClick = { /*TODO*/ }, type = ButtonType.LARGE, text = stringResource(R
-            .string.login))
+        CustomButton(
+            onClick = {navController.navigate(Route.HOME_SCREEN) },
+            type = ButtonType.LARGE,
+            text = stringResource(R
+            .string.login)
+        )
         Spacer(modifier = Modifier.height(16.dp))
 
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {

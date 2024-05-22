@@ -110,6 +110,7 @@
     <item name="visible_removing_fragment_view_tag" type="id"/>
     <item name="wrapped_composition_tag" type="id"/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="analyze">Analyze</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_name">SkinScan</string>
     <string name="bottom_sheet_collapse_description">Collapse bottom sheet</string>
@@ -170,6 +171,8 @@
     <string name="email">Email</string>
     <string name="expanded">Expanded</string>
     <string name="have_account">Already have an account?</string>
+    <string name="history">History</string>
+    <string name="home">Home</string>
     <string name="in_progress">In progress</string>
     <string name="indeterminate">Partially checked</string>
     <string name="login">Login</string>
@@ -180,6 +183,7 @@
     <string name="next">Next</string>
     <string name="not_selected">Not selected</string>
     <string name="password">Password</string>
+    <string name="profile">Profile</string>
     <string name="range_end">"Range end"</string>
     <string name="range_start">"Range start"</string>
     <string name="register">Register</string>
