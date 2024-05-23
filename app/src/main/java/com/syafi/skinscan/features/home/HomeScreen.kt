@@ -46,7 +46,7 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
                             Primary700,
                             shape = RoundedCornerShape(bottomEnd = 20.dp, bottomStart = 20.dp)
                         )
-                        .padding(end = 32.dp)
+                        .padding(end = 20.dp)
                 )
 
                 HomeChartCard(

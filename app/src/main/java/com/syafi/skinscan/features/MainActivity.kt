@@ -19,12 +19,17 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
+    companion object {
+        var fabAction: () -> Unit= {}
+    }
+
     private val showBottomBar= listOf(
         Route.HOME_SCREEN,
         Route.ANALYZE_SCREEN,
         Route.HISTORY_SCREEN,
         Route.PROFILE_SCREEN
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -41,7 +46,8 @@ class MainActivity : ComponentActivity() {
                     CustomScaffold(
                         navController = navController,
                         showBottomBar = currentRoute in showBottomBar,
-                        showFab = currentRoute.equals(Route.HOME_SCREEN)
+                        showFab = currentRoute.equals(Route.ANALYZE_SCREEN),
+                        fabAction = fabAction
                     ) {
                         Navigation(navController = navController)
                     }

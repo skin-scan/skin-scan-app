@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="guideline">
+        <item>Ensure the image is in focus with good lighting conditions.</item>
+        <item>Keep zoomed at the closest distance (less than 10 cm) </item>
+        <item>Keep in focus and center only the skin mark (without hair, wrinkles and other objects)</item>
+        <item> If it’s a single lesion, capture a focused close-up. If the issue is widespread, capture an image that best represents the concern</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="ic_launcher_background">#FFFFFF</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -11,11 +17,15 @@
     <string name="analyze">Analyze</string>
     <string name="app_name">SkinScan</string>
     <string name="are_ready">Are you ready for your skin scan today?</string>
+    <string name="camera">Camera</string>
+    <string name="choose_image_source">Choose Image Source</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="diagnosed_problem">Diagnosed Problem</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="email">Email</string>
+    <string name="gallery">Gallery</string>
     <string name="greet">Hi, %1$s!</string>
+    <string name="guideline">Guideline</string>
     <string name="have_account">Already have an account?</string>
     <string name="history">History</string>
     <string name="home">Home</string>
@@ -29,6 +39,7 @@
     <string name="photo_uploaded">Photo Uploaded</string>
     <string name="photos">Photos</string>
     <string name="profile">Profile</string>
+    <string name="read_guideline">You can read the guide provided below.</string>
     <string name="register">Register</string>
     <string name="register_greeting">Hello there, join us to get started!</string>
     <string name="success">Success</string>

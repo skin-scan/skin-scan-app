@@ -26,4 +26,16 @@
     <string name="success">Success</string>
     <string name="success_congrats">Congratulations, your account has been registered</string>
     <string name="ok">OK</string>
+    <string name="read_guideline">You can read the guide provided below.</string>
+    <string name="guideline">Guideline</string>
+    <string name="choose_image_source">Choose Image Source</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+
+    <string-array name="guideline">
+        <item>Ensure the image is in focus with good lighting conditions.</item>
+        <item>Keep zoomed at the closest distance (less than 10 cm) </item>
+        <item>Keep in focus and center only the skin mark (without hair, wrinkles and other objects)</item>
+        <item> If it’s a single lesion, capture a focused close-up. If the issue is widespread, capture an image that best represents the concern</item>
+    </string-array>
 </resources>

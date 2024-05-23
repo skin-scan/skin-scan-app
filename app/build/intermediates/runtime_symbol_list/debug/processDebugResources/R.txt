@@ -5,6 +5,7 @@ int animator fragment_fade_enter 0x7f020002
 int animator fragment_fade_exit 0x7f020003
 int animator fragment_open_enter 0x7f020004
 int animator fragment_open_exit 0x7f020005
+int array guideline 0x7f100000
 int attr action 0x7f030000
 int attr activityAction 0x7f030027
 int attr activityName 0x7f030028
@@ -105,6 +106,8 @@ int drawable ic_call_answer_video 0x7f060020
 int drawable ic_call_answer_video_low 0x7f060021
 int drawable ic_call_decline 0x7f060022
 int drawable ic_call_decline_low 0x7f060023
+int drawable ic_camera 0x7f06004a
+int drawable ic_gallery 0x7f06004b
 int drawable ic_history 0x7f060039
 int drawable ic_home 0x7f06003a
 int drawable ic_launcher_background 0x7f060024
@@ -261,6 +264,8 @@ int string call_notification_hang_up_action 0x7f0c0009
 int string call_notification_incoming_text 0x7f0c000a
 int string call_notification_ongoing_text 0x7f0c000b
 int string call_notification_screening_text 0x7f0c000c
+int string camera 0x7f0c0074
+int string choose_image_source 0x7f0c0073
 int string close_drawer 0x7f0c000d
 int string close_sheet 0x7f0c000e
 int string collapsed 0x7f0c000f
@@ -304,7 +309,9 @@ int string dont_have_account 0x7f0c005d
 int string dropdown_menu 0x7f0c0032
 int string email 0x7f0c005b
 int string expanded 0x7f0c0033
+int string gallery 0x7f0c0075
 int string greet 0x7f0c0067
+int string guideline 0x7f0c0071
 int string have_account 0x7f0c005f
 int string history 0x7f0c0063
 int string home 0x7f0c0064
@@ -325,6 +332,7 @@ int string photos 0x7f0c0069
 int string profile 0x7f0c0065
 int string range_end 0x7f0c003b
 int string range_start 0x7f0c003c
+int string read_guideline 0x7f0c0070
 int string register 0x7f0c003d
 int string register_greeting 0x7f0c0061
 int string search_bar_search 0x7f0c003e

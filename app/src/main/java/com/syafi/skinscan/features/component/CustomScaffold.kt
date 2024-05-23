@@ -8,14 +8,15 @@ import androidx.navigation.NavController
 
 @Composable
 fun CustomScaffold(
-    showBottomBar: Boolean= false,
-    showFab: Boolean= false,
+    showBottomBar: Boolean = false,
+    showFab: Boolean = false,
     navController: NavController,
+    fabAction: () -> Unit= {},
     content: @Composable (PaddingValues) -> Unit
 ) {
     Scaffold(
         bottomBar = { if (showBottomBar) BottomNavigation(navController = navController) },
-        floatingActionButton = {},
+        floatingActionButton = { if (showFab) Fab(onClick = { fabAction() }) },
         content = content
     )
 }
