@@ -67,7 +67,7 @@ fun HomeChartCard(viewModel: HomeViewModel, modifier: Modifier = Modifier) {
             DonutPieChart(
                 modifier = Modifier
                     .padding(6.dp)
-                    .sizeIn(maxHeight = 160.dp),
+                    .sizeIn(maxHeight = 135.dp),
                 donutChartData,
                 donutChartConfig,
             )

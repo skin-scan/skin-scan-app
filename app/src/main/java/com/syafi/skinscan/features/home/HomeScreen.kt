@@ -25,14 +25,15 @@ import com.syafi.skinscan.features.home.component.HomeGreet
 import com.syafi.skinscan.ui.theme.Base50
 import com.syafi.skinscan.ui.theme.Neutral100
 import com.syafi.skinscan.ui.theme.Neutral50
+import com.syafi.skinscan.ui.theme.Primary200
 import com.syafi.skinscan.ui.theme.Primary700
 
 @Composable
 fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltViewModel()) {
     LazyColumn(
-        Modifier.fillMaxSize(),
+        Modifier.fillMaxSize().background(Primary200),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(140.dp)
+        verticalArrangement = Arrangement.spacedBy(100.dp)
     ) {
         item {
             Box() {
@@ -52,7 +53,7 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
                     viewModel = viewModel,
                     Modifier
                         .align(Alignment.BottomCenter)
-                        .offset(y = 120.dp)
+                        .offset(y = 75.dp)
                 )
             }
         }
@@ -62,8 +63,7 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
                 modifier = Modifier
                     .fillMaxSize()
                     .background(Neutral50, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp))
-                    .shadow(elevation = .5.dp, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp))
-                    .padding(horizontal = 30.dp, vertical = 20.dp)
+                    .padding(30.dp)
             )
         }
     }

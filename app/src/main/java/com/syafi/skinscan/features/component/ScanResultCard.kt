@@ -33,16 +33,16 @@ fun ScanResultCard(photo: Any, timeStamp: String, name: String, output: String) 
             modifier = Modifier
                 .clip(RoundedCornerShape(10.dp))
                 .size(135.dp)
+                .padding(12.dp)
         )
 
-        Column(Modifier.padding(8.dp)) {
-            Spacer(modifier = Modifier.height(2.dp))
+        Column(Modifier.padding(12.dp)) {
 
             Text(text = timeStamp, style = Type.textxsRegular(), color = Neutral700)
-            Spacer(modifier = Modifier.height(2.dp))
+            Spacer(modifier = Modifier.height(4.dp))
 
             Text(text = name, style = Type.textsmMedium(), color = Neutral900)
-            Spacer(modifier = Modifier.height(2.dp))
+            Spacer(modifier = Modifier.height(4.dp))
 
             Text(text = output, style = Type.textxsRegular(), color = Neutral700)
         }
