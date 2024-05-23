@@ -49,6 +49,13 @@
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />
 
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.syafi.skinscan.androidx-startup"

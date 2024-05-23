@@ -14,6 +14,8 @@ import com.syafi.skinscan.di.AppModule_ProvideUserRepositoryFactory;
 import com.syafi.skinscan.di.AppModule_ProvideUserSessionFactory;
 import com.syafi.skinscan.domain.useCase.user.SetUserSessionUseCase;
 import com.syafi.skinscan.features.MainActivity;
+import com.syafi.skinscan.features.home.HomeViewModel;
+import com.syafi.skinscan.features.home.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.syafi.skinscan.features.splash.SplashViewModel;
 import com.syafi.skinscan.features.splash.SplashViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.syafi.skinscan.features.welcome.WelcomeScreenViewModel;
@@ -379,7 +381,7 @@ public final class DaggerSkinScan_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(2).add(SplashViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(WelcomeScreenViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(3).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SplashViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(WelcomeScreenViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -405,6 +407,8 @@ public final class DaggerSkinScan_HiltComponents_SingletonC {
 
     private final ViewModelCImpl viewModelCImpl = this;
 
+    private Provider<HomeViewModel> homeViewModelProvider;
+
     private Provider<SplashViewModel> splashViewModelProvider;
 
     private Provider<WelcomeScreenViewModel> welcomeScreenViewModelProvider;
@@ -426,13 +430,14 @@ public final class DaggerSkinScan_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
-      this.splashViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.welcomeScreenViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.splashViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.welcomeScreenViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.syafi.skinscan.features.splash.SplashViewModel", ((Provider) splashViewModelProvider)).put("com.syafi.skinscan.features.welcome.WelcomeScreenViewModel", ((Provider) welcomeScreenViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(3).put("com.syafi.skinscan.features.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.syafi.skinscan.features.splash.SplashViewModel", ((Provider) splashViewModelProvider)).put("com.syafi.skinscan.features.welcome.WelcomeScreenViewModel", ((Provider) welcomeScreenViewModelProvider)).build();
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -456,10 +461,13 @@ public final class DaggerSkinScan_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.syafi.skinscan.features.splash.SplashViewModel 
+          case 0: // com.syafi.skinscan.features.home.HomeViewModel 
+          return (T) new HomeViewModel(singletonCImpl.provideUserRepositoryProvider.get());
+
+          case 1: // com.syafi.skinscan.features.splash.SplashViewModel 
           return (T) new SplashViewModel(singletonCImpl.provideUserSessionProvider.get());
 
-          case 1: // com.syafi.skinscan.features.welcome.WelcomeScreenViewModel 
+          case 2: // com.syafi.skinscan.features.welcome.WelcomeScreenViewModel 
           return (T) new WelcomeScreenViewModel(viewModelCImpl.setUserSessionUseCase());
 
           default: throw new AssertionError(id);
@@ -553,8 +561,8 @@ public final class DaggerSkinScan_HiltComponents_SingletonC {
 
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
-      this.provideUserSessionProvider = DoubleCheck.provider(new SwitchingProvider<UserSessionData>(singletonCImpl, 0));
-      this.provideUserRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<UserRepository>(singletonCImpl, 1));
+      this.provideUserSessionProvider = DoubleCheck.provider(new SwitchingProvider<UserSessionData>(singletonCImpl, 1));
+      this.provideUserRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<UserRepository>(singletonCImpl, 0));
     }
 
     @Override
@@ -590,11 +598,11 @@ public final class DaggerSkinScan_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.syafi.skinscan.data.local.dataStore.UserSessionData 
-          return (T) AppModule_ProvideUserSessionFactory.provideUserSession(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
-
-          case 1: // com.syafi.skinscan.data.repository.UserRepository 
+          case 0: // com.syafi.skinscan.data.repository.UserRepository 
           return (T) AppModule_ProvideUserRepositoryFactory.provideUserRepository(singletonCImpl.provideUserSessionProvider.get());
+
+          case 1: // com.syafi.skinscan.data.local.dataStore.UserSessionData 
+          return (T) AppModule_ProvideUserSessionFactory.provideUserSession(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);
         }

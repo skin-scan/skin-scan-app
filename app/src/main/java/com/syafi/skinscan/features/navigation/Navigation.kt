@@ -16,7 +16,7 @@ import com.syafi.skinscan.util.Route
 
 @Composable
 fun Navigation(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = Route.SPLASH_SCREEN) {
+    NavHost(navController = navController, startDestination = Route.HOME_SCREEN) {
 
         composable(Route.SPLASH_SCREEN) {
             SplashScreen(navController)
@@ -31,7 +31,7 @@ fun Navigation(navController: NavHostController) {
             RegisterScreen(navController)
         }
         composable(Route.HOME_SCREEN) {
-            HomeScreen()
+            HomeScreen(navController)
         }
         composable(Route.ANALYZE_SCREEN) {
             AnalyzeScreen()

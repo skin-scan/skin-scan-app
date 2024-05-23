@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.syafi.skinscan.app-mergeDebugResources-64:/values-tl/values-tl.xml",
+            "outputFile": "com.syafi.skinscan.app-mergeDebugResources-66:/values-tl/values-tl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\f70ac4b903f01390aca272a064b0c682\\transformed\\core-1.13.1\\res\\values-tl\\values-tl.xml",

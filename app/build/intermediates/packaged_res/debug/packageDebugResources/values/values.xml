@@ -10,20 +10,29 @@
     <color name="white">#FFFFFFFF</color>
     <string name="analyze">Analyze</string>
     <string name="app_name">SkinScan</string>
+    <string name="are_ready">Are you ready for your skin scan today?</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="diagnosed_problem">Diagnosed Problem</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="email">Email</string>
+    <string name="greet">Hi, %1$s!</string>
     <string name="have_account">Already have an account?</string>
     <string name="history">History</string>
     <string name="home">Home</string>
+    <string name="last_scanning">Last Scanning</string>
     <string name="login">Login</string>
     <string name="login_greeting">Hello there, login to continue!</string>
     <string name="name">Name</string>
     <string name="next">Next</string>
     <string name="password">Password</string>
+    <string name="photo_uploaded">Photo Uploaded</string>
+    <string name="photos">Photos</string>
     <string name="profile">Profile</string>
     <string name="register">Register</string>
     <string name="register_greeting">Hello there, join us to get started!</string>
     <string name="welcome">Welcome</string>
-    <style name="Theme.SkinScan" parent="android:Theme.Material.Light.NoActionBar"/>
+    <string name="without_problem">Without Problem</string>
+    <style name="Theme.SkinScan" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
 </resources>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.syafi.skinscan.app-mergeDebugResources-64:/values-sw/values-sw.xml",
+            "outputFile": "com.syafi.skinscan.app-mergeDebugResources-66:/values-sw/values-sw.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\52fcf19fbc332b88fcf43acbb64e7735\\transformed\\foundation-release\\res\\values-sw\\values-sw.xml",

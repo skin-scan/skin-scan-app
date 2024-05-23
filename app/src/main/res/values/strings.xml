@@ -16,4 +16,11 @@
     <string name="analyze">Analyze</string>
     <string name="history">History</string>
     <string name="profile">Profile</string>
+    <string name="greet">Hi, %1$s!</string>
+    <string name="are_ready">Are you ready for your skin scan today?</string>
+    <string name="diagnosed_problem">Diagnosed Problem</string>
+    <string name="without_problem">Without Problem</string>
+    <string name="photos">Photos</string>
+    <string name="photo_uploaded">Photo Uploaded</string>
+    <string name="last_scanning">Last Scanning</string>
 </resources>

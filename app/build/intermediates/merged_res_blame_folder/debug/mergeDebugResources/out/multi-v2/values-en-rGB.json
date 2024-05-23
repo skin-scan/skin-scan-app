@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.syafi.skinscan.app-mergeDebugResources-64:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.syafi.skinscan.app-mergeDebugResources-66:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-4\\52fcf19fbc332b88fcf43acbb64e7735\\transformed\\foundation-release\\res\\values-en-rGB\\values-en-rGB.xml",

@@ -2,20 +2,19 @@ package com.syafi.skinscan.features.component
 
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.syafi.skinscan.R
 import com.syafi.skinscan.domain.model.BottomNavData
-import com.syafi.skinscan.ui.theme.Neutral100
-import com.syafi.skinscan.ui.theme.Neutral200
+import com.syafi.skinscan.ui.theme.Base50
 import com.syafi.skinscan.ui.theme.Neutral400
-import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Route
@@ -47,7 +46,7 @@ fun BottomNavigation(navController: NavController) {
     )
     val currentScreen= navController.currentBackStackEntry?.destination?.route
 
-    BottomAppBar(containerColor = Neutral100, tonalElevation = 12.dp) {
+    BottomAppBar(containerColor = Base50, modifier = Modifier.shadow(16.dp)) {
         bottomNavList.forEach {
             NavigationBarItem(
                 selected = false,
