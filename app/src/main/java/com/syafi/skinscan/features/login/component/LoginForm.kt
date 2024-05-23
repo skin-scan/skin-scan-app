@@ -28,20 +28,25 @@ import com.syafi.skinscan.util.Route
 fun LoginForm(navController: NavController) {
 
     Column(Modifier.fillMaxWidth()) {
-        
-        Text(text = stringResource(R.string.email), style= Type.textsmMedium())
+
+        Text(text = stringResource(R.string.email), style = Type.textsmMedium())
         CustomTextField(text = "")
         Spacer(modifier = Modifier.height(8.dp))
 
-        Text(text = stringResource(R.string.password), style= Type.textsmMedium())
+        Text(text = stringResource(R.string.password), style = Type.textsmMedium())
         CustomTextField(text = "", trailingIcon = Icons.Default.VisibilityOff)
         Spacer(modifier = Modifier.height(32.dp))
-        
+
         CustomButton(
-            onClick = {navController.navigate(Route.HOME_SCREEN) },
+            onClick = {
+                navController.popBackStack()
+                navController.navigate(Route.HOME_SCREEN)
+            },
             type = ButtonType.LARGE,
-            text = stringResource(R
-            .string.login)
+            text = stringResource(
+                R
+                    .string.login
+            )
         )
         Spacer(modifier = Modifier.height(16.dp))
 

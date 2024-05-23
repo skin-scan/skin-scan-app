@@ -20,6 +20,7 @@ drawable ic_safe
 drawable ic_warning
 drawable img_buble
 drawable img_buble2
+drawable img_success
 drawable img_welcome1
 drawable img_welcome2
 drawable img_welcome3
@@ -46,12 +47,15 @@ string login
 string login_greeting
 string name
 string next
+string ok
 string password
 string photo_uploaded
 string photos
 string profile
 string register
 string register_greeting
+string success
+string success_congrats
 string welcome
 string without_problem
 style Theme.SkinScan

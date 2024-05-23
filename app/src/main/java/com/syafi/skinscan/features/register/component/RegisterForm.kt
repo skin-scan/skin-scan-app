@@ -19,34 +19,38 @@ import androidx.navigation.NavController
 import com.syafi.skinscan.R
 import com.syafi.skinscan.features.component.CustomButton
 import com.syafi.skinscan.features.component.CustomTextField
+import com.syafi.skinscan.features.register.RegisterViewModel
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.ButtonType
 import com.syafi.skinscan.util.Route
+
 @Composable
-fun RegisterForm(navController: NavController) {
+fun RegisterForm(navController: NavController, viewModel: RegisterViewModel) {
 
     Column(Modifier.fillMaxWidth()) {
 
 
-        Text(text = stringResource(R.string.name), style= Type.textsmMedium())
+        Text(text = stringResource(R.string.name), style = Type.textsmMedium())
         CustomTextField(text = "")
         Spacer(modifier = Modifier.height(8.dp))
 
-        Text(text = stringResource(R.string.email), style= Type.textsmMedium())
+        Text(text = stringResource(R.string.email), style = Type.textsmMedium())
         CustomTextField(text = "")
         Spacer(modifier = Modifier.height(8.dp))
 
-        Text(text = stringResource(R.string.confirm_password), style= Type.textsmMedium())
+        Text(text = stringResource(R.string.confirm_password), style = Type.textsmMedium())
         CustomTextField(text = "", trailingIcon = Icons.Default.VisibilityOff)
         Spacer(modifier = Modifier.height(8.dp))
 
-        Text(text = stringResource(R.string.password), style= Type.textsmMedium())
+        Text(text = stringResource(R.string.password), style = Type.textsmMedium())
         CustomTextField(text = "", trailingIcon = Icons.Default.VisibilityOff)
         Spacer(modifier = Modifier.height(32.dp))
 
         CustomButton(
-            onClick = { navController.navigate(Route.HOME_SCREEN) },
+            onClick = {
+                viewModel.setDialogState(true)
+            },
             type = ButtonType.LARGE,
             text = stringResource(R.string.register)
         )

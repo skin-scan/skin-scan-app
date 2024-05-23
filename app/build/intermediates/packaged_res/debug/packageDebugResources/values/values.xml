@@ -24,12 +24,15 @@
     <string name="login_greeting">Hello there, login to continue!</string>
     <string name="name">Name</string>
     <string name="next">Next</string>
+    <string name="ok">OK</string>
     <string name="password">Password</string>
     <string name="photo_uploaded">Photo Uploaded</string>
     <string name="photos">Photos</string>
     <string name="profile">Profile</string>
     <string name="register">Register</string>
     <string name="register_greeting">Hello there, join us to get started!</string>
+    <string name="success">Success</string>
+    <string name="success_congrats">Congratulations, your account has been registered</string>
     <string name="welcome">Welcome</string>
     <string name="without_problem">Without Problem</string>
     <style name="Theme.SkinScan" parent="android:Theme.Material.Light.NoActionBar">

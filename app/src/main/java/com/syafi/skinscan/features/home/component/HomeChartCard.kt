@@ -60,7 +60,8 @@ fun HomeChartCard(viewModel: HomeViewModel, modifier: Modifier = Modifier) {
             .padding(horizontal = 30.dp)
             .fillMaxWidth()
             .shadow(8.dp, shape = RoundedCornerShape(20.dp))
-            .background(Base50, shape = RoundedCornerShape(20.dp)),
+            .background(Base50, shape = RoundedCornerShape(20.dp))
+            .padding(horizontal = 16.dp),
         verticalAlignment = Alignment.Top
     ) {
         Box {

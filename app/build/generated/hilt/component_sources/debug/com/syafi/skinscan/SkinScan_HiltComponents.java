@@ -3,6 +3,7 @@ package com.syafi.skinscan;
 import com.syafi.skinscan.di.AppModule;
 import com.syafi.skinscan.features.MainActivity_GeneratedInjector;
 import com.syafi.skinscan.features.home.HomeViewModel_HiltModules;
+import com.syafi.skinscan.features.register.RegisterViewModel_HiltModules;
 import com.syafi.skinscan.features.splash.SplashViewModel_HiltModules;
 import com.syafi.skinscan.features.welcome.WelcomeScreenViewModel_HiltModules;
 import dagger.Binds;
@@ -148,6 +149,7 @@ public final class SkinScan_HiltComponents {
       modules = {
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HomeViewModel_HiltModules.KeyModule.class,
+          RegisterViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           SplashViewModel_HiltModules.KeyModule.class,
@@ -189,6 +191,7 @@ public final class SkinScan_HiltComponents {
       modules = {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,
+          RegisterViewModel_HiltModules.BindsModule.class,
           SplashViewModel_HiltModules.BindsModule.class,
           WelcomeScreenViewModel_HiltModules.BindsModule.class
       }

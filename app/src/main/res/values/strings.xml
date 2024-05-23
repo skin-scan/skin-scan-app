@@ -23,4 +23,7 @@
     <string name="photos">Photos</string>
     <string name="photo_uploaded">Photo Uploaded</string>
     <string name="last_scanning">Last Scanning</string>
+    <string name="success">Success</string>
+    <string name="success_congrats">Congratulations, your account has been registered</string>
+    <string name="ok">OK</string>
 </resources>

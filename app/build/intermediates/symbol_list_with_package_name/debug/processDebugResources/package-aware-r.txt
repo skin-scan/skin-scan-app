@@ -116,6 +116,7 @@ drawable ic_safe
 drawable ic_warning
 drawable img_buble
 drawable img_buble2
+drawable img_success
 drawable img_welcome1
 drawable img_welcome2
 drawable img_welcome3
@@ -318,6 +319,7 @@ string name
 string navigation_menu
 string next
 string not_selected
+string ok
 string password
 string photo_uploaded
 string photos
@@ -333,6 +335,8 @@ string state_empty
 string state_off
 string state_on
 string status_bar_notification_info_overflow
+string success
+string success_congrats
 string suggestions_available
 string switch_role
 string tab

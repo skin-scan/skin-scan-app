@@ -23,9 +23,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
+import com.syafi.skinscan.features.component.SuccessPopup
 import com.syafi.skinscan.features.register.component.RegisterForm
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Neutral700
@@ -35,13 +37,30 @@ import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Route
 
 @Composable
-fun RegisterScreen(navController: NavHostController) {
+fun RegisterScreen(
+    navController: NavHostController,
+    viewModel: RegisterViewModel = hiltViewModel()
+) {
 
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Primary700)
     ) {
+
+        if (viewModel.isShowDialog.value) {
+            SuccessPopup(
+                onButtonClick = {
+                    viewModel.setDialogState(false)
+                    navController.popBackStack()
+                    navController.navigate(Route.LOGIN_SCREEN)
+                },
+                onDismiss = {
+                    viewModel.setDialogState(false)
+                }
+            )
+        }
+
         AsyncImage(
             model = R.drawable.img_buble,
             contentDescription = "",
@@ -52,7 +71,9 @@ fun RegisterScreen(navController: NavHostController) {
 
         Column {
             Row(
-                Modifier.wrapContentHeight().padding(top = 55.dp, start = 20.dp),
+                Modifier
+                    .wrapContentHeight()
+                    .padding(top = 55.dp, start = 20.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
@@ -66,7 +87,7 @@ fun RegisterScreen(navController: NavHostController) {
                     Icon(
                         imageVector = Icons.Default.ArrowBackIosNew,
                         contentDescription = "",
-                        tint= Neutral50
+                        tint = Neutral50
                     )
                 }
                 Text(
@@ -98,8 +119,8 @@ fun RegisterScreen(navController: NavHostController) {
                     style = Type.textxsRegular()
                 )
                 Spacer(modifier = Modifier.height(30.dp))
-                
-                RegisterForm(navController = navController)
+
+                RegisterForm(navController = navController, viewModel)
             }
         }
     }

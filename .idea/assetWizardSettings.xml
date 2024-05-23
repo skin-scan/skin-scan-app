@@ -307,8 +307,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="home_banner" />
-                            <entry key="sourceFile" value="C:\Users\USER\Downloads\Group 547home_banner.svg" />
+                            <entry key="outputName" value="img_success" />
+                            <entry key="sourceFile" value="C:\Users\USER\Downloads\Frameimg_success.svg" />
                           </map>
                         </option>
                       </PersistentState>
