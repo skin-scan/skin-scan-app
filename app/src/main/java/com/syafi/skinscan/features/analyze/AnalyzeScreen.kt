@@ -1,5 +1,9 @@
 package com.syafi.skinscan.features.analyze
 
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,8 +21,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.features.MainActivity
@@ -28,22 +35,58 @@ import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary50
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
+import com.syafi.skinscan.util.getImageUri
 
 
 @Composable
-fun AnalyzeScreen() {
+fun AnalyzeScreen(navController: NavController, viewModel: AnalyzeViewModel= hiltViewModel()) {
 
-    var isDialogOpen by remember {
-        mutableStateOf(false)
+    val context= LocalContext.current
+    
+    val galleryIntent= rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.PickVisualMedia(),
+        onResult = { uri ->
+            if (uri != null) {
+                viewModel.setPhotoUri(uri)
+            } else {
+                Toast.makeText(context, context.getString(R.string.please_pick_a_picture), Toast.LENGTH_SHORT).show()
+            }
+        }
+    )
+
+    val cameraIntent= rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.TakePicture(),
+        onResult = {
+            if (it) {
+
+            } else {
+                Toast.makeText(context, context.getString(R.string.please_pick_a_picture), Toast.LENGTH_SHORT).show()
+            }
+        }
+    )
+
+    fun startCamera() {
+        viewModel.setPhotoUri(getImageUri(context))
+        cameraIntent.launch(viewModel.photoUri.value)
     }
 
     MainActivity.fabAction = {
-        isDialogOpen = true
+        viewModel.setDialogState(true)
     }
 
-    if (isDialogOpen) {
+    if (viewModel.isDialogOpen.value) {
         ChooseMediaPicker(
-            onDismiss = { isDialogOpen = false }
+            onDismiss = { viewModel.setDialogState(false) },
+            onGalleryClick = {
+                viewModel.setDialogState(false)
+                galleryIntent.launch(
+                    PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
+                )
+            },
+            onCameraClick = {
+                viewModel.setDialogState(false)
+                startCamera()
+            }
         )
     }
 

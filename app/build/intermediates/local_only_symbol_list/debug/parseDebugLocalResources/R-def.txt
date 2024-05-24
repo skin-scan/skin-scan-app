@@ -58,6 +58,7 @@ string ok
 string password
 string photo_uploaded
 string photos
+string please_pick_a_picture
 string profile
 string read_guideline
 string register
@@ -69,3 +70,4 @@ string without_problem
 style Theme.SkinScan
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

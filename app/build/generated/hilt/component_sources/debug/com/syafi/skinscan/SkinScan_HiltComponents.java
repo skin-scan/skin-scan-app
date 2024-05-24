@@ -2,6 +2,7 @@ package com.syafi.skinscan;
 
 import com.syafi.skinscan.di.AppModule;
 import com.syafi.skinscan.features.MainActivity_GeneratedInjector;
+import com.syafi.skinscan.features.analyze.AnalyzeViewModel_HiltModules;
 import com.syafi.skinscan.features.home.HomeViewModel_HiltModules;
 import com.syafi.skinscan.features.register.RegisterViewModel_HiltModules;
 import com.syafi.skinscan.features.splash.SplashViewModel_HiltModules;
@@ -147,6 +148,7 @@ public final class SkinScan_HiltComponents {
 
   @Subcomponent(
       modules = {
+          AnalyzeViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HomeViewModel_HiltModules.KeyModule.class,
           RegisterViewModel_HiltModules.KeyModule.class,
@@ -189,6 +191,7 @@ public final class SkinScan_HiltComponents {
 
   @Subcomponent(
       modules = {
+          AnalyzeViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,
           RegisterViewModel_HiltModules.BindsModule.class,

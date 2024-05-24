@@ -38,6 +38,7 @@
     <string name="password">Password</string>
     <string name="photo_uploaded">Photo Uploaded</string>
     <string name="photos">Photos</string>
+    <string name="please_pick_a_picture">Please pick a picture</string>
     <string name="profile">Profile</string>
     <string name="read_guideline">You can read the guide provided below.</string>
     <string name="register">Register</string>

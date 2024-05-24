@@ -330,6 +330,7 @@ string ok
 string password
 string photo_uploaded
 string photos
+string please_pick_a_picture
 string profile
 string range_end
 string range_start
@@ -406,3 +407,4 @@ styleable StateListDrawable android_dither android_visible android_variablePaddi
 styleable StateListDrawableItem android_drawable
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

@@ -34,7 +34,7 @@ fun Navigation(navController: NavHostController) {
             HomeScreen(navController)
         }
         composable(Route.ANALYZE_SCREEN) {
-            AnalyzeScreen()
+            AnalyzeScreen(navController)
         }
         composable(Route.HISTORY_SCREEN) {
             HistoryScreen()

@@ -1,0 +1,13 @@
+#Fri May 24 19:05:06 ICT 2024
+base.0=C\:\\Users\\USER\\OneDrive\\Documents\\Bangkit\\Capstone\\dev\\SkinScan-dev\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=C\:\\Users\\USER\\OneDrive\\Documents\\Bangkit\\Capstone\\dev\\SkinScan-dev\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=C\:\\Users\\USER\\OneDrive\\Documents\\Bangkit\\Capstone\\dev\\SkinScan-dev\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\12\\classes.dex
+base.3=C\:\\Users\\USER\\OneDrive\\Documents\\Bangkit\\Capstone\\dev\\SkinScan-dev\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\5\\classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=12/classes.dex
+path.3=5/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex

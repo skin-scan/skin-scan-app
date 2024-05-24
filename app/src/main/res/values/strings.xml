@@ -31,6 +31,7 @@
     <string name="choose_image_source">Choose Image Source</string>
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
+    <string name="please_pick_a_picture">Please pick a picture</string>
 
     <string-array name="guideline">
         <item>Ensure the image is in focus with good lighting conditions.</item>

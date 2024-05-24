@@ -8,165 +8,192 @@
 8        android:minSdkVersion="26"
 9        android:targetSdkVersion="34" />
 10
-11    <permission
-11-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
-12        android:name="com.syafi.skinscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.syafi.skinscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:5:5-27:19
-18        android:name="com.syafi.skinscan.SkinScan"
-18-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:6:9-33
-19        android:allowBackup="true"
-19-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:7:9-35
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
-21        android:dataExtractionRules="@xml/data_extraction_rules"
-21-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:8:9-65
-22        android:debuggable="true"
-23        android:extractNativeLibs="false"
-24        android:fullBackupContent="@xml/backup_rules"
-24-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:9:9-54
-25        android:icon="@mipmap/ic_launcher"
-25-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:10:9-43
-26        android:label="@string/app_name"
-26-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:11:9-41
-27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:12:9-54
-28        android:supportsRtl="true"
-28-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:13:9-35
-29        android:testOnly="true"
-30        android:theme="@style/Theme.SkinScan" >
-30-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:14:9-46
-31        <activity
-31-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:16:9-26:20
-32            android:name="com.syafi.skinscan.features.MainActivity"
-32-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:17:13-50
-33            android:exported="true"
-33-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:18:13-36
-34            android:label="@string/app_name"
-34-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:19:13-45
-35            android:theme="@style/Theme.SkinScan" >
-35-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:20:13-50
-36            <intent-filter>
-36-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:21:13-25:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:22:17-69
-37-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:22:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:24:17-77
-39-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:24:27-74
-40            </intent-filter>
-41        </activity>
-42
-43        <service
-43-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:24:9-28:63
-44            android:name="androidx.room.MultiInstanceInvalidationService"
-44-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:25:13-74
-45            android:directBootAware="true"
-45-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:26:13-43
-46            android:exported="false" />
-46-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:27:13-37
+11    <uses-permission
+11-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:5:5-7:38
+12        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+12-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:6:9-65
+13        android:maxSdkVersion="28" />
+13-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:7:9-35
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:8:5-67
+14-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:8:22-64
+15
+16    <permission
+16-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+17        android:name="com.syafi.skinscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.syafi.skinscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:10:5-42:19
+23        android:name="com.syafi.skinscan.SkinScan"
+23-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:11:9-33
+24        android:allowBackup="true"
+24-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:12:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.13.1] C:\Users\USER\.gradle\caches\transforms-4\f70ac4b903f01390aca272a064b0c682\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+26        android:dataExtractionRules="@xml/data_extraction_rules"
+26-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:13:9-65
+27        android:debuggable="true"
+28        android:extractNativeLibs="false"
+29        android:fullBackupContent="@xml/backup_rules"
+29-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:14:9-54
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:15:9-43
+31        android:label="@string/app_name"
+31-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:16:9-41
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:17:9-54
+33        android:supportsRtl="true"
+33-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:18:9-35
+34        android:testOnly="true"
+35        android:theme="@style/Theme.SkinScan" >
+35-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:19:9-46
+36        <activity
+36-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:21:9-31:20
+37            android:name="com.syafi.skinscan.features.MainActivity"
+37-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:22:13-50
+38            android:exported="true"
+38-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:23:13-36
+39            android:label="@string/app_name"
+39-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:24:13-45
+40            android:theme="@style/Theme.SkinScan" >
+40-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:25:13-50
+41            <intent-filter>
+41-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:26:13-30:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:27:17-69
+42-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:27:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:29:17-77
+44-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:29:27-74
+45            </intent-filter>
+46        </activity>
 47
-48        <activity
-48-->[androidx.compose.ui:ui-tooling-android:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\965908d0d89b121406da3deb465df224\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
-49            android:name="androidx.compose.ui.tooling.PreviewActivity"
-49-->[androidx.compose.ui:ui-tooling-android:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\965908d0d89b121406da3deb465df224\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
-50            android:exported="true" />
-50-->[androidx.compose.ui:ui-tooling-android:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\965908d0d89b121406da3deb465df224\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
-51
-52        <uses-library
-52-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-53            android:name="androidx.window.extensions"
-53-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-54            android:required="false" />
-54-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
-55        <uses-library
-55-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-56            android:name="androidx.window.sidecar"
-56-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
-57            android:required="false" />
-57-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-58
-59        <provider
-59-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-60            android:name="androidx.startup.InitializationProvider"
-60-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-61            android:authorities="com.syafi.skinscan.androidx-startup"
-61-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-62            android:exported="false" >
-62-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-63            <meta-data
-63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-64                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-65                android:value="androidx.startup" />
-65-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-66            <meta-data
-66-->[androidx.lifecycle:lifecycle-process:2.8.0-rc01] C:\Users\USER\.gradle\caches\transforms-4\0f100f1e5033cf03fe3bda17b606b292\transformed\lifecycle-process-2.8.0-rc01\AndroidManifest.xml:29:13-31:52
-67                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-67-->[androidx.lifecycle:lifecycle-process:2.8.0-rc01] C:\Users\USER\.gradle\caches\transforms-4\0f100f1e5033cf03fe3bda17b606b292\transformed\lifecycle-process-2.8.0-rc01\AndroidManifest.xml:30:17-78
-68                android:value="androidx.startup" />
-68-->[androidx.lifecycle:lifecycle-process:2.8.0-rc01] C:\Users\USER\.gradle\caches\transforms-4\0f100f1e5033cf03fe3bda17b606b292\transformed\lifecycle-process-2.8.0-rc01\AndroidManifest.xml:31:17-49
-69            <meta-data
-69-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-70                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-70-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-71                android:value="androidx.startup" />
-71-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-72        </provider>
+48        <provider
+49            android:name="androidx.core.content.FileProvider"
+49-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:34:13-62
+50            android:authorities="com.syafi.skinscan.fileprovider"
+50-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:35:13-64
+51            android:exported="false"
+51-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:36:13-37
+52            android:grantUriPermissions="true" >
+52-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:37:13-47
+53            <meta-data
+53-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:38:13-40:53
+54                android:name="android.support.FILE_PROVIDER_PATHS"
+54-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:39:17-67
+55                android:resource="@xml/file_paths" />
+55-->C:\Users\USER\OneDrive\Documents\Bangkit\Capstone\dev\SkinScan-dev\app\src\main\AndroidManifest.xml:40:17-51
+56        </provider>
+57
+58        <service
+58-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:24:9-28:63
+59            android:name="androidx.room.MultiInstanceInvalidationService"
+59-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:25:13-74
+60            android:directBootAware="true"
+60-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:26:13-43
+61            android:exported="false" />
+61-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-4\d2bb430faf3173296df302431a361d85\transformed\room-runtime-2.5.2\AndroidManifest.xml:27:13-37
+62
+63        <activity
+63-->[androidx.compose.ui:ui-tooling-android:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\965908d0d89b121406da3deb465df224\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+64            android:name="androidx.compose.ui.tooling.PreviewActivity"
+64-->[androidx.compose.ui:ui-tooling-android:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\965908d0d89b121406da3deb465df224\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+65            android:exported="true" />
+65-->[androidx.compose.ui:ui-tooling-android:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\965908d0d89b121406da3deb465df224\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+66
+67        <uses-library
+67-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+68            android:name="androidx.window.extensions"
+68-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+69            android:required="false" />
+69-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+70        <uses-library
+70-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+71            android:name="androidx.window.sidecar"
+71-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+72            android:required="false" />
+72-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-4\e895dfc3434a338aee504eede309cca8\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 73
-74        <activity
-74-->[androidx.compose.ui:ui-test-manifest:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\9f4457d4990e9616712a7b2c3074da85\transformed\ui-test-manifest-1.7.0-alpha08\AndroidManifest.xml:23:9-25:39
-75            android:name="androidx.activity.ComponentActivity"
-75-->[androidx.compose.ui:ui-test-manifest:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\9f4457d4990e9616712a7b2c3074da85\transformed\ui-test-manifest-1.7.0-alpha08\AndroidManifest.xml:24:13-63
-76            android:exported="true" />
-76-->[androidx.compose.ui:ui-test-manifest:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\9f4457d4990e9616712a7b2c3074da85\transformed\ui-test-manifest-1.7.0-alpha08\AndroidManifest.xml:25:13-36
-77
-78        <receiver
-78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-79            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-80            android:directBootAware="false"
-80-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-81            android:enabled="true"
-81-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-82            android:exported="true"
-82-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-83            android:permission="android.permission.DUMP" >
-83-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-84            <intent-filter>
-84-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-85                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-86            </intent-filter>
-87            <intent-filter>
-87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-88                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-89            </intent-filter>
-90            <intent-filter>
-90-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-91                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-92            </intent-filter>
-93            <intent-filter>
-93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-94                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-95            </intent-filter>
-96        </receiver>
-97    </application>
-98
-99</manifest>
+74        <provider
+74-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+75            android:name="androidx.startup.InitializationProvider"
+75-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+76            android:authorities="com.syafi.skinscan.androidx-startup"
+76-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+77            android:exported="false" >
+77-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+78            <meta-data
+78-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+79                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+79-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+80                android:value="androidx.startup" />
+80-->[androidx.emoji2:emoji2:1.3.0] C:\Users\USER\.gradle\caches\transforms-4\d8cb62db0d2d8a061f02de9b0e2295ea\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+81            <meta-data
+81-->[androidx.lifecycle:lifecycle-process:2.8.0-rc01] C:\Users\USER\.gradle\caches\transforms-4\0f100f1e5033cf03fe3bda17b606b292\transformed\lifecycle-process-2.8.0-rc01\AndroidManifest.xml:29:13-31:52
+82                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+82-->[androidx.lifecycle:lifecycle-process:2.8.0-rc01] C:\Users\USER\.gradle\caches\transforms-4\0f100f1e5033cf03fe3bda17b606b292\transformed\lifecycle-process-2.8.0-rc01\AndroidManifest.xml:30:17-78
+83                android:value="androidx.startup" />
+83-->[androidx.lifecycle:lifecycle-process:2.8.0-rc01] C:\Users\USER\.gradle\caches\transforms-4\0f100f1e5033cf03fe3bda17b606b292\transformed\lifecycle-process-2.8.0-rc01\AndroidManifest.xml:31:17-49
+84            <meta-data
+84-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+86                android:value="androidx.startup" />
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+87        </provider>
+88
+89        <activity
+89-->[androidx.compose.ui:ui-test-manifest:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\9f4457d4990e9616712a7b2c3074da85\transformed\ui-test-manifest-1.7.0-alpha08\AndroidManifest.xml:23:9-25:39
+90            android:name="androidx.activity.ComponentActivity"
+90-->[androidx.compose.ui:ui-test-manifest:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\9f4457d4990e9616712a7b2c3074da85\transformed\ui-test-manifest-1.7.0-alpha08\AndroidManifest.xml:24:13-63
+91            android:exported="true" />
+91-->[androidx.compose.ui:ui-test-manifest:1.7.0-alpha08] C:\Users\USER\.gradle\caches\transforms-4\9f4457d4990e9616712a7b2c3074da85\transformed\ui-test-manifest-1.7.0-alpha08\AndroidManifest.xml:25:13-36
+92
+93        <receiver
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+94            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+95            android:directBootAware="false"
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+96            android:enabled="true"
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+97            android:exported="true"
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+98            android:permission="android.permission.DUMP" >
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+99            <intent-filter>
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+100                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+101            </intent-filter>
+102            <intent-filter>
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+103                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+104            </intent-filter>
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+106                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+109                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\USER\.gradle\caches\transforms-4\f9d11326697e92859b5e521e85160009\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+110            </intent-filter>
+111        </receiver>
+112    </application>
+113
+114</manifest>
