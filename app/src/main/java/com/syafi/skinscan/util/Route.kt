@@ -1,5 +1,7 @@
 package com.syafi.skinscan.util
 
+import kotlinx.serialization.Serializable
+
 object Route {
 
     const val SPLASH_SCREEN= "splash_screen"
@@ -10,4 +12,19 @@ object Route {
     const val ANALYZE_SCREEN= "analyze_screen"
     const val HISTORY_SCREEN= "history_screen"
     const val PROFILE_SCREEN= "profile_screen"
+
+    @Serializable
+    data class UPLOAD_SCREEN(
+        val photoUri: String
+    )
+
+    @Serializable
+    data class INSPECT_IMAGE(
+        val photoUri: String
+    )
+
+    @Serializable
+    data class RESULT_DETAIL(
+        val id: String
+    )
 }

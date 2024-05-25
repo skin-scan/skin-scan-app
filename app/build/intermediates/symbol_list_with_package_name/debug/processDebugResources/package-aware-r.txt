@@ -99,6 +99,7 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 drawable abc_vector_test
+drawable detail_place_holder
 drawable home_banner
 drawable ic_analyze
 drawable ic_call_answer
@@ -304,6 +305,7 @@ string date_range_picker_start_headline
 string date_range_picker_title
 string default_error_message
 string default_popup_window_title
+string delete
 string diagnosed_problem
 string dialog
 string dont_have_account
@@ -316,6 +318,7 @@ string guideline
 string have_account
 string history
 string home
+string image_preview
 string in_progress
 string indeterminate
 string last_scanning
@@ -328,15 +331,20 @@ string next
 string not_selected
 string ok
 string password
+string photo_label
 string photo_uploaded
+string photo_will_be_uploaded
 string photos
 string please_pick_a_picture
+string please_select_a_photo_first
 string profile
 string range_end
 string range_start
 string read_guideline
 string register
 string register_greeting
+string result
+string risk_assessment
 string search_bar_search
 string selected
 string snackbar_dismiss
@@ -350,6 +358,7 @@ string suggestions_available
 string switch_role
 string tab
 string template_percent
+string time_detection
 string time_picker_am
 string time_picker_hour
 string time_picker_hour_24h_suffix
@@ -366,6 +375,9 @@ string tooltip_description
 string tooltip_label
 string tooltip_long_press_label
 string tooltip_pane_description
+string upload
+string upload_image
+string upload_title
 string welcome
 string without_problem
 style DialogWindowTheme

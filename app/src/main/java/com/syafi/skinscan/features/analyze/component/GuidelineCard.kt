@@ -26,7 +26,7 @@ fun GuidelineCard(modifier: Modifier = Modifier) {
     
     val guideline= stringArrayResource(id = R.array.guideline)
     
-    Card(elevation = CardDefaults.elevatedCardElevation(16.dp)) {
+    Card(elevation = CardDefaults.elevatedCardElevation(6.dp)) {
         Column(
             modifier,
             verticalArrangement = Arrangement.spacedBy(12.dp)

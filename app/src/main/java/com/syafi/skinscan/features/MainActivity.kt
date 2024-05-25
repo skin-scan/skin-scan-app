@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
@@ -19,11 +21,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    companion object {
-        var fabAction: () -> Unit= {}
-    }
 
-    private val showBottomBar= listOf(
+    private val showBottomBar = listOf(
         Route.HOME_SCREEN,
         Route.ANALYZE_SCREEN,
         Route.HISTORY_SCREEN,
@@ -35,23 +34,27 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
+            val (fabOnClick, setFabOnClick) = remember {
+                mutableStateOf<(() -> Unit)?>(null)
+            }
+
             val navController = rememberNavController()
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val currentRoute = navBackStackEntry?.destination?.route
 
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colorScheme.background
+            ) {
+                CustomScaffold(
+                    navController = navController,
+                    showBottomBar = currentRoute in showBottomBar,
+                    showFab = currentRoute.equals(Route.ANALYZE_SCREEN),
+                    fabAction = { fabOnClick?.let { it() } }
                 ) {
-                    CustomScaffold(
-                        navController = navController,
-                        showBottomBar = currentRoute in showBottomBar,
-                        showFab = currentRoute.equals(Route.ANALYZE_SCREEN),
-                        fabAction = fabAction
-                    ) {
-                        Navigation(navController = navController)
-                    }
+                    Navigation(navController = navController, setFabOnClick)
                 }
+            }
         }
     }
 }

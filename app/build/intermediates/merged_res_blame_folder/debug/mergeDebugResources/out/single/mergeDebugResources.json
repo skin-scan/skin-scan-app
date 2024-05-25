@@ -28,6 +28,10 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_detail_place_holder.png.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\detail_place_holder.png"
+    },
+    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\font_poppins_semibold.ttf.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\font\\poppins_semibold.ttf"
     },
@@ -42,6 +46,10 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_img_welcome3.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\img_welcome3.xml"
+    },
+    {
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\xml\\file_paths.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_ic_profile.xml.flat",
@@ -74,10 +82,6 @@
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.syafi.skinscan.app-debug-68:/xml_file_paths.xml.flat",
-        "source": "com.syafi.skinscan.app-main-70:/xml/file_paths.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\xml_data_extraction_rules.xml.flat",
@@ -120,10 +124,6 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_home_banner.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\home_banner.xml"
-    },
-    {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -136,16 +136,20 @@
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_ic_gallery.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\ic_gallery.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_img_buble2.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\img_buble2.xml"
     },
     {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\drawable_ic_gallery.xml.flat",
+        "source": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-main-70:\\drawable\\ic_gallery.xml"
+    },
+    {
+        "merged": "com.syafi.skinscan.app-debug-68:/drawable_home_banner.png.flat",
+        "source": "com.syafi.skinscan.app-main-70:/drawable/home_banner.png"
     },
     {
         "merged": "C:\\Users\\USER\\.gradle\\daemon\\8.6\\com.syafi.skinscan.app-debug-68:\\mipmap-anydpi-v26_ic_launcher.xml.flat",

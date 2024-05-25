@@ -8,6 +8,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import androidx.core.content.FileProvider
 import com.syafi.skinscan.BuildConfig
+import com.syafi.skinscan.R
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -22,7 +23,7 @@ fun getImageUri(context: Context): Uri {
         val contentValues = ContentValues().apply {
             put(MediaStore.MediaColumns.DISPLAY_NAME, "$timeStamp.jpg")
             put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
-            put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/MyCamera/")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/${context.getString(R.string.app_name)}/")
         }
         uri = context.contentResolver.insert(
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI,

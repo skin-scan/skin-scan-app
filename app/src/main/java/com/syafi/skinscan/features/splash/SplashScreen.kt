@@ -27,7 +27,6 @@ import com.syafi.skinscan.ui.theme.Primary900
 import com.syafi.skinscan.ui.theme.Secondary500
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Constant
-import com.syafi.skinscan.util.Route
 import kotlinx.coroutines.delay
 
 @Composable

@@ -1,5 +1,6 @@
 package com.syafi.skinscan.features.analyze
 
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
@@ -15,10 +16,7 @@ import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -28,39 +26,62 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
-import com.syafi.skinscan.features.MainActivity
 import com.syafi.skinscan.features.analyze.component.ChooseMediaPicker
 import com.syafi.skinscan.features.analyze.component.GuidelineCard
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary50
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
+import com.syafi.skinscan.util.Route
 import com.syafi.skinscan.util.getImageUri
 
 
 @Composable
-fun AnalyzeScreen(navController: NavController, viewModel: AnalyzeViewModel= hiltViewModel()) {
+fun AnalyzeScreen(
+    navController: NavController,
+    setFabOnClick: (() -> Unit) -> Unit,
+    viewModel: AnalyzeViewModel = hiltViewModel()
+) {
 
-    val context= LocalContext.current
-    
-    val galleryIntent= rememberLauncherForActivityResult(
+    val context = LocalContext.current
+
+    setFabOnClick {
+        viewModel.setDialogState(true)
+    }
+
+    LaunchedEffect(key1 = viewModel.photoUri.value) {
+
+        if (viewModel.photoUri.value != null) {
+            navController.navigate(Route.UPLOAD_SCREEN(viewModel.photoUri.value.toString()))
+        }
+    }
+
+    val galleryIntent = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.PickVisualMedia(),
         onResult = { uri ->
             if (uri != null) {
                 viewModel.setPhotoUri(uri)
             } else {
-                Toast.makeText(context, context.getString(R.string.please_pick_a_picture), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    context,
+                    context.getString(R.string.please_pick_a_picture),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     )
 
-    val cameraIntent= rememberLauncherForActivityResult(
+    val cameraIntent = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.TakePicture(),
         onResult = {
             if (it) {
 
             } else {
-                Toast.makeText(context, context.getString(R.string.please_pick_a_picture), Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    context,
+                    context.getString(R.string.please_pick_a_picture),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     )
@@ -68,10 +89,6 @@ fun AnalyzeScreen(navController: NavController, viewModel: AnalyzeViewModel= hil
     fun startCamera() {
         viewModel.setPhotoUri(getImageUri(context))
         cameraIntent.launch(viewModel.photoUri.value)
-    }
-
-    MainActivity.fabAction = {
-        viewModel.setDialogState(true)
     }
 
     if (viewModel.isDialogOpen.value) {
