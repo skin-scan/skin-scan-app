@@ -16,6 +16,7 @@ import com.syafi.skinscan.features.component.CustomTextField
 import com.syafi.skinscan.features.upload.UploadViewModel
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.ButtonType
+import com.syafi.skinscan.util.Route
 
 @Composable
 fun UploadForm(
@@ -33,7 +34,13 @@ fun UploadForm(
         Text(text = stringResource(R.string.photo_label), style = Type.textsmMedium())
         CustomTextField(text = "")
         Spacer(modifier = Modifier.height(32.dp))
-        
-        CustomButton(onClick = { /*TODO*/ }, type = ButtonType.LARGE, text = stringResource(R.string.upload))
+
+        CustomButton(
+            onClick = {
+                navController.navigate(Route.RESULT_DETAIL(id = "1"))
+            },
+            type = ButtonType.LARGE,
+            text = stringResource(R.string.upload)
+        )
     }
 }

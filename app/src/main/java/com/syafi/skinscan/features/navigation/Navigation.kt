@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import com.syafi.skinscan.features.home.HomeScreen
 import com.syafi.skinscan.features.analyze.AnalyzeScreen
-import com.syafi.skinscan.features.component.ResultDetail
+import com.syafi.skinscan.features.component.detail.ResultDetail
 import com.syafi.skinscan.features.history.HistoryScreen
 import com.syafi.skinscan.features.inspect.InspectImage
 import com.syafi.skinscan.features.login.LoginScreen
@@ -21,7 +21,7 @@ import com.syafi.skinscan.util.Route
 @Composable
 fun Navigation(navController: NavHostController, setFabOnClick: ((() -> Unit)?) -> Unit) {
 
-    NavHost(navController = navController, startDestination = "d") {
+    NavHost(navController = navController, startDestination = Route.ANALYZE_SCREEN) {
 
         composable(Route.SPLASH_SCREEN) {
             SplashScreen(navController)
@@ -49,8 +49,8 @@ fun Navigation(navController: NavHostController, setFabOnClick: ((() -> Unit)?) 
             val args= it.toRoute<Route.INSPECT_IMAGE>()
             InspectImage(navController = navController, photoUri = args.photoUri)
         }
-        composable("d") {
-//            val args= it.toRoute<Route.RESULT_DETAIL>()
+        composable<Route.RESULT_DETAIL> {
+            val args= it.toRoute<Route.RESULT_DETAIL>()
             ResultDetail(navController = navController)
         }
         composable(Route.HISTORY_SCREEN) {

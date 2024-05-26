@@ -17,11 +17,14 @@
     <string name="analyze">Analyze</string>
     <string name="app_name">SkinScan</string>
     <string name="are_ready">Are you ready for your skin scan today?</string>
+    <string name="are_you_sure">Are You Sure</string>
     <string name="camera">Camera</string>
     <string name="choose_image_source">Choose Image Source</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="delete">Delete</string>
+    <string name="delete_success">Deletion was successful.</string>
     <string name="diagnosed_problem">Diagnosed Problem</string>
+    <string name="do_you_really_want_to_delete_it">Do you really want to delete it?</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="email">Email</string>
     <string name="gallery">Gallery</string>
@@ -36,6 +39,7 @@
     <string name="login_greeting">Hello there, login to continue!</string>
     <string name="name">Name</string>
     <string name="next">Next</string>
+    <string name="no">No</string>
     <string name="ok">OK</string>
     <string name="password">Password</string>
     <string name="photo_label">Photo Label</string>
@@ -58,6 +62,7 @@
     <string name="upload_title">You can add a name to the photo you have already chosen.</string>
     <string name="welcome">Welcome</string>
     <string name="without_problem">Without Problem</string>
+    <string name="yes">Yes</string>
     <style name="Theme.SkinScan" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowTranslucentNavigation">true</item>
     </style>

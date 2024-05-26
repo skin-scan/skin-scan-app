@@ -120,6 +120,7 @@ drawable ic_safe
 drawable ic_warning
 drawable img_buble
 drawable img_buble2
+drawable img_choice
 drawable img_success
 drawable img_welcome1
 drawable img_welcome2
@@ -255,6 +256,7 @@ string analyze
 string androidx_startup
 string app_name
 string are_ready
+string are_you_sure
 string bottom_sheet_collapse_description
 string bottom_sheet_dismiss_description
 string bottom_sheet_drag_handle_description
@@ -306,8 +308,10 @@ string date_range_picker_title
 string default_error_message
 string default_popup_window_title
 string delete
+string delete_success
 string diagnosed_problem
 string dialog
+string do_you_really_want_to_delete_it
 string dont_have_account
 string dropdown_menu
 string email
@@ -328,6 +332,7 @@ string m3c_bottom_sheet_pane_title
 string name
 string navigation_menu
 string next
+string no
 string not_selected
 string ok
 string password
@@ -380,6 +385,7 @@ string upload_image
 string upload_title
 string welcome
 string without_problem
+string yes
 style DialogWindowTheme
 style FloatingDialogTheme
 style FloatingDialogWindowTheme

@@ -43,6 +43,11 @@
     <string name="risk_assessment">Risk Assessment</string>
     <string name="time_detection">Time Detection</string>
     <string name="delete">Delete</string>
+    <string name="are_you_sure">Are You Sure</string>
+    <string name="do_you_really_want_to_delete_it">Do you really want to delete it?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="delete_success">Deletion was successful.</string>
 
     <string-array name="guideline">
         <item>Ensure the image is in focus with good lighting conditions.</item>

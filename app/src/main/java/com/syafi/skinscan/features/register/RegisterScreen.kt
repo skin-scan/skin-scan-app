@@ -57,7 +57,8 @@ fun RegisterScreen(
                 },
                 onDismiss = {
                     viewModel.setDialogState(false)
-                }
+                },
+                message = stringResource(id = R.string.success_congrats)
             )
         }
 

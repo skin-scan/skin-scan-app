@@ -3,6 +3,7 @@ package com.syafi.skinscan.features.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,14 +25,13 @@ import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.ButtonType
 
 @Composable
-fun SuccessPopup(onButtonClick: () -> Unit, onDismiss: () -> Unit= {}) {
+fun SuccessPopup(onButtonClick: () -> Unit, onDismiss: () -> Unit= {}, message: String) {
     Dialog(onDismissRequest = { onDismiss() }) {
         Card(
             shape = RoundedCornerShape(30.dp),
             colors = CardDefaults.cardColors(containerColor = Neutral50)
         ) {
             Column(
-                verticalArrangement = Arrangement.spacedBy(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.padding(20.dp)
             ) {
@@ -40,18 +40,22 @@ fun SuccessPopup(onButtonClick: () -> Unit, onDismiss: () -> Unit= {}) {
                     contentDescription = "",
                     modifier = Modifier.sizeIn(maxHeight = 150.dp)
                 )
+                Spacer(modifier = Modifier.height(20.dp))
+
                 Text(
                     text = stringResource(R.string.success),
                     color = Primary900,
                     style = Type.textlgSemiBold(),
                 )
                 Text(
-                    text = stringResource(R.string.success_congrats),
+                    text = message,
                     color = Primary900,
                     style = Type.textxsRegular(),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(horizontal = 50.dp)
                 )
+                Spacer(modifier = Modifier.height(20.dp))
+
                 CustomButton(
                     onClick = { onButtonClick() },
                     type = ButtonType.MEDIUM,

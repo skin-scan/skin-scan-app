@@ -24,6 +24,7 @@ drawable ic_safe
 drawable ic_warning
 drawable img_buble
 drawable img_buble2
+drawable img_choice
 drawable img_success
 drawable img_welcome1
 drawable img_welcome2
@@ -38,11 +39,14 @@ mipmap ic_launcher_round
 string analyze
 string app_name
 string are_ready
+string are_you_sure
 string camera
 string choose_image_source
 string confirm_password
 string delete
+string delete_success
 string diagnosed_problem
+string do_you_really_want_to_delete_it
 string dont_have_account
 string email
 string gallery
@@ -57,6 +61,7 @@ string login
 string login_greeting
 string name
 string next
+string no
 string ok
 string password
 string photo_label
@@ -79,6 +84,7 @@ string upload_image
 string upload_title
 string welcome
 string without_problem
+string yes
 style Theme.SkinScan
 xml backup_rules
 xml data_extraction_rules

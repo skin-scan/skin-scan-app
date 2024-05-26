@@ -16,4 +16,5 @@ class UploadViewModel @Inject constructor(
     fun setPhotoUri(uri: String) {
         _photoUri.value= uri
     }
+
 }

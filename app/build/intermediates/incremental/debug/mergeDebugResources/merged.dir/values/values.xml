@@ -129,6 +129,7 @@
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_name">SkinScan</string>
     <string name="are_ready">Are you ready for your skin scan today?</string>
+    <string name="are_you_sure">Are You Sure</string>
     <string name="bottom_sheet_collapse_description">Collapse bottom sheet</string>
     <string name="bottom_sheet_dismiss_description">Dismiss bottom sheet</string>
     <string name="bottom_sheet_drag_handle_description">Drag handle</string>
@@ -184,8 +185,10 @@
     <string name="default_error_message">"Invalid input"</string>
     <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
     <string name="delete">Delete</string>
+    <string name="delete_success">Deletion was successful.</string>
     <string name="diagnosed_problem">Diagnosed Problem</string>
     <string name="dialog">"Dialog"</string>
+    <string name="do_you_really_want_to_delete_it">Do you really want to delete it?</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="dropdown_menu">"Dropdown menu"</string>
     <string name="email">Email</string>
@@ -206,6 +209,7 @@
     <string name="name">Name</string>
     <string name="navigation_menu">"Navigation menu"</string>
     <string name="next">Next</string>
+    <string name="no">No</string>
     <string name="not_selected">Not selected</string>
     <string name="ok">OK</string>
     <string name="password">Password</string>
@@ -258,6 +262,7 @@
     <string name="upload_title">You can add a name to the photo you have already chosen.</string>
     <string name="welcome">Welcome</string>
     <string name="without_problem">Without Problem</string>
+    <string name="yes">Yes</string>
     <style name="DialogWindowTheme">
         <item name="android:windowClipToOutline">false</item>
     </style>
