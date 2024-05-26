@@ -3,7 +3,6 @@ package com.syafi.skinscan.features.home.component
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PageSize
@@ -19,8 +18,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
-import com.syafi.skinscan.features.component.PageIndicator
-import com.syafi.skinscan.features.component.ScanResultCard
+import com.syafi.skinscan.features.component.view.PageIndicator
+import com.syafi.skinscan.features.component.view.ScanResultCard
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
 

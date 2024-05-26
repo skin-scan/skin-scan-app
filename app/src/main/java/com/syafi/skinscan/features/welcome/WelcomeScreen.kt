@@ -21,9 +21,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.syafi.skinscan.R
-import com.syafi.skinscan.features.component.CustomButton
-import com.syafi.skinscan.features.component.CustomOutlinedButton
-import com.syafi.skinscan.features.component.PageIndicator
+import com.syafi.skinscan.features.component.view.CustomButton
+import com.syafi.skinscan.features.component.view.CustomOutlinedButton
+import com.syafi.skinscan.features.component.view.PageIndicator
 import com.syafi.skinscan.features.welcome.component.WelcomeContent
 import com.syafi.skinscan.ui.theme.Secondary500
 import com.syafi.skinscan.util.ButtonType

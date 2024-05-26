@@ -1,4 +1,4 @@
-package com.syafi.skinscan.features.component
+package com.syafi.skinscan.features.component.layout
 
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon

@@ -13,7 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.syafi.skinscan.features.component.CustomScaffold
+import com.syafi.skinscan.features.component.layout.CustomScaffold
 import com.syafi.skinscan.features.navigation.Navigation
 import com.syafi.skinscan.util.Route
 import dagger.hilt.android.AndroidEntryPoint

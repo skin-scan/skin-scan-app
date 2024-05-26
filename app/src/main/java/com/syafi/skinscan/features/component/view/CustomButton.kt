@@ -1,4 +1,4 @@
-package com.syafi.skinscan.features.component
+package com.syafi.skinscan.features.component.view
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height

@@ -27,7 +27,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
-import com.syafi.skinscan.features.component.SuccessPopup
+import com.syafi.skinscan.features.component.dialog.SuccessPopup
 import com.syafi.skinscan.features.register.component.RegisterForm
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Neutral700

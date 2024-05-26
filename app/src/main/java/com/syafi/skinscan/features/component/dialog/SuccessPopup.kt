@@ -1,8 +1,8 @@
-package com.syafi.skinscan.features.component
+package com.syafi.skinscan.features.component.dialog
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,67 +16,51 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
+import com.syafi.skinscan.features.component.view.CustomButton
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary900
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.ButtonType
 
 @Composable
-fun DeleteDialog(
-    onDismiss: () -> Unit= {},
-    onPositiveClick: () -> Unit,
-    onNegativeClick: () -> Unit,
-) {
-
+fun SuccessPopup(onButtonClick: () -> Unit, onDismiss: () -> Unit= {}, message: String) {
     Dialog(onDismissRequest = { onDismiss() }) {
         Card(
             shape = RoundedCornerShape(30.dp),
             colors = CardDefaults.cardColors(containerColor = Neutral50)
         ) {
             Column(
-                verticalArrangement = Arrangement.spacedBy(16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.padding(20.dp)
             ) {
                 AsyncImage(
-                    model = R.drawable.img_choice,
+                    model = R.drawable.img_success,
                     contentDescription = "",
                     modifier = Modifier.sizeIn(maxHeight = 150.dp)
                 )
+                Spacer(modifier = Modifier.height(20.dp))
+
                 Text(
-                    text = stringResource(R.string.are_you_sure),
+                    text = stringResource(R.string.success),
                     color = Primary900,
                     style = Type.textlgSemiBold(),
                 )
                 Text(
-                    text = stringResource(R.string.do_you_really_want_to_delete_it),
+                    text = message,
                     color = Primary900,
                     style = Type.textxsRegular(),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(horizontal = 50.dp)
                 )
+                Spacer(modifier = Modifier.height(20.dp))
 
-                Row (
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ){
-                    CustomOutlinedButton(
-                        onClick = { onNegativeClick() },
-                        type = ButtonType.MEDIUM,
-                        text = stringResource(R.string.no),
-                        modifier = Modifier.weight(1f)
-                    )
-
-                    CustomButton(
-                        onClick = { onPositiveClick() },
-                        type = ButtonType.MEDIUM,
-                        text = stringResource(R.string.yes),
-                        modifier = Modifier.weight(1f)
-                    )
-                }
+                CustomButton(
+                    onClick = { onButtonClick() },
+                    type = ButtonType.MEDIUM,
+                    text = stringResource(R.string.ok)
+                )
             }
         }
     }

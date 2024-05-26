@@ -11,8 +11,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.syafi.skinscan.R
-import com.syafi.skinscan.features.component.CustomButton
-import com.syafi.skinscan.features.component.CustomTextField
+import com.syafi.skinscan.features.component.view.CustomButton
+import com.syafi.skinscan.features.component.view.CustomTextField
 import com.syafi.skinscan.features.upload.UploadViewModel
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.ButtonType

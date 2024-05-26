@@ -29,9 +29,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
-import com.syafi.skinscan.features.component.CustomButton
-import com.syafi.skinscan.features.component.DeleteDialog
-import com.syafi.skinscan.features.component.SuccessPopup
+import com.syafi.skinscan.features.component.view.CustomButton
+import com.syafi.skinscan.features.component.dialog.DeleteDialog
+import com.syafi.skinscan.features.component.dialog.SuccessPopup
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary100
 import com.syafi.skinscan.ui.theme.Primary700
