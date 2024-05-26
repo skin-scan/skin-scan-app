@@ -20,6 +20,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import com.syafi.skinscan.ui.theme.Primary100
 import com.syafi.skinscan.ui.theme.Primary400
 import com.syafi.skinscan.ui.theme.Primary50
 import com.syafi.skinscan.ui.theme.Primary700
@@ -85,7 +86,7 @@ fun CustomTextField(
                             Modifier
                                 .size(25.dp)
                                 .clickable { onPasswordToggle(!showPassword) },
-                            tint = Primary700
+                            tint = Primary900
                         )
                     }
                 }
@@ -93,14 +94,16 @@ fun CustomTextField(
         },
         shape = RoundedCornerShape(10.dp),
         colors = TextFieldDefaults.colors(
-            focusedContainerColor = Primary50,
-            unfocusedContainerColor = Primary50,
+            focusedContainerColor = Primary100,
+            unfocusedContainerColor = Primary100,
             disabledContainerColor = Primary50,
             cursorColor = Primary900,
             focusedIndicatorColor = Primary800,
             unfocusedIndicatorColor = Primary400,
             focusedLabelColor = Primary800,
             unfocusedLabelColor = Primary800,
+            focusedPlaceholderColor = Primary900,
+            unfocusedPlaceholderColor = Primary900
         ),
         label = {
             label?.let {

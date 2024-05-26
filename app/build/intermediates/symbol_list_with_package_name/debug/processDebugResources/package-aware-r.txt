@@ -252,6 +252,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 mipmap ic_launcher
 mipmap ic_launcher_round
+string all
 string analyze
 string androidx_startup
 string app_name
@@ -309,6 +310,7 @@ string default_error_message
 string default_popup_window_title
 string delete
 string delete_success
+string diagnosed
 string diagnosed_problem
 string dialog
 string do_you_really_want_to_delete_it
@@ -350,7 +352,9 @@ string register
 string register_greeting
 string result
 string risk_assessment
+string safe
 string search_bar_search
+string search_placeholder
 string selected
 string snackbar_dismiss
 string state_empty

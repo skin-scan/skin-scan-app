@@ -48,6 +48,10 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="delete_success">Deletion was successful.</string>
+    <string name="search_placeholder">Search</string>
+    <string name="all">All</string>
+    <string name="diagnosed">Diagnosed</string>
+    <string name="safe">Safe</string>
 
     <string-array name="guideline">
         <item>Ensure the image is in focus with good lighting conditions.</item>

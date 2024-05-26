@@ -125,6 +125,7 @@
     <item name="visible_removing_fragment_view_tag" type="id"/>
     <item name="wrapped_composition_tag" type="id"/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="all">All</string>
     <string name="analyze">Analyze</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_name">SkinScan</string>
@@ -186,6 +187,7 @@
     <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
     <string name="delete">Delete</string>
     <string name="delete_success">Deletion was successful.</string>
+    <string name="diagnosed">Diagnosed</string>
     <string name="diagnosed_problem">Diagnosed Problem</string>
     <string name="dialog">"Dialog"</string>
     <string name="do_you_really_want_to_delete_it">Do you really want to delete it?</string>
@@ -227,7 +229,9 @@
     <string name="register_greeting">Hello there, join us to get started!</string>
     <string name="result">Result</string>
     <string name="risk_assessment">Risk Assessment</string>
+    <string name="safe">Safe</string>
     <string name="search_bar_search">Search</string>
+    <string name="search_placeholder">Search</string>
     <string name="selected">Selected</string>
     <string name="snackbar_dismiss">Dismiss</string>
     <string name="state_empty">Empty</string>

@@ -6,6 +6,4 @@ object Constant {
     const val USER_DATASTORE= "user_datastore"
     const val WELCOME_SCREEN_KEY= "welcome_screen_key"
     const val USER_TOKEN_KEY= "user_token_key"
-    const val SAFE= "safe"
-    const val NOT_SAFE= "not_safe"
 }

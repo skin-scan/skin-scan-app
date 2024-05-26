@@ -36,6 +36,7 @@ font poppins_regular
 font poppins_semibold
 mipmap ic_launcher
 mipmap ic_launcher_round
+string all
 string analyze
 string app_name
 string are_ready
@@ -45,6 +46,7 @@ string choose_image_source
 string confirm_password
 string delete
 string delete_success
+string diagnosed
 string diagnosed_problem
 string do_you_really_want_to_delete_it
 string dont_have_account
@@ -76,6 +78,8 @@ string register
 string register_greeting
 string result
 string risk_assessment
+string safe
+string search_placeholder
 string success
 string success_congrats
 string time_detection

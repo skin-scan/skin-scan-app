@@ -251,6 +251,7 @@ int layout notification_template_part_chronometer 0x7f0b0007
 int layout notification_template_part_time 0x7f0b0008
 int mipmap ic_launcher 0x7f0c0000
 int mipmap ic_launcher_round 0x7f0c0001
+int string all 0x7f0d0087
 int string analyze 0x7f0d0000
 int string androidx_startup 0x7f0d0001
 int string app_name 0x7f0d0002
@@ -308,6 +309,7 @@ int string default_error_message 0x7f0d0034
 int string default_popup_window_title 0x7f0d0035
 int string delete 0x7f0d007f
 int string delete_success 0x7f0d0085
+int string diagnosed 0x7f0d0088
 int string diagnosed_problem 0x7f0d0036
 int string dialog 0x7f0d0037
 int string do_you_really_want_to_delete_it 0x7f0d0082
@@ -349,7 +351,9 @@ int string register 0x7f0d0058
 int string register_greeting 0x7f0d0059
 int string result 0x7f0d007d
 int string risk_assessment 0x7f0d007e
+int string safe 0x7f0d0089
 int string search_bar_search 0x7f0d005a
+int string search_placeholder 0x7f0d0086
 int string selected 0x7f0d005b
 int string snackbar_dismiss 0x7f0d005c
 int string state_empty 0x7f0d005d

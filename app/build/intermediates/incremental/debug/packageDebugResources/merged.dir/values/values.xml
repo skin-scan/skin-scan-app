@@ -14,6 +14,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
+    <string name="all">All</string>
     <string name="analyze">Analyze</string>
     <string name="app_name">SkinScan</string>
     <string name="are_ready">Are you ready for your skin scan today?</string>
@@ -23,6 +24,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="delete">Delete</string>
     <string name="delete_success">Deletion was successful.</string>
+    <string name="diagnosed">Diagnosed</string>
     <string name="diagnosed_problem">Diagnosed Problem</string>
     <string name="do_you_really_want_to_delete_it">Do you really want to delete it?</string>
     <string name="dont_have_account">Don\'t have an account?</string>
@@ -54,6 +56,8 @@
     <string name="register_greeting">Hello there, join us to get started!</string>
     <string name="result">Result</string>
     <string name="risk_assessment">Risk Assessment</string>
+    <string name="safe">Safe</string>
+    <string name="search_placeholder">Search</string>
     <string name="success">Success</string>
     <string name="success_congrats">Congratulations, your account has been registered</string>
     <string name="time_detection">Time Detection</string>
