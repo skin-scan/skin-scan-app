@@ -100,7 +100,6 @@ dimen notification_top_pad
 dimen notification_top_pad_large_text
 drawable abc_vector_test
 drawable detail_place_holder
-drawable home_banner
 drawable ic_analyze
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -118,6 +117,9 @@ drawable ic_logo
 drawable ic_profile
 drawable ic_safe
 drawable ic_warning
+drawable img_banner1
+drawable img_banner2
+drawable img_banner3
 drawable img_buble
 drawable img_buble2
 drawable img_choice

@@ -10,7 +10,6 @@ color teal_200
 color teal_700
 color white
 drawable detail_place_holder
-drawable home_banner
 drawable ic_analyze
 drawable ic_camera
 drawable ic_gallery
@@ -22,6 +21,9 @@ drawable ic_logo
 drawable ic_profile
 drawable ic_safe
 drawable ic_warning
+drawable img_banner1
+drawable img_banner2
+drawable img_banner3
 drawable img_buble
 drawable img_buble2
 drawable img_choice

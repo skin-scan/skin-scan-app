@@ -2,7 +2,9 @@ package com.syafi.skinscan.features.home.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PageSize
@@ -27,9 +29,9 @@ import com.syafi.skinscan.ui.theme.Type
 fun HomeContent(modifier: Modifier = Modifier) {
 
     val bannerList = listOf(
-        R.drawable.home_banner,
-        R.drawable.home_banner,
-        R.drawable.home_banner,
+        R.drawable.img_banner1,
+        R.drawable.img_banner2,
+        R.drawable.img_banner3
     )
 
     val pagerState = rememberPagerState(pageCount = { bannerList.size })
@@ -38,10 +40,18 @@ fun HomeContent(modifier: Modifier = Modifier) {
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             HorizontalPager(state = pagerState, pageSize = PageSize.Fill) { index ->
-                AsyncImage(
-                    model = bannerList[index], contentDescription = "", modifier =
-                    Modifier.clip(RoundedCornerShape(10.dp))
-                )
+                Column(
+                    Modifier.fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    AsyncImage(
+                        model = bannerList[index], contentDescription = "", modifier =
+                        Modifier
+                            .clip(RoundedCornerShape(10.dp))
+                            .width(300.dp)
+                            .height(136.dp)
+                    )
+                }
             }
             Spacer(modifier = Modifier.height(16.dp))
             PageIndicator(pagerState.currentPage, Primary700)
