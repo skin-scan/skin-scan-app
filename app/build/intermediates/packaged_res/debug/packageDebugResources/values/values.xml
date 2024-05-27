@@ -44,9 +44,9 @@
     <string name="no">No</string>
     <string name="ok">OK</string>
     <string name="password">Password</string>
-    <string name="photo_label">Photo Label</string>
+    <string name="photo_label">Image Label</string>
     <string name="photo_uploaded">Photo Uploaded</string>
-    <string name="photo_will_be_uploaded">This photo will be uploaded.</string>
+    <string name="photo_will_be_uploaded">This image will be uploaded.</string>
     <string name="photos">Photos</string>
     <string name="please_pick_a_picture">Please pick a picture</string>
     <string name="please_select_a_photo_first">Please Select a photo first</string>
@@ -63,7 +63,7 @@
     <string name="time_detection">Time Detection</string>
     <string name="upload">Upload</string>
     <string name="upload_image">Upload Image</string>
-    <string name="upload_title">You can add a name to the photo you have already chosen.</string>
+    <string name="upload_title">You can add a name to the image you have already chosen.</string>
     <string name="welcome">Welcome</string>
     <string name="without_problem">Without Problem</string>
     <string name="yes">Yes</string>

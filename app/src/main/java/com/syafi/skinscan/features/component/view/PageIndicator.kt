@@ -23,7 +23,10 @@ fun PageIndicator(screenPosition: Int, indicatorColor: Color) {
                         width = if (screenPosition == index) 30.dp else 10.dp,
                         height = 6.dp
                     )
-                    .background(if (screenPosition == index) indicatorColor else Neutral300, CircleShape)
+                    .background(
+                        if (screenPosition == index) indicatorColor else Neutral300,
+                        CircleShape
+                    )
 
             )
         }

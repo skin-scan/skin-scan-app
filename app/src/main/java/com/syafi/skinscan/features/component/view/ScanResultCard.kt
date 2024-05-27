@@ -56,7 +56,7 @@ fun ScanResultCard(photo: Any, timeStamp: String, name: String, output: String) 
             Text(text = name, style = Type.textsmMedium(), color = Neutral900)
             Spacer(modifier = Modifier.height(4.dp))
 
-            Text(text = output, style = Type.textxsRegular(), color = Neutral700)
+            DiagnosedLabel(isDeases = true, result = "Ringworm")
         }
     }
 }
