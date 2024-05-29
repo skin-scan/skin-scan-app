@@ -107,11 +107,15 @@ int drawable ic_call_answer_video_low 0x7f070024
 int drawable ic_call_decline 0x7f070025
 int drawable ic_call_decline_low 0x7f070026
 int drawable ic_camera 0x7f070027
+int drawable ic_edit 0x7f07004b
+int drawable ic_exit 0x7f07004c
 int drawable ic_gallery 0x7f070028
+int drawable ic_globe 0x7f07004d
 int drawable ic_history 0x7f070029
 int drawable ic_home 0x7f07002a
 int drawable ic_launcher_background 0x7f07002b
 int drawable ic_launcher_foreground 0x7f07002c
+int drawable ic_lock 0x7f07004e
 int drawable ic_logo 0x7f07002d
 int drawable ic_profile 0x7f07002e
 int drawable ic_safe 0x7f07002f
@@ -122,6 +126,7 @@ int drawable img_banner3 0x7f070048
 int drawable img_buble 0x7f070031
 int drawable img_buble2 0x7f070032
 int drawable img_choice 0x7f070033
+int drawable img_circle 0x7f070049
 int drawable img_success 0x7f070034
 int drawable img_welcome1 0x7f070035
 int drawable img_welcome2 0x7f070036
@@ -140,6 +145,7 @@ int drawable notification_template_icon_low_bg 0x7f070042
 int drawable notification_tile_bg 0x7f070043
 int drawable notify_panel_notification_icon_bg 0x7f070044
 int drawable place_holder 0x7f070045
+int drawable profile_place_holder 0x7f07004a
 int font poppins_bold 0x7f080000
 int font poppins_medium 0x7f080001
 int font poppins_regular 0x7f080002
@@ -271,6 +277,8 @@ int string call_notification_incoming_text 0x7f0d000e
 int string call_notification_ongoing_text 0x7f0d000f
 int string call_notification_screening_text 0x7f0d0010
 int string camera 0x7f0d0011
+int string change_language 0x7f0d008d
+int string change_password 0x7f0d008e
 int string choose_image_source 0x7f0d0012
 int string close_drawer 0x7f0d0013
 int string close_sheet 0x7f0d0014
@@ -317,6 +325,7 @@ int string dialog 0x7f0d003c
 int string do_you_really_want_to_delete_it 0x7f0d003d
 int string dont_have_account 0x7f0d003e
 int string dropdown_menu 0x7f0d003f
+int string edit_profile 0x7f0d008b
 int string email 0x7f0d0040
 int string expanded 0x7f0d0041
 int string gallery 0x7f0d0042
@@ -331,6 +340,7 @@ int string indeterminate 0x7f0d004a
 int string last_scanning 0x7f0d004b
 int string login 0x7f0d004c
 int string login_greeting 0x7f0d004d
+int string logout 0x7f0d008c
 int string m3c_bottom_sheet_pane_title 0x7f0d004e
 int string name 0x7f0d004f
 int string navigation_menu 0x7f0d0050
@@ -388,6 +398,8 @@ int string tooltip_pane_description 0x7f0d0083
 int string upload 0x7f0d0084
 int string upload_image 0x7f0d0085
 int string upload_title 0x7f0d0086
+int string uploaded 0x7f0d008a
+int string want_to_logout 0x7f0d008f
 int string welcome 0x7f0d0087
 int string without_problem 0x7f0d0088
 int string yes 0x7f0d0089

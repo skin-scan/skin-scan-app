@@ -29,8 +29,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
+import com.syafi.skinscan.features.component.dialog.ChoiceDialog
 import com.syafi.skinscan.features.component.view.CustomButton
-import com.syafi.skinscan.features.component.dialog.DeleteDialog
 import com.syafi.skinscan.features.component.dialog.SuccessPopup
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary100
@@ -47,7 +47,8 @@ fun ResultDetail(
 ) {
 
     if (viewModel.isDeleteDialogOpen.value) {
-        DeleteDialog(
+        ChoiceDialog(
+            stringResource(id = R.string.do_you_really_want_to_delete_it),
             onDismiss = { viewModel.setDeleteDialogState(false) },
             onPositiveClick = {
                 viewModel.setDeleteDialogState(false)

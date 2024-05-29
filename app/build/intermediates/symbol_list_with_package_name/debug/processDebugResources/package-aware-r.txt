@@ -108,11 +108,15 @@ drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_camera
+drawable ic_edit
+drawable ic_exit
 drawable ic_gallery
+drawable ic_globe
 drawable ic_history
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_lock
 drawable ic_logo
 drawable ic_profile
 drawable ic_safe
@@ -123,6 +127,7 @@ drawable img_banner3
 drawable img_buble
 drawable img_buble2
 drawable img_choice
+drawable img_circle
 drawable img_success
 drawable img_welcome1
 drawable img_welcome2
@@ -141,6 +146,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable place_holder
+drawable profile_place_holder
 font poppins_bold
 font poppins_medium
 font poppins_regular
@@ -272,6 +278,8 @@ string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
 string camera
+string change_language
+string change_password
 string choose_image_source
 string close_drawer
 string close_sheet
@@ -318,6 +326,7 @@ string dialog
 string do_you_really_want_to_delete_it
 string dont_have_account
 string dropdown_menu
+string edit_profile
 string email
 string expanded
 string gallery
@@ -332,6 +341,7 @@ string indeterminate
 string last_scanning
 string login
 string login_greeting
+string logout
 string m3c_bottom_sheet_pane_title
 string name
 string navigation_menu
@@ -389,6 +399,8 @@ string tooltip_pane_description
 string upload
 string upload_image
 string upload_title
+string uploaded
+string want_to_logout
 string welcome
 string without_problem
 string yes

@@ -26,7 +26,8 @@ import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.ButtonType
 
 @Composable
-fun DeleteDialog(
+fun ChoiceDialog(
+    message: String,
     onDismiss: () -> Unit= {},
     onPositiveClick: () -> Unit,
     onNegativeClick: () -> Unit,
@@ -53,7 +54,7 @@ fun DeleteDialog(
                     style = Type.textlgSemiBold(),
                 )
                 Text(
-                    text = stringResource(R.string.do_you_really_want_to_delete_it),
+                    text = message,
                     color = Primary900,
                     style = Type.textxsRegular(),
                     textAlign = TextAlign.Center,

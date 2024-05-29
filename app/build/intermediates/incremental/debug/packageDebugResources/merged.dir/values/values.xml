@@ -20,6 +20,8 @@
     <string name="are_ready">Are you ready for your skin scan today?</string>
     <string name="are_you_sure">Are You Sure</string>
     <string name="camera">Camera</string>
+    <string name="change_language">Change Language</string>
+    <string name="change_password">Change Password</string>
     <string name="choose_image_source">Choose Image Source</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="delete">Delete</string>
@@ -28,6 +30,7 @@
     <string name="diagnosed_problem">Diagnosed Problem</string>
     <string name="do_you_really_want_to_delete_it">Do you really want to delete it?</string>
     <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="edit_profile">Edit Profile</string>
     <string name="email">Email</string>
     <string name="gallery">Gallery</string>
     <string name="greet">Hi, %1$s!</string>
@@ -39,6 +42,7 @@
     <string name="last_scanning">Last Scanning</string>
     <string name="login">Login</string>
     <string name="login_greeting">Hello there, login to continue!</string>
+    <string name="logout">Logout</string>
     <string name="name">Name</string>
     <string name="next">Next</string>
     <string name="no">No</string>
@@ -64,6 +68,8 @@
     <string name="upload">Upload</string>
     <string name="upload_image">Upload Image</string>
     <string name="upload_title">You can add a name to the image you have already chosen.</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="want_to_logout">Do you really want to log out of this app?</string>
     <string name="welcome">Welcome</string>
     <string name="without_problem">Without Problem</string>
     <string name="yes">Yes</string>
