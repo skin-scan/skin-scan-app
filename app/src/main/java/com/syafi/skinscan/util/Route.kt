@@ -27,4 +27,9 @@ object Route {
     data class RESULT_DETAIL(
         val id: String
     )
+
+    @Serializable
+    data class EDIT_SCREEN(
+        val changeType: String
+    )
 }

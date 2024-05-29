@@ -329,6 +329,7 @@ string dropdown_menu
 string edit_profile
 string email
 string expanded
+string fill_to_change_password
 string gallery
 string greet
 string guideline
@@ -350,6 +351,7 @@ string no
 string not_selected
 string ok
 string password
+string password_changed
 string photo_label
 string photo_uploaded
 string photo_will_be_uploaded
@@ -365,6 +367,7 @@ string register_greeting
 string result
 string risk_assessment
 string safe
+string save
 string search_bar_search
 string search_placeholder
 string selected

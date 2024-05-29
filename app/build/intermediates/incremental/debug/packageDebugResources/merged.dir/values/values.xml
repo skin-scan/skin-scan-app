@@ -32,6 +32,7 @@
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="email">Email</string>
+    <string name="fill_to_change_password">Fill in if you want to change the password!</string>
     <string name="gallery">Gallery</string>
     <string name="greet">Hi, %1$s!</string>
     <string name="guideline">Guideline</string>
@@ -48,6 +49,7 @@
     <string name="no">No</string>
     <string name="ok">OK</string>
     <string name="password">Password</string>
+    <string name="password_changed">Password successfully changed.</string>
     <string name="photo_label">Image Label</string>
     <string name="photo_uploaded">Photo Uploaded</string>
     <string name="photo_will_be_uploaded">This image will be uploaded.</string>
@@ -61,6 +63,7 @@
     <string name="result">Result</string>
     <string name="risk_assessment">Risk Assessment</string>
     <string name="safe">Safe</string>
+    <string name="save">Save</string>
     <string name="search_placeholder">Search</string>
     <string name="success">Success</string>
     <string name="success_congrats">Congratulations, your account has been registered</string>

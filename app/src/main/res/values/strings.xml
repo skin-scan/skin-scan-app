@@ -58,6 +58,9 @@
     <string name="change_password">Change Password</string>
     <string name="change_language">Change Language</string>
     <string name="want_to_logout">Do you really want to log out of this app?</string>
+    <string name="fill_to_change_password">Fill in if you want to change the password!</string>
+    <string name="save">Save</string>
+    <string name="password_changed">Password successfully changed.</string>
 
     <string-array name="guideline">
         <item>Ensure the image is in focus with good lighting conditions.</item>

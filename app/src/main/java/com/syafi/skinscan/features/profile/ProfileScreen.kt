@@ -25,6 +25,7 @@ import com.syafi.skinscan.features.profile.component.ProfileAction
 import com.syafi.skinscan.features.profile.component.ProfileHead
 import com.syafi.skinscan.ui.theme.Neutral100
 import com.syafi.skinscan.ui.theme.Primary700
+import com.syafi.skinscan.util.Constant
 import com.syafi.skinscan.util.Route
 
 @Composable
@@ -70,14 +71,14 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel= hil
                 icon = R.drawable.ic_edit,
                 action = stringResource(R.string.edit_profile)
             ) {
-
+                navController.navigate(Route.EDIT_SCREEN(Constant.EDIT_PROFILE))
             }
 
             ProfileAction(
                 icon = R.drawable.ic_lock,
                 action = stringResource(R.string.change_password)
             ) {
-
+                navController.navigate(Route.EDIT_SCREEN(Constant.CHANGE_PASSWORD))
             }
 
             ProfileAction(

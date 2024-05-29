@@ -62,6 +62,7 @@ string do_you_really_want_to_delete_it
 string dont_have_account
 string edit_profile
 string email
+string fill_to_change_password
 string gallery
 string greet
 string guideline
@@ -78,6 +79,7 @@ string next
 string no
 string ok
 string password
+string password_changed
 string photo_label
 string photo_uploaded
 string photo_will_be_uploaded
@@ -91,6 +93,7 @@ string register_greeting
 string result
 string risk_assessment
 string safe
+string save
 string search_placeholder
 string success
 string success_congrats

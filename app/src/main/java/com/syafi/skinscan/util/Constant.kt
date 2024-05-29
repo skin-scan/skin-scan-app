@@ -8,5 +8,7 @@ object Constant {
     const val USER_TOKEN_KEY= "user_token_key"
     const val ALL= "all"
     const val DIAGNOSED= "diagnosed"
-    const val  SAFE= "safe"
+    const val SAFE= "safe"
+    const val EDIT_PROFILE= "edit_profile"
+    const val CHANGE_PASSWORD= "change_password"
 }

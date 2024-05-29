@@ -8,6 +8,7 @@ import androidx.navigation.toRoute
 import com.syafi.skinscan.features.home.HomeScreen
 import com.syafi.skinscan.features.analyze.AnalyzeScreen
 import com.syafi.skinscan.features.component.detail.ResultDetail
+import com.syafi.skinscan.features.edit.EditScreen
 import com.syafi.skinscan.features.history.HistoryScreen
 import com.syafi.skinscan.features.inspect.InspectImage
 import com.syafi.skinscan.features.login.LoginScreen
@@ -58,6 +59,10 @@ fun Navigation(navController: NavHostController, setFabOnClick: ((() -> Unit)?) 
         }
         composable(Route.PROFILE_SCREEN) {
             ProfileScreen(navController)
+        }
+        composable<Route.EDIT_SCREEN> {
+            val args= it.toRoute<Route.EDIT_SCREEN>()
+            EditScreen(navController = navController, changeType = args.changeType)
         }
     }
 }
