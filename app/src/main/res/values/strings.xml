@@ -61,6 +61,7 @@
     <string name="fill_to_change_password">Fill in if you want to change the password!</string>
     <string name="save">Save</string>
     <string name="password_changed">Password successfully changed.</string>
+    <string name="successfully_edit_profile">You have successfully saved profile changes.</string>
 
     <string-array name="guideline">
         <item>Ensure the image is in focus with good lighting conditions.</item>

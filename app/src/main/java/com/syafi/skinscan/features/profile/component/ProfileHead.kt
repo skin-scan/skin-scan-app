@@ -44,15 +44,15 @@ fun ProfileHead() {
 
         Row(
             Modifier
-                .fillMaxWidth()
+                .fillMaxWidth(.85f)
                 .background(Neutral50, CircleShape)
                 .padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceAround
         ) {
             ProfileStats(value = "200", title = stringResource(id = R.string.uploaded))
-            ProfileStats(value = "200", title = stringResource(id = R.string.uploaded))
-            ProfileStats(value = "200", title = stringResource(id = R.string.uploaded))
+            ProfileStats(value = "60", title = stringResource(id = R.string.diagnosed))
+            ProfileStats(value = "140", title = stringResource(id = R.string.safe))
         }
     }
 }

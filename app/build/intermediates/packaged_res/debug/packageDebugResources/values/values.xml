@@ -67,6 +67,7 @@
     <string name="search_placeholder">Search</string>
     <string name="success">Success</string>
     <string name="success_congrats">Congratulations, your account has been registered</string>
+    <string name="successfully_edit_profile">You have successfully saved profile changes.</string>
     <string name="time_detection">Time Detection</string>
     <string name="upload">Upload</string>
     <string name="upload_image">Upload Image</string>

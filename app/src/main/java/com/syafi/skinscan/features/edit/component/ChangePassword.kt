@@ -33,7 +33,6 @@ import com.syafi.skinscan.features.component.view.CustomTextField
 import com.syafi.skinscan.features.edit.EditViewModel
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary700
-import com.syafi.skinscan.ui.theme.Primary900
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.ButtonType
 import com.syafi.skinscan.util.Route

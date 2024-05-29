@@ -101,6 +101,7 @@ dimen notification_top_pad_large_text
 drawable abc_vector_test
 drawable detail_place_holder
 drawable ic_analyze
+drawable ic_blue_edit
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -378,6 +379,7 @@ string state_on
 string status_bar_notification_info_overflow
 string success
 string success_congrats
+string successfully_edit_profile
 string suggestions_available
 string switch_role
 string tab

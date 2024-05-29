@@ -11,6 +11,7 @@ color teal_700
 color white
 drawable detail_place_holder
 drawable ic_analyze
+drawable ic_blue_edit
 drawable ic_camera
 drawable ic_edit
 drawable ic_exit
@@ -97,6 +98,7 @@ string save
 string search_placeholder
 string success
 string success_congrats
+string successfully_edit_profile
 string time_detection
 string upload
 string upload_image

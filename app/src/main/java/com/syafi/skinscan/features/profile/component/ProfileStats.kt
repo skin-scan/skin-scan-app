@@ -13,12 +13,12 @@ import com.syafi.skinscan.ui.theme.Type
 fun ProfileStats(value: String, title: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
-            text = "200",
+            text = value,
             style = Type.textlgBold(),
             color = Primary900
         )
         Text(
-            text = stringResource(R.string.uploaded),
+            text = title,
             style = Type.text2xsRegular(),
             color = Primary900
         )

@@ -100,6 +100,7 @@ int dimen notification_top_pad_large_text 0x7f060015
 int drawable abc_vector_test 0x7f07001d
 int drawable detail_place_holder 0x7f07001e
 int drawable ic_analyze 0x7f07001f
+int drawable ic_blue_edit 0x7f07004e
 int drawable ic_call_answer 0x7f070020
 int drawable ic_call_answer_low 0x7f070021
 int drawable ic_call_answer_video 0x7f070022
@@ -377,6 +378,7 @@ int string state_on 0x7f0d0072
 int string status_bar_notification_info_overflow 0x7f0d0073
 int string success 0x7f0d0074
 int string success_congrats 0x7f0d0075
+int string successfully_edit_profile 0x7f0d0093
 int string suggestions_available 0x7f0d0076
 int string switch_role 0x7f0d0077
 int string tab 0x7f0d0078
