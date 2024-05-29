@@ -11,12 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.syafi.skinscan.ui.theme.Primary50
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Secondary500
 import com.syafi.skinscan.ui.theme.Type
+import com.syafi.skinscan.util.Constant
 
 @Composable
-fun DiagnosedLabel(isDisease: Boolean, result: String) {
+fun DiagnosedLabel(isDisease: String, result: String) {
 
     Row(
         horizontalArrangement = Arrangement.spacedBy(4.dp),
@@ -27,7 +29,12 @@ fun DiagnosedLabel(isDisease: Boolean, result: String) {
             modifier = Modifier
                 .size(8.dp)
                 .background(
-                    color = if (isDisease) Secondary500 else Primary700,
+                    color =
+                        when (isDisease) {
+                            Constant.DIAGNOSED -> Secondary500
+                            Constant.SAFE -> Primary700
+                            else -> Primary50
+                        },
                     shape = CircleShape
                 )
         )

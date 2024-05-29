@@ -27,6 +27,7 @@ import com.syafi.skinscan.ui.theme.Neutral800
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Primary900
 import com.syafi.skinscan.ui.theme.Type
+import com.syafi.skinscan.util.Route
 
 @Composable
 fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
@@ -82,7 +83,10 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
                     photo = R.drawable.place_holder,
                     timeStamp = "October 23, 2024",
                     name = "Upper Arm",
-                    output = "Ringworm"
+                    output = "Ringworm",
+                    onClick = {
+                        navController.navigate(Route.RESULT_DETAIL("1"))
+                    }
                 )
             }
         }

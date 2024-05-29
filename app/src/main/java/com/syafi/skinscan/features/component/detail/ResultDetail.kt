@@ -43,7 +43,7 @@ import com.syafi.skinscan.util.Route
 fun ResultDetail(
     navController: NavController,
     id: String = "",
-    viewModel: ResultDetailViewModel = hiltViewModel()
+    viewModel: ResultDetailViewModel = hiltViewModel(),
 ) {
 
     if (viewModel.isDeleteDialogOpen.value) {
@@ -83,7 +83,7 @@ fun ResultDetail(
         IconButton(
             onClick = {
                 navController.popBackStack()
-                navController.navigate(Route.ANALYZE_SCREEN)
+                navController.navigate(Route.HISTORY_SCREEN)
             },
             Modifier
                 .padding(top = 55.dp, start = 20.dp),

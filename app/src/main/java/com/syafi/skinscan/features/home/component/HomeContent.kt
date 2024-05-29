@@ -18,15 +18,17 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.features.component.view.PageIndicator
 import com.syafi.skinscan.features.component.view.ScanResultCard
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
+import com.syafi.skinscan.util.Route
 
 @Composable
-fun HomeContent(modifier: Modifier = Modifier) {
+fun HomeContent(modifier: Modifier = Modifier, navController: NavController) {
 
     val bannerList = listOf(
         R.drawable.img_banner1,
@@ -71,7 +73,10 @@ fun HomeContent(modifier: Modifier = Modifier) {
                     photo = R.drawable.place_holder,
                     timeStamp = "October 23, 2024",
                     name = "Upper Arm",
-                    output = "Ringworm"
+                    output = "Ringworm",
+                    onClick = {
+                        navController.navigate(Route.RESULT_DETAIL("1"))
+                    }
                 )
             }
         }

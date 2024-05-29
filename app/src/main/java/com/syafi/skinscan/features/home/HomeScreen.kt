@@ -63,7 +63,8 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
                 modifier = Modifier
                     .fillMaxSize()
                     .background(Neutral50, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp))
-                    .padding(30.dp)
+                    .padding(30.dp),
+                navController
             )
         }
     }
