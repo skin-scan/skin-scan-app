@@ -1,4 +1,4 @@
-#Wed May 29 22:45:39 ICT 2024
+#Fri May 31 21:54:36 ICT 2024
 base.0=C\:\\Users\\USER\\OneDrive\\Documents\\Bangkit\\Capstone\\dev\\SkinScan-dev\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\USER\\OneDrive\\Documents\\Bangkit\\Capstone\\dev\\SkinScan-dev\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\USER\\OneDrive\\Documents\\Bangkit\\Capstone\\dev\\SkinScan-dev\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex

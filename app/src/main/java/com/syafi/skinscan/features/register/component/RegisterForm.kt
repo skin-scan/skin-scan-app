@@ -32,15 +32,36 @@ fun RegisterForm(navController: NavController, viewModel: RegisterViewModel) {
 
 
         Text(text = stringResource(R.string.name), style = Type.textsmMedium())
-        CustomTextField(text = "")
+        CustomTextField(
+            text = viewModel.name.value,
+            onValueChange = {
+                viewModel.setName(it)
+            }
+        )
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(text = stringResource(R.string.email), style = Type.textsmMedium())
-        CustomTextField(text = "")
+        CustomTextField(
+            text = viewModel.name.value,
+            onValueChange = {
+                viewModel.setEmail(it)
+            }
+        )
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(text = stringResource(R.string.confirm_password), style = Type.textsmMedium())
-        CustomTextField(text = "", trailingIcon = Icons.Default.VisibilityOff)
+        CustomTextField(
+            text = viewModel.password.value,
+            onValueChange = {
+                viewModel.setPassword(it)
+            },
+            isPassword = true,
+            showPassword = viewModel.isShowPassword.value,
+            onPasswordToggle = {
+                viewModel.setPasswordVisibility(!viewModel.isShowPassword.value)
+            },
+            trailingIcon = Icons.Default.VisibilityOff
+        )
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(text = stringResource(R.string.password), style = Type.textsmMedium())
@@ -49,7 +70,7 @@ fun RegisterForm(navController: NavController, viewModel: RegisterViewModel) {
 
         CustomButton(
             onClick = {
-                viewModel.setDialogState(true)
+//                viewModel.setDialogState(true)
             },
             type = ButtonType.LARGE,
             text = stringResource(R.string.register)

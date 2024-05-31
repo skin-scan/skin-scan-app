@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -21,6 +23,17 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        val keystoreFile = project.rootProject.file("gradle.properties")
+        val properties = Properties()
+        properties.load(keystoreFile.inputStream())
+
+        val baseUrl = properties.getProperty("BASE_URL") ?: ""
+        buildConfigField(
+            type = "String",
+            name = "BASE_URL",
+            value = baseUrl
+        )
     }
 
     buildTypes {
@@ -85,7 +98,7 @@ dependencies {
     //Dagger - Hilt
     implementation("com.google.dagger:hilt-android:2.48")
     ksp("com.google.dagger:hilt-compiler:2.48")
-    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
