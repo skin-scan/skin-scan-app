@@ -62,6 +62,11 @@
     <string name="save">Save</string>
     <string name="password_changed">Password successfully changed.</string>
     <string name="successfully_edit_profile">You have successfully saved profile changes.</string>
+    <string name="fill_all_the_field">Fill all the field</string>
+    <string name="passwords_do_not_match">Passwords do not match!</string>
+    <string name="name_must_contain_3">String must contain at least 3 character(s)</string>
+    <string name="email_not_valid">Email not valid</string>
+    <string name="password_must_contain_8_characters">String must contain at least 8 character(s)</string>
 
     <string-array name="guideline">
         <item>Ensure the image is in focus with good lighting conditions.</item>

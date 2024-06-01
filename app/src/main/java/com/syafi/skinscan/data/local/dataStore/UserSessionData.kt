@@ -17,8 +17,8 @@ class UserSessionData(context: Context) {
 
     private val dataStore = context.dataStore
 
-    val welcomeScreenCompletedKey = booleanPreferencesKey(Constant.WELCOME_SCREEN_KEY)
-    val userTokenKey = stringPreferencesKey(Constant.USER_TOKEN_KEY)
+    private val welcomeScreenCompletedKey = booleanPreferencesKey(Constant.WELCOME_SCREEN_KEY)
+    private val userTokenKey = stringPreferencesKey(Constant.USER_TOKEN_KEY)
 
     val isWelcomeScreenCompleted: Flow<Boolean> =
         dataStore.data.map { pref ->
@@ -33,6 +33,12 @@ class UserSessionData(context: Context) {
     suspend fun setIsComplete(isCompleted: Boolean) {
         dataStore.edit { pref ->
             pref[welcomeScreenCompletedKey] = isCompleted
+        }
+    }
+
+    suspend fun setUserToken(token: String) {
+        dataStore.edit { pref ->
+            pref[userTokenKey]= token
         }
     }
 }

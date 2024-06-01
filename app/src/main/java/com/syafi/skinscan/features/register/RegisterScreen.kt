@@ -28,6 +28,7 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.features.component.dialog.SuccessPopup
+import com.syafi.skinscan.features.component.view.Loading
 import com.syafi.skinscan.features.register.component.RegisterForm
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Neutral700
@@ -41,6 +42,10 @@ fun RegisterScreen(
     navController: NavHostController,
     viewModel: RegisterViewModel = hiltViewModel()
 ) {
+
+    if (viewModel.isLoading.value) {
+        Loading()
+    }
 
     Box(
         modifier = Modifier

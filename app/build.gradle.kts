@@ -23,17 +23,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
-        val keystoreFile = project.rootProject.file("gradle.properties")
-        val properties = Properties()
-        properties.load(keystoreFile.inputStream())
-
-        val baseUrl = properties.getProperty("BASE_URL") ?: ""
-        buildConfigField(
-            type = "String",
-            name = "BASE_URL",
-            value = baseUrl
-        )
     }
 
     buildTypes {

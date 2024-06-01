@@ -1,8 +1,8 @@
 package com.syafi.skinscan.di
 
 import android.content.Context
-import com.syafi.skinscan.BuildConfig
 import com.syafi.skinscan.data.local.dataStore.UserSessionData
+import com.syafi.skinscan.data.remote.api.ApiConfig
 import com.syafi.skinscan.data.remote.api.AuthService
 import com.syafi.skinscan.data.repository.UserRepository
 import dagger.Module
@@ -30,10 +30,5 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideAuthApi() =
-        Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(AuthService::class.java)
+    fun provideAuthApi() = ApiConfig.authApi
 }

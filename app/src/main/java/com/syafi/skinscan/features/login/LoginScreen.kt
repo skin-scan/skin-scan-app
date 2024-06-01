@@ -15,9 +15,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
+import com.syafi.skinscan.features.component.view.Loading
 import com.syafi.skinscan.features.login.component.LoginForm
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Neutral700
@@ -26,7 +28,11 @@ import com.syafi.skinscan.ui.theme.Primary900
 import com.syafi.skinscan.ui.theme.Type
 
 @Composable
-fun LoginScreen(navController: NavController) {
+fun LoginScreen(navController: NavController, viewModel: LoginViewModel= hiltViewModel()) {
+
+    if (viewModel.isLoading.value) {
+        Loading()
+    }
 
     Box(
         modifier = Modifier
@@ -72,7 +78,7 @@ fun LoginScreen(navController: NavController) {
                 )
                 Spacer(modifier = Modifier.height(30.dp))
 
-                LoginForm(navController)
+                LoginForm(navController, viewModel)
             }
         }
     }
