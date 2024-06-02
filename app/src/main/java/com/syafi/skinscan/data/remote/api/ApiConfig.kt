@@ -10,7 +10,11 @@ object ApiConfig {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val authApi by lazy {
-        retrofit.create(AuthService::class.java)
+    val userApi by lazy {
+        retrofit.create(UserService::class.java)
+    }
+
+    val mainApi by lazy {
+        retrofit.create(MainService::class.java)
     }
 }

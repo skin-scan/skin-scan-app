@@ -19,7 +19,7 @@ class LoginUseCase @Inject constructor(
                 val resp= repo.login(request)
                 emit(Resource.Success(resp.data.token))
             } catch (e: Exception) {
-                emit(Resource.Error(e.message ?: e.toString()))
+                emit(Resource.Error(e.message ?: e.localizedMessage.toString()))
             }
         }
 }

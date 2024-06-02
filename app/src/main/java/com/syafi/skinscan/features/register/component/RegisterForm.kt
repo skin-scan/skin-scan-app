@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Text
@@ -38,106 +39,118 @@ fun RegisterForm(navController: NavController, viewModel: RegisterViewModel) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    Column(Modifier.fillMaxWidth()) {
+    LazyColumn(Modifier.fillMaxWidth()) {
 
 
-        Text(text = stringResource(R.string.name), style = Type.textsmMedium())
-        CustomTextField(
-            text = viewModel.name.value,
-            onValueChange = {
-                viewModel.setName(it)
-            }
-        )
-        Spacer(modifier = Modifier.height(8.dp))
+        item {
+            Text(text = stringResource(R.string.name), style = Type.textsmMedium())
+            CustomTextField(
+                text = viewModel.name.value,
+                onValueChange = {
+                    viewModel.setName(it)
+                }
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+        }
 
-        Text(text = stringResource(R.string.email), style = Type.textsmMedium())
-        CustomTextField(
-            text = viewModel.email.value,
-            onValueChange = {
-                viewModel.setEmail(it)
-            }
-        )
-        Spacer(modifier = Modifier.height(8.dp))
+        item {
+            Text(text = stringResource(R.string.email), style = Type.textsmMedium())
+            CustomTextField(
+                text = viewModel.email.value,
+                onValueChange = {
+                    viewModel.setEmail(it)
+                }
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+        }
 
-        Text(text = stringResource(R.string.password), style = Type.textsmMedium())
-        CustomTextField(
-            text = viewModel.password.value,
-            onValueChange = {
-                viewModel.setPassword(it)
-            },
-            isPassword = true,
-            showPassword = viewModel.isShowPassword.value,
-            onPasswordToggle = {
-                viewModel.setPasswordVisibility(!viewModel.isShowPassword.value)
-            },
-            trailingIcon = Icons.Default.VisibilityOff
-        )
-        Spacer(modifier = Modifier.height(8.dp))
+        item {
+            Text(text = stringResource(R.string.password), style = Type.textsmMedium())
+            CustomTextField(
+                text = viewModel.password.value,
+                onValueChange = {
+                    viewModel.setPassword(it)
+                },
+                isPassword = true,
+                showPassword = viewModel.isShowPassword.value,
+                onPasswordToggle = {
+                    viewModel.setPasswordVisibility(!viewModel.isShowPassword.value)
+                },
+                trailingIcon = Icons.Default.VisibilityOff
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+        }
 
-        Text(text = stringResource(R.string.confirm_password), style = Type.textsmMedium())
-        CustomTextField(
-            text = viewModel.confirmPassword.value,
-            trailingIcon = Icons.Default.VisibilityOff,
-            isPassword = true,
-            showPassword = viewModel.isShowConfirmPassword.value,
-            onValueChange = {
-                viewModel.setConfirmPassword(it)
-            },
-            onPasswordToggle = {
-                viewModel.setConfirmPasswordVisibility(!viewModel.isShowConfirmPassword.value)
-            }
-        )
-        Spacer(modifier = Modifier.height(32.dp))
+        item {
+            Text(text = stringResource(R.string.confirm_password), style = Type.textsmMedium())
+            CustomTextField(
+                text = viewModel.confirmPassword.value,
+                trailingIcon = Icons.Default.VisibilityOff,
+                isPassword = true,
+                showPassword = viewModel.isShowConfirmPassword.value,
+                onValueChange = {
+                    viewModel.setConfirmPassword(it)
+                },
+                onPasswordToggle = {
+                    viewModel.setConfirmPasswordVisibility(!viewModel.isShowConfirmPassword.value)
+                }
+            )
+            Spacer(modifier = Modifier.height(32.dp))
+        }
 
-        CustomButton(
-            onClick = {
-                if (isFormValid(viewModel, context)) {
-                    val req = RegisterRequest(
-                        viewModel.name.value,
-                        viewModel.email.value,
-                        viewModel.password.value
-                    )
+        item {
+            CustomButton(
+                onClick = {
+                    if (isFormValid(viewModel, context)) {
+                        val req = RegisterRequest(
+                            viewModel.name.value,
+                            viewModel.email.value,
+                            viewModel.password.value
+                        )
 
-                    scope.launch {
-                        viewModel.register(req).collect {
-                            when (it) {
-                                is Resource.Error -> {
-                                    viewModel.setLoadingState(false)
-                                    showToast(context, it.message.toString())
-                                }
+                        scope.launch {
+                            viewModel.register(req).collect {
+                                when (it) {
+                                    is Resource.Error -> {
+                                        viewModel.setLoadingState(false)
+                                        showToast(context, it.message.toString())
+                                    }
 
-                                is Resource.Loading -> viewModel.setLoadingState(true)
-                                is Resource.Success -> {
-                                    viewModel.setLoadingState(false)
-                                    viewModel.setDialogState(true)
+                                    is Resource.Loading -> viewModel.setLoadingState(true)
+                                    is Resource.Success -> {
+                                        viewModel.setLoadingState(false)
+                                        viewModel.setDialogState(true)
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            },
-            type = ButtonType.LARGE,
-            text = stringResource(R.string.register)
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-            Text(text = stringResource(R.string.have_account), style = Type.textxsRegular())
-            Spacer(modifier = Modifier.width(4.dp))
-            Text(
-                text = stringResource(id = R.string.login),
-                style = Type.textxsRegular(),
-                color = Primary700,
-                modifier = Modifier.clickable {
-                    navController.popBackStack()
-                    navController.navigate(Route.LOGIN_SCREEN)
-                }
+                },
+                type = ButtonType.LARGE,
+                text = stringResource(R.string.register)
             )
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+
+        item {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                Text(text = stringResource(R.string.have_account), style = Type.textxsRegular())
+                Spacer(modifier = Modifier.width(4.dp))
+                Text(
+                    text = stringResource(id = R.string.login),
+                    style = Type.textxsRegular(),
+                    color = Primary700,
+                    modifier = Modifier.clickable {
+                        navController.popBackStack()
+                        navController.navigate(Route.LOGIN_SCREEN)
+                    }
+                )
+            }
         }
     }
 }
 
-fun isFormValid(viewModel: RegisterViewModel, context: Context): Boolean {
+private fun isFormValid(viewModel: RegisterViewModel, context: Context): Boolean {
 
     if (viewModel.name.value.isEmpty() ||
         viewModel.email.value.isEmpty() ||
@@ -171,6 +184,6 @@ fun isFormValid(viewModel: RegisterViewModel, context: Context): Boolean {
     return true
 }
 
-fun showToast(context: Context, message: String) {
+private fun showToast(context: Context, message: String) {
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }

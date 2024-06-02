@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -26,9 +27,20 @@ import com.syafi.skinscan.ui.theme.Neutral700
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Primary900
 import com.syafi.skinscan.ui.theme.Type
+import com.syafi.skinscan.util.Route
 
 @Composable
 fun LoginScreen(navController: NavController, viewModel: LoginViewModel= hiltViewModel()) {
+
+
+    LaunchedEffect(key1 = viewModel.token.value) {
+        viewModel.getUserToken()
+
+        if (viewModel.token.value != null) {
+            navController.popBackStack()
+            navController.navigate(Route.HOME_SCREEN)
+        }
+    }
 
     if (viewModel.isLoading.value) {
         Loading()

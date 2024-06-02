@@ -116,7 +116,7 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
     }
 }
 
-fun isFormValid(viewModel: LoginViewModel, context: Context): Boolean {
+private fun isFormValid(viewModel: LoginViewModel, context: Context): Boolean {
 
     if (viewModel.email.value.isEmpty() || viewModel.password.value.isEmpty()) {
         showToast(context, context.getString(R.string.fill_all_the_field))
@@ -136,6 +136,6 @@ fun isFormValid(viewModel: LoginViewModel, context: Context): Boolean {
     return true
 }
 
-fun showToast(context: Context, message: String) {
+private fun showToast(context: Context, message: String) {
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }

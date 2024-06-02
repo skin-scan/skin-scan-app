@@ -22,7 +22,7 @@ import com.syafi.skinscan.util.Route
 @Composable
 fun Navigation(navController: NavHostController, setFabOnClick: ((() -> Unit)?) -> Unit) {
 
-    NavHost(navController = navController, startDestination = Route.REGISTER_SCREEN) {
+    NavHost(navController = navController, startDestination = Route.SPLASH_SCREEN) {
 
         composable(Route.SPLASH_SCREEN) {
             SplashScreen(navController)

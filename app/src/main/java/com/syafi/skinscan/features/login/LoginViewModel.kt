@@ -1,5 +1,6 @@
 package com.syafi.skinscan.features.login
 
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -10,6 +11,7 @@ import com.syafi.skinscan.domain.useCase.auth.LoginUseCase
 import com.syafi.skinscan.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -34,6 +36,9 @@ class LoginViewModel @Inject constructor(
     private val _message = mutableStateOf("")
     val message: State<String> = _message
 
+    private val _token= mutableStateOf<String?>(null)
+    val token: State<String?> = _token
+
     fun setLoadingState(state: Boolean) {
         _isLoading.value = state
     }
@@ -57,5 +62,18 @@ class LoginViewModel @Inject constructor(
         }
 
         return resp as Flow<Resource<String>>
+    }
+
+    fun getUserToken() {
+
+        viewModelScope.launch {
+            pref.userToken.collect { token ->
+                setToken(token)
+            }
+        }
+    }
+
+    private fun setToken(token: String) {
+        _token.value= token
     }
 }

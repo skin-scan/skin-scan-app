@@ -14,13 +14,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import co.yml.charts.common.model.PlotType
 import co.yml.charts.ui.piechart.charts.DonutPieChart
 import co.yml.charts.ui.piechart.models.PieChartConfig
 import co.yml.charts.ui.piechart.models.PieChartData
 import com.syafi.skinscan.R
-import com.syafi.skinscan.features.home.HomeViewModel
 import com.syafi.skinscan.ui.theme.Base50
 import com.syafi.skinscan.ui.theme.Neutral900
 import com.syafi.skinscan.ui.theme.Primary700
@@ -29,18 +29,18 @@ import com.syafi.skinscan.ui.theme.Secondary500
 import com.syafi.skinscan.ui.theme.Type
 
 @Composable
-fun HomeChartCard(viewModel: HomeViewModel, modifier: Modifier = Modifier) {
+fun HomeChartCard(safeDiagnosed: Float, problemDiagnosed: Float, modifier: Modifier = Modifier) {
 
     val donutChartData = PieChartData(
         slices = listOf(
             PieChartData.Slice(
                 stringResource(R.string.diagnosed_problem),
-                viewModel.problemDiagnosed.value,
+                problemDiagnosed,
                 Secondary500
             ),
             PieChartData.Slice(
                 stringResource(R.string.without_problem),
-                viewModel.safeDiagnosed.value,
+                safeDiagnosed,
                 Primary700
             ),
         ),
@@ -53,7 +53,7 @@ fun HomeChartCard(viewModel: HomeViewModel, modifier: Modifier = Modifier) {
         isAnimationEnable = true
     )
 
-    val totalScanned = (viewModel.safeDiagnosed.value + viewModel.problemDiagnosed.value).toInt()
+    val totalScanned = (safeDiagnosed + problemDiagnosed).toInt()
 
     Row(
         modifier
@@ -75,12 +75,14 @@ fun HomeChartCard(viewModel: HomeViewModel, modifier: Modifier = Modifier) {
 
             Column(
                 modifier = Modifier
-                    .align(Alignment.Center)
+                    .align(Alignment.Center),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = totalScanned.toString(),
                     style = Type.textlgSemiBold(),
-                    color = Neutral900
+                    color = Neutral900,
+                    textAlign = TextAlign.Center
                 )
                 Text(
                     text = stringResource(R.string.photos), color = Primary900, style = Type
@@ -88,6 +90,6 @@ fun HomeChartCard(viewModel: HomeViewModel, modifier: Modifier = Modifier) {
                 )
             }
         }
-        ChartInfo(viewModel.problemDiagnosed.value.toInt(), viewModel.safeDiagnosed.value.toInt())
+        ChartInfo(problemDiagnosed.toInt(), safeDiagnosed.toInt())
     }
 }

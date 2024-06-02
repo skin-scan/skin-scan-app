@@ -67,6 +67,7 @@
     <string name="name_must_contain_3">String must contain at least 3 character(s)</string>
     <string name="email_not_valid">Email not valid</string>
     <string name="password_must_contain_8_characters">String must contain at least 8 character(s)</string>
+    <string name="see_all">See all</string>
 
     <string-array name="guideline">
         <item>Ensure the image is in focus with good lighting conditions.</item>
