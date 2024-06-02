@@ -1,6 +1,7 @@
 package com.syafi.skinscan.features.component.view
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,6 +21,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.syafi.skinscan.ui.theme.Base50
@@ -30,7 +33,14 @@ import com.syafi.skinscan.util.Constant
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScanResultCard(photo: Any, timeStamp: String, name: String, output: String, onClick: () -> Unit= {}) {
+fun ScanResultCard(
+    photo: Any,
+    timeStamp: String,
+    name: String,
+    status: String,
+    diagnosis: String,
+    onClick: () -> Unit = {}
+) {
     Card(
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(containerColor = Base50),
@@ -41,14 +51,18 @@ fun ScanResultCard(photo: Any, timeStamp: String, name: String, output: String, 
         onClick = { onClick() }
 
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxWidth()
+        ) {
             AsyncImage(
                 model = photo,
-                contentDescription = output,
+                contentDescription = diagnosis,
                 modifier = Modifier
-                    .clip(RoundedCornerShape(10.dp))
                     .size(135.dp)
                     .padding(12.dp)
+                    .clip(RoundedCornerShape(10.dp)),
+                contentScale = ContentScale.FillBounds
             )
         }
 
@@ -57,10 +71,17 @@ fun ScanResultCard(photo: Any, timeStamp: String, name: String, output: String, 
             Text(text = timeStamp, style = Type.textxsRegular(), color = Neutral700)
             Spacer(modifier = Modifier.height(4.dp))
 
-            Text(text = name, style = Type.textsmMedium(), color = Neutral900)
+            Text(
+                text = name,
+                style = Type.textsmMedium(),
+                color = Neutral900,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+//                modifier = Modifier.basicMarquee()
+            )
             Spacer(modifier = Modifier.height(4.dp))
 
-            DiagnosedLabel(isDisease = Constant.DIAGNOSED, result = "Ringworm")
+            DiagnosedLabel(isDisease = status.lowercase(), result = diagnosis)
         }
     }
 }

@@ -83,7 +83,8 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
                     photo = R.drawable.place_holder,
                     timeStamp = "October 23, 2024",
                     name = "Upper Arm",
-                    output = "Ringworm",
+                    diagnosis = "Ringworm",
+                    status = "",
                     onClick = {
                         navController.navigate(Route.RESULT_DETAIL("1"))
                     }

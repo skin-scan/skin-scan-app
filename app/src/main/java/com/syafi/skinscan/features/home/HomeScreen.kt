@@ -21,6 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.data.remote.response.profile.UserData
 import com.syafi.skinscan.features.component.view.Loading
 import com.syafi.skinscan.features.home.component.HomeChartCard
@@ -30,6 +31,8 @@ import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary200
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.util.Resource
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 @Composable
 fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltViewModel()) {
@@ -38,8 +41,9 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
     val safeDiagnosed by viewModel.safeDiagnosed
     val problemDiagnosed by viewModel.problemDiagnosed
     val userData by viewModel.userProfileData
+    val detectionList by viewModel.detectionList
 
-    val context= LocalContext.current
+    val context = LocalContext.current
 
     LaunchedEffect(key1 = viewModel.token.value) {
         viewModel.setLoadingState(true)
@@ -47,23 +51,9 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
 
 
         token?.let {
-
-
-            val bearerToken= "Bearer $it"
-
-            viewModel.getUserProfile(bearerToken).collect {
-                when (it) {
-                    is Resource.Error -> {
-                        viewModel.setLoadingState(false)
-                        showToast(context, it.message.toString())
-                    }
-                    is Resource.Loading -> viewModel.setLoadingState(true)
-                    is Resource.Success -> {
-                        viewModel.setLoadingState(false)
-                        viewModel.setUserProfileData(it.data?.data as UserData)
-                    }
-                }
-            }
+            val bearerToken = "Bearer $it"
+            getUserProfile(viewModel, bearerToken, context, this)
+            getDetectionResult(viewModel, "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjNWU1OTgzLTA2Y2YtNDZiOS05ODRiLTAxY2JlNmJjNjhlYyIsImVtYWlsIjoic3dhc0BnbWFpbC5jb20iLCJpYXQiOjE3MTczMzU2Mzd9.Zf7u1qQXt-qZ9qfmndLDcfPeFo31zL2PuzivfVJVK2Y", context, this)
         }
     }
 
@@ -108,7 +98,8 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
                     .fillMaxSize()
                     .background(Neutral50, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp))
                     .padding(30.dp),
-                navController
+                navController,
+                detectionList
             )
         }
     }
@@ -116,4 +107,58 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
 
 private fun showToast(context: Context, message: String) {
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+}
+
+private fun getUserProfile(
+    viewModel: HomeViewModel,
+    token: String,
+    context: Context,
+    scope: CoroutineScope
+) {
+    scope.launch {
+        viewModel.getUserProfile(token).collect {
+            when (it) {
+                is Resource.Error -> {
+                    viewModel.setLoadingState(false)
+                    showToast(context, it.message.toString())
+                }
+
+                is Resource.Loading -> viewModel.setLoadingState(true)
+                is Resource.Success -> {
+                    viewModel.setLoadingState(false)
+                    viewModel.setUserProfileData(it.data?.data as UserData)
+                }
+            }
+        }
+    }
+}
+
+private fun getDetectionResult(
+    viewModel: HomeViewModel,
+    token: String,
+    context: Context,
+    scope: CoroutineScope
+) {
+    scope.launch {
+        viewModel.getDetectionResult(
+            token = token,
+            query = null,
+            limit = 5,
+            order = null,
+            status = null,
+            page = null
+        ).collect {
+            when (it) {
+                is Resource.Error -> {
+                    viewModel.setLoadingState(false)
+                    showToast(context, it.message.toString())
+                }
+                is Resource.Loading -> viewModel.setLoadingState(true)
+                is Resource.Success -> {
+                    viewModel.setLoadingState(false)
+                    viewModel.setDetectionList(it.data?.data as List<Detection>)
+                }
+            }
+        }
+    }
 }

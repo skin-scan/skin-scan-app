@@ -5,11 +5,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.rememberPagerState
@@ -29,14 +31,21 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
+import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.features.component.view.PageIndicator
 import com.syafi.skinscan.features.component.view.ScanResultCard
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Route
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 
 @Composable
-fun HomeContent(modifier: Modifier = Modifier, navController: NavController) {
+fun HomeContent(
+    modifier: Modifier = Modifier,
+    navController: NavController,
+    detectionList: List<Detection>
+) {
 
     val bannerList = listOf(
         R.drawable.img_banner1,
@@ -71,10 +80,7 @@ fun HomeContent(modifier: Modifier = Modifier, navController: NavController) {
 
         Row(
             Modifier
-                .fillMaxWidth()
-                .clickable {
-                    navController.navigate(Route.ANALYZE_SCREEN)
-                },
+                .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
@@ -85,7 +91,10 @@ fun HomeContent(modifier: Modifier = Modifier, navController: NavController) {
 
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.clickable {
+                navController.navigate(Route.HISTORY_SCREEN)
+            },
             ) {
                 Text(
                     text = stringResource(R.string.see_all),
@@ -94,7 +103,7 @@ fun HomeContent(modifier: Modifier = Modifier, navController: NavController) {
                 )
 
                 IconButton(
-                    onClick = { navController.navigate(Route.ANALYZE_SCREEN) },
+                    onClick = { navController.navigate(Route.HISTORY_SCREEN) },
                     modifier = Modifier.size(12.dp)
                 ) {
                     Icon(
@@ -107,19 +116,27 @@ fun HomeContent(modifier: Modifier = Modifier, navController: NavController) {
             }
         }
         Spacer(modifier = Modifier.height(12.dp))
-        LazyRow {
-            items(5) {
+        LazyRow(Modifier.fillMaxSize()) {
+            items(detectionList) {
                 ScanResultCard(
-                    photo = R.drawable.place_holder,
-                    timeStamp = "October 23, 2024",
-                    name = "Upper Arm",
-                    output = "Ringworm",
+                    photo = it.image,
+                    timeStamp = formatDate(it.createdAt),
+                    name = it.name,
+                    diagnosis = it.diagnosis,
+                    status= it.status,
                     onClick = {
-                        navController.navigate(Route.RESULT_DETAIL("1"))
+                        navController.navigate(Route.RESULT_DETAIL(it.id))
                     }
                 )
             }
         }
         Spacer(modifier = Modifier.height(120.dp))
     }
+}
+
+private fun formatDate(timeStamp: String): String {
+    val zonedDateTime = ZonedDateTime.parse(timeStamp, DateTimeFormatter.ISO_DATE_TIME)
+    val customFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
+
+    return zonedDateTime.format(customFormatter)
 }

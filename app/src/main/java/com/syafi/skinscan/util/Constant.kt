@@ -12,4 +12,6 @@ object Constant {
     const val EDIT_PROFILE= "edit_profile"
     const val CHANGE_PASSWORD= "change_password"
     const val BASE_URL= "https://skin-scan-api-rwnddebfva-et.a.run.app/api/"
+    const val ASC= "asc"
+    const val DESC= "desc"
 }

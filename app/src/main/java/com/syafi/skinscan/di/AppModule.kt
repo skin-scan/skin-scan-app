@@ -32,5 +32,5 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideMainApi()= ApiConfig.mainApi
+    fun provideMainApi()= ApiConfig.detectionApi
 }
