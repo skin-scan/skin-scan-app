@@ -18,11 +18,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
+import com.syafi.skinscan.data.remote.response.profile.UserData
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Type
 
 @Composable
-fun ProfileHead() {
+fun ProfileHead(userData: UserData?, safeDiagnosed: Int, problemDiagnosed: Int) {
+
+    val totalScanned = (safeDiagnosed + problemDiagnosed).toString()
 
     Column(
         Modifier
@@ -38,8 +41,8 @@ fun ProfileHead() {
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-        Text(text = "Mikasa Ackerman", style = Type.textsmSemiBold(), color = Neutral50)
-        Text(text = "mikasa@gmail.com", style = Type.textxsRegular(), color = Neutral50)
+        Text(text = userData?.name ?: "", style = Type.textsmSemiBold(), color = Neutral50)
+        Text(text = userData?.email ?: "", style = Type.textxsRegular(), color = Neutral50)
         Spacer(modifier = Modifier.height(20.dp))
 
         Row(
@@ -50,9 +53,9 @@ fun ProfileHead() {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceAround
         ) {
-            ProfileStats(value = "200", title = stringResource(id = R.string.uploaded))
-            ProfileStats(value = "60", title = stringResource(id = R.string.diagnosed))
-            ProfileStats(value = "140", title = stringResource(id = R.string.safe))
+            ProfileStats(value = totalScanned.toString(), title = stringResource(id = R.string.uploaded))
+            ProfileStats(value = problemDiagnosed.toString(), title = stringResource(id = R.string.diagnosed))
+            ProfileStats(value = safeDiagnosed.toString(), title = stringResource(id = R.string.safe))
         }
     }
 }

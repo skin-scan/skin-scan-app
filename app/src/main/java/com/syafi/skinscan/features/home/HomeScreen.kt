@@ -53,7 +53,7 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
         token?.let {
             val bearerToken = "Bearer $it"
             getUserProfile(viewModel, bearerToken, context, this)
-            getDetectionResult(viewModel, "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjNWU1OTgzLTA2Y2YtNDZiOS05ODRiLTAxY2JlNmJjNjhlYyIsImVtYWlsIjoic3dhc0BnbWFpbC5jb20iLCJpYXQiOjE3MTczMzU2Mzd9.Zf7u1qQXt-qZ9qfmndLDcfPeFo31zL2PuzivfVJVK2Y", context, this)
+            getDetectionResult(viewModel, bearerToken, context, this)
         }
     }
 
@@ -122,7 +122,6 @@ private fun getUserProfile(
                     viewModel.setLoadingState(false)
                     showToast(context, it.message.toString())
                 }
-
                 is Resource.Loading -> viewModel.setLoadingState(true)
                 is Resource.Success -> {
                     viewModel.setLoadingState(false)
