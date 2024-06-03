@@ -22,6 +22,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -29,6 +30,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.data.remote.response.detection.Detection
@@ -52,7 +54,8 @@ fun HomeContent(
         R.drawable.img_banner2,
         R.drawable.img_banner3
     )
-
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
     val pagerState = rememberPagerState(pageCount = { bannerList.size })
 
     Column(modifier = modifier) {
@@ -125,7 +128,10 @@ fun HomeContent(
                     diagnosis = it.diagnosis,
                     status= it.status,
                     onClick = {
-                        navController.navigate(Route.RESULT_DETAIL(it.id))
+                        navController.navigate(Route.RESULT_DETAIL(
+                            id = it.id,
+                            previousScreen = currentRoute.toString()
+                        ))
                     }
                 )
             }

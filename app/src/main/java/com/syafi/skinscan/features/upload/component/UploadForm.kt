@@ -37,7 +37,7 @@ fun UploadForm(
 
         CustomButton(
             onClick = {
-                navController.navigate(Route.RESULT_DETAIL(id = "1"))
+                navController.navigate(Route.RESULT_DETAIL(id = "1", previousScreen = ""))
             },
             type = ButtonType.LARGE,
             text = stringResource(R.string.upload)

@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import com.syafi.skinscan.data.remote.ErrorParser
 import com.syafi.skinscan.data.remote.api.DetectionService
 import com.syafi.skinscan.data.remote.response.detection.DetectionResponse
+import com.syafi.skinscan.data.remote.response.detection.detail.DetailDetectionResponse
 import com.syafi.skinscan.domain.repository.IDetectionRepository
 import javax.inject.Inject
 
@@ -29,6 +30,19 @@ class DetectionRepository @Inject constructor(
             status = status,
             page = page
         )
+
+        if (resp.isSuccessful) {
+            resp.body()?.let {
+                return it
+            }
+        }
+
+        val error= errorParser.parse((resp.errorBody()?.string()))
+        throw Exception(error)
+    }
+
+    override suspend fun getDetectionDetail(token: String, id: String): DetailDetectionResponse {
+        val resp= api.getDetectionDetail(token, id)
 
         if (resp.isSuccessful) {
             resp.body()?.let {

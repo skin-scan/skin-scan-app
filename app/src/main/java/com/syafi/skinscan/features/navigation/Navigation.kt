@@ -52,7 +52,11 @@ fun Navigation(navController: NavHostController, setFabOnClick: ((() -> Unit)?) 
         }
         composable<Route.RESULT_DETAIL> {
             val args= it.toRoute<Route.RESULT_DETAIL>()
-            ResultDetail(navController = navController)
+            ResultDetail(
+                navController = navController,
+                id= args.id,
+                previousScreen = args.previousScreen
+            )
         }
         composable(Route.HISTORY_SCREEN) {
             HistoryScreen(navController)

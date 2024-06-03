@@ -14,11 +14,13 @@ import androidx.compose.material3.TabRowDefaults
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import com.syafi.skinscan.R
 import com.syafi.skinscan.features.component.view.ScanResultCard
 import com.syafi.skinscan.features.history.HistoryViewModel
@@ -31,6 +33,9 @@ import com.syafi.skinscan.util.Route
 
 @Composable
 fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
+
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
 
     val tabTitle = listOf(
         stringResource(id = R.string.all),
@@ -86,7 +91,8 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
                     diagnosis = "Ringworm",
                     status = "",
                     onClick = {
-                        navController.navigate(Route.RESULT_DETAIL("1"))
+                        navController.navigate(Route.RESULT_DETAIL(id = "1", previousScreen =
+                        currentRoute.toString()))
                     }
                 )
             }

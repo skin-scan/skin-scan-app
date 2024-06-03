@@ -25,7 +25,8 @@ object Route {
 
     @Serializable
     data class RESULT_DETAIL(
-        val id: String
+        val id: String,
+        val previousScreen: String
     )
 
     @Serializable
