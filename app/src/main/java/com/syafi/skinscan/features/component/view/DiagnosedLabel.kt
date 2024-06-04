@@ -44,8 +44,7 @@ fun DiagnosedLabel(isDisease: String, result: String) {
             text = result,
             style = Type.text2xsRegular(),
             maxLines = 1,
-//          overflow = TextOverflow.Ellipsis,
-//          modifier = Modifier.basicMarquee()
+            overflow = TextOverflow.Ellipsis,
         )
     }
 }

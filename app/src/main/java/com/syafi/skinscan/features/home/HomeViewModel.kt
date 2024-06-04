@@ -9,8 +9,6 @@ import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.data.remote.response.detection.DetectionResponse
 import com.syafi.skinscan.data.remote.response.profile.ProfileResponse
 import com.syafi.skinscan.data.remote.response.profile.UserData
-import com.syafi.skinscan.data.repository.DetectionRepository
-import com.syafi.skinscan.data.repository.UserRepository
 import com.syafi.skinscan.domain.useCase.detection.GetAllDetectionResultUseCase
 import com.syafi.skinscan.domain.useCase.user.GetProfileUseCase
 import com.syafi.skinscan.util.Resource

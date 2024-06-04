@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBackIosNew
@@ -35,11 +36,11 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailedDetection
+import com.syafi.skinscan.features.component.detail.component.ResultDetailContent
 import com.syafi.skinscan.features.component.dialog.ChoiceDialog
 import com.syafi.skinscan.features.component.view.CustomButton
 import com.syafi.skinscan.features.component.dialog.SuccessPopup
 import com.syafi.skinscan.features.component.view.Loading
-import com.syafi.skinscan.features.home.HomeViewModel
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary100
 import com.syafi.skinscan.ui.theme.Primary700
@@ -107,7 +108,7 @@ fun ResultDetail(
 
         AsyncImage(
             model = detectionData?.image ?: "",
-            contentDescription = detectionData?.name.toString(),
+            contentDescription = detectionData?.title.toString(),
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .fillMaxWidth()
@@ -134,73 +135,16 @@ fun ResultDetail(
             )
         }
 
-        Card(
-            shape = RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp),
-            colors = CardDefaults.cardColors(containerColor = Neutral50),
-            elevation = CardDefaults.elevatedCardElevation(6.dp),
-            modifier = Modifier
+        ResultDetailContent(
+            detectionData,
+            viewModel,
+            Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(.7f)
+                .background(Neutral50, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp))
                 .align(Alignment.BottomCenter)
-                .offset(y = 60.dp)
-        ) {
-            Card(
-                shape = RoundedCornerShape(10.dp),
-                elevation = CardDefaults.elevatedCardElevation(6.dp),
-                colors = CardDefaults.cardColors(containerColor = Primary100),
-                modifier = Modifier.padding(horizontal = 20.dp, vertical = 24.dp)
-            ) {
-                Text(
-                    text = detectionData?.name ?: "",
-                    style = Type.textmdSemiBold(),
-                    color = Primary700,
-                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 10.dp)
-                )
-
-                Column(
-                    Modifier
-                        .fillMaxWidth()
-                        .background(Neutral50)
-                        .padding(20.dp),
-                ) {
-                    Text(text = stringResource(R.string.result), style = Type.textsmSemiBold())
-                    Text(text = detectionData?.diagnosis ?: "", style = Type.textsmRegular())
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                    Text(
-                        text = stringResource(R.string.risk_assessment), style = Type
-                            .textsmSemiBold()
-                    )
-                    Text(
-                        text = detectionData?.assessment.toString(),
-                        style = Type.textsmRegular()
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                    Text(
-                        text = stringResource(R.string.time_detection),
-                        style = Type.textsmSemiBold()
-                    )
-                    Text(
-                        text =
-                        if (detectionData?.createdAt != null) {
-                            formatDate(detectionData?.createdAt.toString())
-                        } else {
-                            ""
-                        },
-                        style = Type.textsmRegular()
-                    )
-                }
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-
-            CustomButton(
-                onClick = { viewModel.setDeleteDialogState(true) },
-                type = ButtonType.LARGE,
-                text = stringResource(R.string.delete),
-                modifier = Modifier.padding(horizontal = 20.dp)
-            )
-        }
+                .padding(vertical = 20.dp)
+        )
     }
 }
 
@@ -231,11 +175,4 @@ fun getDetectionDetail(
             }
         }
     }
-}
-
-private fun formatDate(timeStamp: String): String {
-    val zonedDateTime = ZonedDateTime.parse(timeStamp, DateTimeFormatter.ISO_DATE_TIME)
-    val customFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
-
-    return zonedDateTime.format(customFormatter)
 }

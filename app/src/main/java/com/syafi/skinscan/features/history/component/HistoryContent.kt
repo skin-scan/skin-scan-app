@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
@@ -22,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.syafi.skinscan.R
+import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.features.component.view.ScanResultCard
 import com.syafi.skinscan.features.history.HistoryViewModel
 import com.syafi.skinscan.ui.theme.Neutral50
@@ -32,10 +34,11 @@ import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Route
 
 @Composable
-fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
+fun HistoryContent(navController: NavController, viewModel: HistoryViewModel, detection: List<Detection>) {
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
+    val detectionResultList by viewModel.detectionList
 
     val tabTitle = listOf(
         stringResource(id = R.string.all),
@@ -49,6 +52,7 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
             .fillMaxSize()
             .clip(RoundedCornerShape(topStart = 30.dp, topEnd = 30.dp))
             .background(Neutral50)
+            .padding(bottom = 10.dp)
     ) {
         TabRow(
             selectedTabIndex = 1,
@@ -68,7 +72,6 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
                     selected = index == viewModel.currTabIndex.value,
                     onClick = {
                         viewModel.setIndex(index)
-                        viewModel.setType(tab)
                     },
                     text = {
                         Text(
@@ -77,23 +80,20 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
                             if (index == viewModel.currTabIndex.value) Type.textsmSemiBold()
                             else Type.textsmMedium(),
                         )
-                    }, selectedContentColor = Primary900,
+                    },
+                    selectedContentColor = Primary900,
                     unselectedContentColor = Neutral800
                 )
             }
         }
         LazyVerticalGrid(columns = GridCells.Adaptive(200.dp)) {
-            items(10) {
+            items(detectionResultList) {
                 ScanResultCard(
-                    photo = R.drawable.place_holder,
-                    timeStamp = "October 23, 2024",
-                    name = "Upper Arm",
-                    diagnosis = "Ringworm",
-                    status = "",
-                    onClick = {
-                        navController.navigate(Route.RESULT_DETAIL(id = "1", previousScreen =
-                        currentRoute.toString()))
-                    }
+                    photo = it.image,
+                    timeStamp = it.createdAt,
+                    medicalName = it.medicalName,
+                    title = it.title,
+                    status = it.status
                 )
             }
         }

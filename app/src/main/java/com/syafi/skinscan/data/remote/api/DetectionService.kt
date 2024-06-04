@@ -1,9 +1,7 @@
 package com.syafi.skinscan.data.remote.api
 
-import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.data.remote.response.detection.DetectionResponse
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailDetectionResponse
-import com.syafi.skinscan.util.Constant
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header

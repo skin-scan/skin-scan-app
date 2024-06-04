@@ -123,9 +123,9 @@ fun HomeContent(
             items(detectionList) {
                 ScanResultCard(
                     photo = it.image,
-                    timeStamp = formatDate(it.createdAt),
-                    name = it.name,
-                    diagnosis = it.diagnosis,
+                    timeStamp = it.createdAt,
+                    title = it.title,
+                    medicalName = it.medicalName,
                     status= it.status,
                     onClick = {
                         navController.navigate(Route.RESULT_DETAIL(
@@ -138,11 +138,4 @@ fun HomeContent(
         }
         Spacer(modifier = Modifier.height(120.dp))
     }
-}
-
-private fun formatDate(timeStamp: String): String {
-    val zonedDateTime = ZonedDateTime.parse(timeStamp, DateTimeFormatter.ISO_DATE_TIME)
-    val customFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
-
-    return zonedDateTime.format(customFormatter)
 }

@@ -75,4 +75,7 @@
         <item>Keep in focus and center only the skin mark (without hair, wrinkles and other objects)</item>
         <item> If it’s a single lesion, capture a focused close-up. If the issue is widespread, capture an image that best represents the concern</item>
     </string-array>
+
+    <string name="medical_name">Nama Medis</string>
+    <string name="commmon_name">Nama Umum</string>
 </resources>

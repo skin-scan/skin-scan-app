@@ -5,7 +5,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.syafi.skinscan.data.local.dataStore.UserSessionData
-import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailDetectionResponse
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailedDetection
 import com.syafi.skinscan.domain.useCase.detection.GetDetectionDetailUseCase

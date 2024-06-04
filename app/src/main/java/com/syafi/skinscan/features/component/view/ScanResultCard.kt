@@ -30,15 +30,17 @@ import com.syafi.skinscan.ui.theme.Neutral700
 import com.syafi.skinscan.ui.theme.Neutral900
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Constant
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScanResultCard(
     photo: Any,
     timeStamp: String,
-    name: String,
+    medicalName: String,
+    title: String,
     status: String,
-    diagnosis: String,
     onClick: () -> Unit = {}
 ) {
     Card(
@@ -57,7 +59,7 @@ fun ScanResultCard(
         ) {
             AsyncImage(
                 model = photo,
-                contentDescription = diagnosis,
+                contentDescription = medicalName,
                 modifier = Modifier
                     .size(135.dp)
                     .padding(12.dp)
@@ -68,20 +70,26 @@ fun ScanResultCard(
 
         Column(Modifier.padding(12.dp)) {
 
-            Text(text = timeStamp, style = Type.textxsRegular(), color = Neutral700)
+            Text(text = formatDate(timeStamp), style = Type.textxsRegular(), color = Neutral700)
             Spacer(modifier = Modifier.height(4.dp))
 
             Text(
-                text = name,
+                text = title,
                 style = Type.textsmMedium(),
                 color = Neutral900,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-//                modifier = Modifier.basicMarquee()
             )
             Spacer(modifier = Modifier.height(4.dp))
 
-            DiagnosedLabel(isDisease = status.lowercase(), result = diagnosis)
+            DiagnosedLabel(isDisease = status.lowercase(), result = medicalName)
         }
     }
+}
+
+private fun formatDate(timeStamp: String): String {
+    val zonedDateTime = ZonedDateTime.parse(timeStamp, DateTimeFormatter.ISO_DATE_TIME)
+    val customFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
+
+    return zonedDateTime.format(customFormatter)
 }
