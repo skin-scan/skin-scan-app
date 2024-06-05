@@ -18,21 +18,29 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.ui.theme.Base50
 import com.syafi.skinscan.ui.theme.Neutral50
+import com.syafi.skinscan.ui.theme.Neutral900
+import com.syafi.skinscan.ui.theme.Secondary900
 import com.syafi.skinscan.ui.theme.Type
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProfileAction(icon: Int, action: String, onClick: () -> Unit) {
+fun ProfileAction(
+    icon: Int,
+    action: String,
+    backgroundColor: Color,
+    onClick: () -> Unit
+) {
     Card(
         elevation = CardDefaults.cardElevation(2.dp),
         shape = RoundedCornerShape(10.dp),
-        colors = CardDefaults.cardColors(containerColor = Base50),
+        colors = CardDefaults.cardColors(containerColor = backgroundColor),
         onClick = { onClick() }
     ) {
         Row(
@@ -49,7 +57,16 @@ fun ProfileAction(icon: Int, action: String, onClick: () -> Unit) {
             ) {
                 AsyncImage(model = icon, contentDescription = action, modifier = Modifier.size(30
                     .dp))
-                Text(text = action, style = Type.textsmMedium())
+                Text(
+                    text = action,
+                    style = Type.textsmMedium(),
+                    color =
+                        if (action.equals(stringResource(id = R.string.logout))) {
+                            Secondary900
+                        } else {
+                            Neutral900
+                        }
+                )
             }
             
             if (!action.equals(stringResource(id = R.string.logout))) {

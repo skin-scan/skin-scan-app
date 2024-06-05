@@ -86,7 +86,10 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel, de
                 )
             }
         }
-        LazyVerticalGrid(columns = GridCells.Adaptive(200.dp)) {
+        LazyVerticalGrid(
+            columns = GridCells.Adaptive(185.dp), modifier = Modifier.padding(horizontal = 20.dp,
+                vertical = 16.dp
+                )) {
             items(detectionResultList) {
                 ScanResultCard(
                     photo = it.image,

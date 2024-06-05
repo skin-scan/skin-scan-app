@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
@@ -36,6 +37,7 @@ import com.syafi.skinscan.R
 import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.features.component.view.PageIndicator
 import com.syafi.skinscan.features.component.view.ScanResultCard
+import com.syafi.skinscan.features.component.view.ZeroState
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Route
@@ -60,7 +62,10 @@ fun HomeContent(
 
     Column(modifier = modifier) {
 
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.padding(top = 30.dp)
+        ) {
             HorizontalPager(state = pagerState, pageSize = PageSize.Fill) { index ->
                 Column(
                     Modifier.fillMaxWidth(),
@@ -83,7 +88,8 @@ fun HomeContent(
 
         Row(
             Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .padding(start = 20.dp, end = 20.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
@@ -96,8 +102,8 @@ fun HomeContent(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.clickable {
-                navController.navigate(Route.HISTORY_SCREEN)
-            },
+                    navController.navigate(Route.HISTORY_SCREEN)
+                },
             ) {
                 Text(
                     text = stringResource(R.string.see_all),
@@ -118,22 +124,34 @@ fun HomeContent(
                 }
             }
         }
-        Spacer(modifier = Modifier.height(12.dp))
-        LazyRow(Modifier.fillMaxSize()) {
-            items(detectionList) {
-                ScanResultCard(
-                    photo = it.image,
-                    timeStamp = it.createdAt,
-                    title = it.title,
-                    medicalName = it.medicalName,
-                    status= it.status,
-                    onClick = {
-                        navController.navigate(Route.RESULT_DETAIL(
-                            id = it.id,
-                            previousScreen = currentRoute.toString()
-                        ))
-                    }
-                )
+        Spacer(modifier = Modifier.height(32.dp))
+        LazyRow(Modifier.fillMaxSize().padding(start = 20.dp, bottom = 20.dp),
+            horizontalArrangement =
+        Arrangement
+            .Center) {
+
+            if (detectionList.size == 0) {
+                item {
+                    ZeroState(navController = navController)
+                }
+            } else {
+                items(detectionList) {
+                    ScanResultCard(
+                        photo = it.image,
+                        timeStamp = it.createdAt,
+                        title = it.title,
+                        medicalName = it.medicalName,
+                        status = it.status,
+                        onClick = {
+                            navController.navigate(
+                                Route.RESULT_DETAIL(
+                                    id = it.id,
+                                    previousScreen = currentRoute.toString()
+                                )
+                            )
+                        }
+                    )
+                }
             }
         }
         Spacer(modifier = Modifier.height(120.dp))

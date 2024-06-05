@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.syafi.skinscan.ui.theme.Base50
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
@@ -63,7 +64,7 @@ fun CustomOutlinedButton(onClick: () -> Unit, type: String, text: String, modifi
                 Text(
                     text = text,
                     color = Primary700,
-                    style = Type.textsmBold()
+                    style = Type.text2xsBold()
                 )
             }
         }

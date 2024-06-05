@@ -1,11 +1,13 @@
 package com.syafi.skinscan.features.upload.component
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -24,6 +26,11 @@ fun UploadForm(
     navController: NavHostController,
     viewModel: UploadViewModel
 ) {
+
+    LaunchedEffect(key1 = true) {
+        Log.i("cek foto", "UploadForm: ${viewModel.photoUri}")
+    }
+
     Column(modifier) {
         Text(text = stringResource(R.string.upload_title), style = Type.textmdRegular())
         Spacer(modifier = Modifier.height(20.dp))
@@ -37,7 +44,7 @@ fun UploadForm(
 
         CustomButton(
             onClick = {
-                navController.navigate(Route.RESULT_DETAIL(id = "1", previousScreen = ""))
+                navController.navigate(Route.HISTORY_SCREEN)
             },
             type = ButtonType.LARGE,
             text = stringResource(R.string.upload)

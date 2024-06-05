@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -28,8 +29,11 @@ import com.syafi.skinscan.features.component.dialog.ChoiceDialog
 import com.syafi.skinscan.features.component.view.Loading
 import com.syafi.skinscan.features.profile.component.ProfileAction
 import com.syafi.skinscan.features.profile.component.ProfileHead
+import com.syafi.skinscan.ui.theme.Base50
 import com.syafi.skinscan.ui.theme.Neutral100
 import com.syafi.skinscan.ui.theme.Primary700
+import com.syafi.skinscan.ui.theme.Secondary300
+import com.syafi.skinscan.ui.theme.Secondary50
 import com.syafi.skinscan.util.Constant
 import com.syafi.skinscan.util.Resource
 import com.syafi.skinscan.util.Route
@@ -44,6 +48,8 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel= hil
     val problemDiagnosed by viewModel.problemDiagnosed
     val userData by viewModel.userProfileData
     val context = LocalContext.current
+
+    val scope= rememberCoroutineScope()
 
     LaunchedEffect(key1 = viewModel.token.value) {
         viewModel.setLoadingState(true)
@@ -62,9 +68,12 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel= hil
             onDismiss = { viewModel.setDialogState(false) },
             onNegativeClick = { viewModel.setDialogState(false) },
             onPositiveClick = {
-                viewModel.setDialogState(false)
-                navController.popBackStack()
-                navController.navigate(Route.LOGIN_SCREEN)
+                scope.launch {
+                    viewModel.setDialogState(false)
+                    viewModel.deleteUserSeesion()
+                    navController.popBackStack()
+                    navController.navigate(Route.LOGIN_SCREEN)
+                }
             }
         )
     }
@@ -98,6 +107,7 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel= hil
         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             ProfileAction(
                 icon = R.drawable.ic_edit,
+                backgroundColor= Base50,
                 action = stringResource(R.string.edit_profile)
             ) {
                 navController.navigate(Route.EDIT_SCREEN(Constant.EDIT_PROFILE))
@@ -105,21 +115,16 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel= hil
 
             ProfileAction(
                 icon = R.drawable.ic_lock,
+                backgroundColor= Base50,
                 action = stringResource(R.string.change_password)
             ) {
                 navController.navigate(Route.EDIT_SCREEN(Constant.CHANGE_PASSWORD))
             }
 
             ProfileAction(
-                icon = R.drawable.ic_globe,
-                action = stringResource(R.string.change_language)
-            ) {
-
-            }
-
-            ProfileAction(
                 icon = R.drawable.ic_exit,
-                action = stringResource(R.string.logout)
+                action = stringResource(R.string.logout),
+                backgroundColor = Secondary50
             ) {
                 viewModel.setDialogState(true)
             }

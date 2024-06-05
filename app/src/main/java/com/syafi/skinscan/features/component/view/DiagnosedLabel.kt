@@ -29,7 +29,7 @@ fun DiagnosedLabel(isDisease: String, result: String) {
 
         Box(
             modifier = Modifier
-                .size(8.dp)
+                .size(10.dp)
                 .background(
                     color =
                     when (isDisease) {
@@ -42,7 +42,7 @@ fun DiagnosedLabel(isDisease: String, result: String) {
         )
         Text(
             text = result,
-            style = Type.text2xsRegular(),
+            style = Type.textxsRegular(),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )

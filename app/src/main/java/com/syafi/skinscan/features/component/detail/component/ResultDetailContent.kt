@@ -1,5 +1,6 @@
 package com.syafi.skinscan.features.component.detail.component
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -10,6 +11,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,12 +20,11 @@ import androidx.compose.ui.unit.dp
 import com.syafi.skinscan.R
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailedDetection
 import com.syafi.skinscan.features.component.detail.ResultDetailViewModel
-import com.syafi.skinscan.features.component.view.CustomButton
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary100
 import com.syafi.skinscan.ui.theme.Primary700
+import com.syafi.skinscan.ui.theme.Secondary700
 import com.syafi.skinscan.ui.theme.Type
-import com.syafi.skinscan.util.ButtonType
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
@@ -64,7 +65,7 @@ fun ResultDetailContent(
                     Spacer(modifier = Modifier.height(16.dp))
 
                     Text(
-                        text = stringResource(R.string.commmon_name),
+                        text = stringResource(R.string.common_name),
                         style = Type.textsmSemiBold()
                     )
                     Text(text = detectionData?.commonName ?: "", style = Type.textsmRegular())
@@ -88,7 +89,7 @@ fun ResultDetailContent(
                     Text(
                         text =
                         if (detectionData?.createdAt != null) {
-                            formatDate(detectionData?.createdAt.toString())
+                            formatDate(detectionData.createdAt)
                         } else {
                             ""
                         },
@@ -100,12 +101,23 @@ fun ResultDetailContent(
 
         item {
             Spacer(modifier = Modifier.height(8.dp))
-            CustomButton(
-                onClick = { viewModel.setDeleteDialogState(true) },
-                type = ButtonType.LARGE,
-                text = stringResource(R.string.delete),
-                modifier = Modifier.padding(horizontal = 20.dp)
-            )
+            OutlinedButton(
+                onClick = {
+                    viewModel.setDeleteDialogState(true)
+                },
+                border = BorderStroke(width = 2.dp, color = Secondary700),
+                shape = RoundedCornerShape(10.dp),
+                modifier = Modifier
+                    .padding(horizontal = 20.dp)
+                    .fillMaxWidth()
+                    .height(48.dp)
+            ) {
+                Text(
+                    text = stringResource(id = R.string.scan),
+                    color = Secondary700,
+                    style = Type.textsmBold()
+                )
+            }
             Spacer(modifier = Modifier.height(28.dp))
 
         }

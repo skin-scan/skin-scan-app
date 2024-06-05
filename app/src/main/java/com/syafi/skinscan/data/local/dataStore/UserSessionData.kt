@@ -41,4 +41,10 @@ class UserSessionData(context: Context) {
             pref[userTokenKey]= token
         }
     }
+
+    suspend fun deleteSession() {
+        dataStore.edit { pref ->
+            pref[userTokenKey]= ""
+        }
+    }
 }

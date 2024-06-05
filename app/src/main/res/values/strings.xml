@@ -78,4 +78,7 @@
 
     <string name="medical_name">Nama Medis</string>
     <string name="common_name">Nama Umum</string>
+    <string name="still_empty">Masih kosong</string>
+    <string name="didnt_scan_yet">Kamu tidak pernah melakukan scan sebelumnya</string>
+    <string name="scan">Scan</string>
 </resources>

@@ -56,6 +56,12 @@ class ProfileViewModel @Inject constructor(
         }
     }
 
+    fun deleteUserSeesion() {
+        viewModelScope.launch {
+            pref.deleteSession()
+        }
+    }
+
     private fun setToken(token: String) {
         _token.value= token
     }

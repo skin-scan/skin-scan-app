@@ -96,8 +96,7 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
             HomeContent(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Neutral50, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp))
-                    .padding(30.dp),
+                    .background(Neutral50, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp)),
                 navController,
                 detectionList
             )

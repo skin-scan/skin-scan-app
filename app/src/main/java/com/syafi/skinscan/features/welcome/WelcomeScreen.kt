@@ -59,44 +59,26 @@ fun WelcomeScreen(
         PageIndicator(pagerState.currentPage, Secondary500)
         Spacer(modifier = Modifier.height(52.dp))
 
-        AnimatedVisibility(visible = pagerState.currentPage == welcomeScreenDataList.size - 1) {
-            Row(
-                Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                CustomOutlinedButton(
-                    onClick = {
+
+        CustomButton(
+            onClick = {
+                scope.launch {
+
+                    if (pagerState.currentPage == welcomeScreenDataList.size - 1) {
                         viewModel.setUserSession(true)
-                        navController.popBackStack()
-                        navController.navigate(Route.REGISTER_SCREEN)
-                    },
-                    type = ButtonType.MEDIUM,
-                    text = stringResource(R.string.register),
-                    Modifier.fillMaxWidth(.5f)
-                )
-                CustomButton(
-                    onClick = {
-                        viewModel.setUserSession(true)
-                        navController.popBackStack()
                         navController.navigate(Route.LOGIN_SCREEN)
-                    },
-                    type = ButtonType.MEDIUM,
-                    text = stringResource(R.string.login),
-                    Modifier.fillMaxWidth()
-                )
-            }
-        }
-        AnimatedVisibility(visible = pagerState.currentPage < welcomeScreenDataList.size - 1) {
-            CustomButton(
-                onClick = {
-                    scope.launch {
+                    } else {
                         pagerState.animateScrollToPage(pagerState.currentPage + 1)
                     }
-                },
-                type = ButtonType.LARGE,
-                text = stringResource(id = R.string.next)
-            )
-        }
+                }
+            },
+            type = ButtonType.LARGE,
+            text =
+            if (pagerState.currentPage == welcomeScreenDataList.size - 1) {
+                stringResource(id = R.string.login)
+            } else {
+                stringResource(id = R.string.next)
+            }
+        )
     }
 }

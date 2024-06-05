@@ -46,9 +46,9 @@ fun ScanResultCard(
     Card(
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(containerColor = Base50),
-        elevation = CardDefaults.elevatedCardElevation(1.dp),
+        elevation = CardDefaults.elevatedCardElevation(4.dp),
         modifier = Modifier
-            .padding(8.dp)
+            .padding(end = 12.dp, bottom = 12.dp)
             .width(152.dp),
         onClick = { onClick() }
 
@@ -62,7 +62,7 @@ fun ScanResultCard(
                 contentDescription = medicalName,
                 modifier = Modifier
                     .size(135.dp)
-                    .padding(12.dp)
+                    .padding(10.dp)
                     .clip(RoundedCornerShape(10.dp)),
                 contentScale = ContentScale.FillBounds
             )
