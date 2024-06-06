@@ -64,7 +64,7 @@
     <string name="successfully_edit_profile">Kamu berhasil menyimpan perubahan profil.</string>
     <string name="fill_all_the_field">Isi semua kolom</string>
     <string name="passwords_do_not_match">Sandi tidak cocok!</string>
-    <string name="name_must_contain_3">Nama minimal 3 kararkter</string>
+    <string name="name_must_contain_3">Nama minimal 3 karakter</string>
     <string name="email_not_valid">Email tidak valid</string>
     <string name="password_must_contain_8_characters">Sandi minimal 8 karakter</string>
     <string name="see_all">Lihat semua</string>

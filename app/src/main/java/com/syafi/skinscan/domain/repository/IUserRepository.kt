@@ -4,8 +4,9 @@ import com.syafi.skinscan.data.remote.request.LoginRequest
 import com.syafi.skinscan.data.remote.request.RegisterRequest
 import com.syafi.skinscan.data.remote.response.auth.AuthResponse
 import com.syafi.skinscan.data.remote.response.profile.ProfileResponse
-import com.syafi.skinscan.util.Resource
-import kotlinx.coroutines.flow.Flow
+import com.syafi.skinscan.data.remote.response.profile.update.UpdateProfileResponse
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 
 interface IUserRepository {
 
@@ -14,4 +15,10 @@ interface IUserRepository {
     suspend fun login (loginRequest: LoginRequest): AuthResponse
     suspend fun setUserToken(token: String)
     suspend fun getUserProfile(token: String): ProfileResponse
+    suspend fun updateUserProfile(
+        token: String,
+        multipartBody: MultipartBody.Part?,
+        reqNameBody: RequestBody,
+        reqEmailBody: RequestBody
+    ): UpdateProfileResponse
 }

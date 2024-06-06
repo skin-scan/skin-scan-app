@@ -8,7 +8,10 @@ import com.syafi.skinscan.data.remote.request.LoginRequest
 import com.syafi.skinscan.data.remote.request.RegisterRequest
 import com.syafi.skinscan.data.remote.response.auth.AuthResponse
 import com.syafi.skinscan.data.remote.response.profile.ProfileResponse
+import com.syafi.skinscan.data.remote.response.profile.update.UpdateProfileResponse
 import com.syafi.skinscan.domain.repository.IUserRepository
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import kotlin.Exception
 
 class UserRepository(
@@ -16,7 +19,7 @@ class UserRepository(
     private val api: UserService
 ) : IUserRepository {
 
-    val errorParser= ErrorParser(Gson())
+    private val errorParser= ErrorParser(Gson())
     override suspend fun setUserSession(isCompleted: Boolean) {
         pref.setIsComplete(isCompleted)
     }
@@ -71,6 +74,25 @@ class UserRepository(
         }
 
         val error= errorParser.parse((resp.errorBody()?.string()))
+        throw Exception(error)
+    }
+
+    override suspend fun updateUserProfile(
+        token: String,
+        multipartBody: MultipartBody.Part?,
+        reqNameBody: RequestBody,
+        reqEmailBody: RequestBody
+    ): UpdateProfileResponse {
+
+        val resp= api.updateProfile(token, multipartBody, reqNameBody, reqEmailBody)
+
+        if (resp.isSuccessful) {
+            resp.body()?.let {
+                return it
+            }
+        }
+
+        val error= errorParser.parse(resp.errorBody()?.string())
         throw Exception(error)
     }
 }
