@@ -108,7 +108,11 @@ fun ChangePassword(navController: NavController, viewModel: EditViewModel) {
                 )
                 Spacer(modifier = Modifier.height(20.dp))
 
-                Text(text = stringResource(R.string.password), style = Type.textsmMedium())
+                Text(text = stringResource(R.string.old_password), style = Type.textsmMedium())
+                CustomTextField(text = "", trailingIcon = Icons.Default.VisibilityOff)
+                Spacer(modifier = Modifier.height(8.dp))
+
+                Text(text = stringResource(R.string.new_password), style = Type.textsmMedium())
                 CustomTextField(text = "", trailingIcon = Icons.Default.VisibilityOff)
                 Spacer(modifier = Modifier.height(8.dp))
 

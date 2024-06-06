@@ -65,7 +65,12 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.File
 
 @Composable
-fun EditProfile(navController: NavController, viewModel: EditViewModel) {
+fun EditProfile(
+    navController: NavController,
+    name: String,
+    email: String,
+    viewModel: EditViewModel,
+) {
 
     val context= LocalContext.current
     val scope= rememberCoroutineScope()
@@ -76,6 +81,8 @@ fun EditProfile(navController: NavController, viewModel: EditViewModel) {
 
     LaunchedEffect(key1 = true) {
         viewModel.getUserToken()
+        viewModel.setName(name)
+        viewModel.setEmail(email)
     }
 
     if (viewModel.isLoading.value) {

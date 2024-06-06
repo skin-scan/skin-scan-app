@@ -66,7 +66,14 @@ fun Navigation(navController: NavHostController, setFabOnClick: ((() -> Unit)?) 
         }
         composable<Route.EDIT_SCREEN> {
             val args= it.toRoute<Route.EDIT_SCREEN>()
-            EditScreen(navController = navController, changeType = args.changeType)
+            args.apply {
+                EditScreen(
+                    navController = navController,
+                    changeType = changeType,
+                    name = name,
+                    email = email
+                )
+            }
         }
     }
 }

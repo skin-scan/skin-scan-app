@@ -31,6 +31,8 @@ object Route {
 
     @Serializable
     data class EDIT_SCREEN(
-        val changeType: String
+        val changeType: String,
+        val name: String,
+        val email: String
     )
 }

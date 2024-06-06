@@ -32,7 +32,6 @@ import com.syafi.skinscan.features.profile.component.ProfileHead
 import com.syafi.skinscan.ui.theme.Base50
 import com.syafi.skinscan.ui.theme.Neutral100
 import com.syafi.skinscan.ui.theme.Primary700
-import com.syafi.skinscan.ui.theme.Secondary300
 import com.syafi.skinscan.ui.theme.Secondary50
 import com.syafi.skinscan.util.Constant
 import com.syafi.skinscan.util.Resource
@@ -110,7 +109,13 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel= hil
                 backgroundColor= Base50,
                 action = stringResource(R.string.edit_profile)
             ) {
-                navController.navigate(Route.EDIT_SCREEN(Constant.EDIT_PROFILE))
+                userData?.let {
+                    navController.navigate(Route.EDIT_SCREEN(
+                        Constant.EDIT_PROFILE,
+                        name = it.name,
+                        email = it.email,
+                    ))
+                }
             }
 
             ProfileAction(
@@ -118,7 +123,13 @@ fun ProfileScreen(navController: NavController, viewModel: ProfileViewModel= hil
                 backgroundColor= Base50,
                 action = stringResource(R.string.change_password)
             ) {
-                navController.navigate(Route.EDIT_SCREEN(Constant.CHANGE_PASSWORD))
+                userData?.let {
+                    navController.navigate(Route.EDIT_SCREEN(
+                        Constant.CHANGE_PASSWORD,
+                        name = it.name,
+                        email = it.email,
+                    ))
+                }
             }
 
             ProfileAction(

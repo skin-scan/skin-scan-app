@@ -81,4 +81,6 @@
     <string name="still_empty">Masih kosong</string>
     <string name="didnt_scan_yet">Kamu tidak pernah melakukan scan sebelumnya</string>
     <string name="scan">Scan</string>
+    <string name="new_password">Sandi Baru</string>
+    <string name="old_password">Sandi Lama</string>
 </resources>
