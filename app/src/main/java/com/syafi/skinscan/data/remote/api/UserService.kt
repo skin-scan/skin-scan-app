@@ -1,16 +1,20 @@
 package com.syafi.skinscan.data.remote.api
 
+import com.syafi.skinscan.data.remote.request.ChangePasswordRequest
 import com.syafi.skinscan.data.remote.response.auth.AuthResponse
+import com.syafi.skinscan.data.remote.response.auth.changePassword.ChangePasswordResponse
 import com.syafi.skinscan.data.remote.response.profile.ProfileResponse
 import com.syafi.skinscan.data.remote.response.profile.update.UpdateProfileResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Multipart
+import retrofit2.http.PATCH
 import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Part
@@ -44,4 +48,10 @@ interface UserService {
         @Part("name") name: RequestBody,
         @Part("email") email: RequestBody
     ): Response<UpdateProfileResponse>
+
+    @PATCH("auth/reset-password")
+    suspend fun changePassword (
+        @Header("Authorization") token: String,
+        @Body changePasswordRequest: ChangePasswordRequest
+    ): Response<ChangePasswordResponse>
 }

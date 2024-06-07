@@ -4,9 +4,11 @@ import com.google.gson.Gson
 import com.syafi.skinscan.data.local.dataStore.UserSessionData
 import com.syafi.skinscan.data.remote.ErrorParser
 import com.syafi.skinscan.data.remote.api.UserService
+import com.syafi.skinscan.data.remote.request.ChangePasswordRequest
 import com.syafi.skinscan.data.remote.request.LoginRequest
 import com.syafi.skinscan.data.remote.request.RegisterRequest
 import com.syafi.skinscan.data.remote.response.auth.AuthResponse
+import com.syafi.skinscan.data.remote.response.auth.changePassword.ChangePasswordResponse
 import com.syafi.skinscan.data.remote.response.profile.ProfileResponse
 import com.syafi.skinscan.data.remote.response.profile.update.UpdateProfileResponse
 import com.syafi.skinscan.domain.repository.IUserRepository
@@ -85,6 +87,28 @@ class UserRepository(
     ): UpdateProfileResponse {
 
         val resp= api.updateProfile(token, multipartBody, reqNameBody, reqEmailBody)
+
+        if (resp.isSuccessful) {
+            resp.body()?.let {
+                return it
+            }
+        }
+
+        val error= errorParser.parse(resp.errorBody()?.string())
+        throw Exception(error)
+    }
+
+    override suspend fun changePassword(
+        token: String,
+        changePasswordRequest: ChangePasswordRequest
+    ): ChangePasswordResponse {
+
+        val resp= api.changePassword(
+            token,
+//            changePasswordRequest.oldPassword.trim(),
+//            changePasswordRequest.newPassword.trim()
+            changePasswordRequest
+        )
 
         if (resp.isSuccessful) {
             resp.body()?.let {
