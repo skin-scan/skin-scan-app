@@ -23,7 +23,7 @@ class ChangePasswordUseCase @Inject constructor(
                 val resp = repo.changePassword(token, changePasswordRequest)
                 emit(Resource.Success(resp))
             } catch (e: Exception) {
-                emit(Resource.Error(e.message ?: e.localizedMessage.toString()))
+                emit(Resource.Error(e.message ?: e.toString()))
             }
         }
 }

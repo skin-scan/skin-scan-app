@@ -105,8 +105,6 @@ class UserRepository(
 
         val resp= api.changePassword(
             token,
-//            changePasswordRequest.oldPassword.trim(),
-//            changePasswordRequest.newPassword.trim()
             changePasswordRequest
         )
 

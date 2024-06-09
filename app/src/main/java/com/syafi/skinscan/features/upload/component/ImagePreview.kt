@@ -18,6 +18,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.core.net.toUri
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
@@ -32,7 +33,7 @@ import com.syafi.skinscan.util.Route
 fun ImagePreview(
     modifier: Modifier = Modifier,
     navController: NavHostController,
-    viewModel: UploadViewModel
+    photoUri: String?
 ) {
 
 
@@ -58,14 +59,14 @@ fun ImagePreview(
             horizontalArrangement = Arrangement.spacedBy(20.dp)
         ) {
             AsyncImage(
-                model = viewModel.photoUri.value,
+                model = photoUri?.toUri() ?: R.drawable.ic_launcher_background,
                 contentDescription = "",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .sizeIn(maxHeight = 65.dp, maxWidth = 65.dp)
                     .clip(RoundedCornerShape(5.dp))
                     .clickable {
-                        navController.navigate(Route.INSPECT_IMAGE(photoUri = viewModel.photoUri.value))
+                        navController.navigate(Route.INSPECT_IMAGE(photoUri = photoUri ?: ""))
                     }
             )
             Text(text = stringResource(R.string.photo_will_be_uploaded), style = Type.textxsMedium())

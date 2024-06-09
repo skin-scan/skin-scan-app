@@ -4,27 +4,21 @@ import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBackIosNew
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -38,20 +32,13 @@ import com.syafi.skinscan.R
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailedDetection
 import com.syafi.skinscan.features.component.detail.component.ResultDetailContent
 import com.syafi.skinscan.features.component.dialog.ChoiceDialog
-import com.syafi.skinscan.features.component.view.CustomButton
 import com.syafi.skinscan.features.component.dialog.SuccessPopup
 import com.syafi.skinscan.features.component.view.Loading
 import com.syafi.skinscan.ui.theme.Neutral50
-import com.syafi.skinscan.ui.theme.Primary100
-import com.syafi.skinscan.ui.theme.Primary700
-import com.syafi.skinscan.ui.theme.Type
-import com.syafi.skinscan.util.ButtonType
 import com.syafi.skinscan.util.Resource
 import com.syafi.skinscan.util.Route
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
 
 @Composable
 fun ResultDetail(
@@ -64,6 +51,7 @@ fun ResultDetail(
     val token by viewModel.token
     val detectionData by viewModel.detectionData
     val context = LocalContext.current
+    val scope= rememberCoroutineScope()
 
     LaunchedEffect(key1 = viewModel.token.value) {
         viewModel.setLoadingState(true)
@@ -86,7 +74,23 @@ fun ResultDetail(
             onDismiss = { viewModel.setDeleteDialogState(false) },
             onPositiveClick = {
                 viewModel.setDeleteDialogState(false)
-                viewModel.setSuccessDialogState(true)
+                scope.launch {
+                    val bearerToken = "Bearer $token"
+
+                    viewModel.removeDetection(bearerToken, detectionData?.id as String).collect {
+                        when (it) {
+                            is Resource.Error -> {
+                                viewModel.setLoadingState(false)
+                                showToast(context, it.message.toString())
+                            }
+                            is Resource.Loading -> viewModel.setLoadingState(true)
+                            is Resource.Success -> {
+                                viewModel.setLoadingState(false)
+                                viewModel.setSuccessDialogState(true)
+                            }
+                        }
+                    }
+                }
             },
             onNegativeClick = {
                 viewModel.setDeleteDialogState(false)
@@ -98,7 +102,13 @@ fun ResultDetail(
         SuccessPopup(
             onButtonClick = {
                 navController.popBackStack()
-                navController.navigate(Route.HISTORY_SCREEN)
+                if (previousScreen.equals(Route.HOME_SCREEN)) {
+                    navController.popBackStack()
+                    navController.navigate(Route.HOME_SCREEN)
+                } else {
+                    navController.popBackStack()
+                    navController.navigate(Route.HISTORY_SCREEN)
+                }
             },
             message = stringResource(R.string.delete_success)
         )

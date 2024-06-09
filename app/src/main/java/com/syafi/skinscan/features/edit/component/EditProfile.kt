@@ -220,6 +220,9 @@ fun EditProfile(
                     onClick = {
                         if (isFormValid(viewModel, context)) {
 
+                            val bearerToken= "Bearer $token"
+
+
                             viewModel.photoUri.value?.let {
                                 imageFile= uriToFile(it, context).reduceFileImage()
                                 val requestImageFile = imageFile?.asRequestBody("image/jpeg"
@@ -241,7 +244,7 @@ fun EditProfile(
 
                             scope.launch {
                                 viewModel.updateProfile(
-                                    "Bearer $token",
+                                    bearerToken,
                                     if (multipartBody == null) null else multipartBody,
                                     reqNameBody,
                                     reqEmailBody

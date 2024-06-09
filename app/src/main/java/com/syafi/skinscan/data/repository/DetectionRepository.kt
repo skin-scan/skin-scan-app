@@ -5,14 +5,17 @@ import com.syafi.skinscan.data.remote.ErrorParser
 import com.syafi.skinscan.data.remote.api.DetectionService
 import com.syafi.skinscan.data.remote.response.detection.DetectionResponse
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailDetectionResponse
+import com.syafi.skinscan.data.remote.response.detection.prediction.PredictionResponse
 import com.syafi.skinscan.domain.repository.IDetectionRepository
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import javax.inject.Inject
 
 class DetectionRepository @Inject constructor(
     private val api: DetectionService
-): IDetectionRepository {
+) : IDetectionRepository {
 
-    val errorParser= ErrorParser(Gson())
+    private val errorParser = ErrorParser(Gson())
 
     override suspend fun getAllDetectionResults(
         token: String,
@@ -22,7 +25,7 @@ class DetectionRepository @Inject constructor(
         status: String?,
         page: Int?
     ): DetectionResponse {
-        val resp= api.getAllDetectionResult(
+        val resp = api.getAllDetectionResult(
             token = token,
             query = query,
             limit = limit,
@@ -37,12 +40,12 @@ class DetectionRepository @Inject constructor(
             }
         }
 
-        val error= errorParser.parse((resp.errorBody()?.string()))
+        val error = errorParser.parse((resp.errorBody()?.string()))
         throw Exception(error)
     }
 
     override suspend fun getDetectionDetail(token: String, id: String): DetailDetectionResponse {
-        val resp= api.getDetectionDetail(token, id)
+        val resp = api.getDetectionDetail(token, id)
 
         if (resp.isSuccessful) {
             resp.body()?.let {
@@ -50,7 +53,37 @@ class DetectionRepository @Inject constructor(
             }
         }
 
-        val error= errorParser.parse((resp.errorBody()?.string()))
+        val error = errorParser.parse((resp.errorBody()?.string()))
+        throw Exception(error)
+    }
+
+    override suspend fun removeDetection(token: String, id: String): String {
+        val resp = api.deleteDetection(token, id)
+
+        if (resp.isSuccessful) {
+            resp.body()?.let {
+                return it.message
+            }
+        }
+        val error = errorParser.parse((resp.errorBody()?.string()))
+        throw Exception(error)
+    }
+
+    override suspend fun getPrediction(
+        token: String,
+        multipartBody: MultipartBody.Part,
+        reqTitleBody: RequestBody
+    ): PredictionResponse {
+
+        val resp = api.getPrediction(token, multipartBody, reqTitleBody)
+
+        if (resp.isSuccessful) {
+            resp.body()?.let {
+                return it
+            }
+        }
+
+        val error = errorParser.parse(resp.errorBody()?.string())
         throw Exception(error)
     }
 }

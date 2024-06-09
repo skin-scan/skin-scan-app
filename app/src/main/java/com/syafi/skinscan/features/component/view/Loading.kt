@@ -7,7 +7,7 @@ import com.syafi.skinscan.ui.theme.Primary700
 
 @Composable
 fun Loading() {
-    Dialog(onDismissRequest = { /*TODO*/ }) {
+    Dialog(onDismissRequest = {  }) {
         CircularProgressIndicator(color = Primary700)
     }
 }

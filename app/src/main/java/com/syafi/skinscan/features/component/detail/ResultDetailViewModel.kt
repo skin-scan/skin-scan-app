@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.syafi.skinscan.data.local.dataStore.UserSessionData
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailDetectionResponse
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailedDetection
+import com.syafi.skinscan.domain.useCase.detection.DeleteDetectionUseCase
 import com.syafi.skinscan.domain.useCase.detection.GetDetectionDetailUseCase
 import com.syafi.skinscan.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,6 +18,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ResultDetailViewModel @Inject constructor(
     private val getDetectionDetailUseCase: GetDetectionDetailUseCase,
+    private val deleteDetectionUseCase: DeleteDetectionUseCase,
     private val pref: UserSessionData
 ): ViewModel() {
 
@@ -72,4 +74,7 @@ class ResultDetailViewModel @Inject constructor(
 
         return resp as Flow<Resource<DetailDetectionResponse>>
     }
+
+    suspend fun removeDetection(token: String, id: String)=
+        deleteDetectionUseCase(token, id)
 }

@@ -96,7 +96,15 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel, de
                     timeStamp = it.createdAt,
                     medicalName = it.medicalName,
                     title = it.title,
-                    status = it.status
+                    status = it.status,
+                    onClick = {
+                        navController.navigate(
+                            Route.RESULT_DETAIL(
+                                id = it.id,
+                                previousScreen = currentRoute.toString()
+                            )
+                        )
+                    }
                 )
             }
         }

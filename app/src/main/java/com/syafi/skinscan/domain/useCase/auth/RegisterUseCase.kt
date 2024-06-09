@@ -20,7 +20,7 @@ class RegisterUseCase @Inject constructor(
                 val resp= repo.register(request)
                 emit(Resource.Success(resp))
             } catch (e: Exception) {
-                emit(Resource.Error(e.message ?: e.localizedMessage.toString()))
+                emit(Resource.Error(e.message ?: e.toString()))
             }
         }
 }

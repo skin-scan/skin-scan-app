@@ -1,5 +1,7 @@
 package com.syafi.skinscan.features.component.detail.component
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -14,7 +16,9 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.syafi.skinscan.R
@@ -30,10 +34,15 @@ import java.time.format.DateTimeFormatter
 
 @Composable
 fun ResultDetailContent(
+
     detectionData: DetailedDetection?,
     viewModel: ResultDetailViewModel,
     modifier: Modifier = Modifier
 ) {
+
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+
     LazyColumn(
         modifier = modifier
     ) {
@@ -113,7 +122,7 @@ fun ResultDetailContent(
                     .height(48.dp)
             ) {
                 Text(
-                    text = stringResource(id = R.string.scan),
+                    text = stringResource(id = R.string.delete),
                     color = Secondary700,
                     style = Type.textsmBold()
                 )
