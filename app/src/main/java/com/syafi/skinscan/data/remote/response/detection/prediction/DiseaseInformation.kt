@@ -1,6 +1,6 @@
 package com.syafi.skinscan.data.remote.response.detection.prediction
 
-data class PredictionResult(
+data class DiseaseInformation(
     val assessment: String,
     val commonName: String,
     val createdAt: String,

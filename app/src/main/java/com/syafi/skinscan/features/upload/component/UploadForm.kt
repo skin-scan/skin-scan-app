@@ -20,8 +20,6 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.navigation.NavHostController
 import com.syafi.skinscan.R
-import com.syafi.skinscan.data.remote.response.detection.prediction.PredictionResponse
-import com.syafi.skinscan.data.remote.response.detection.prediction.PredictionResult
 import com.syafi.skinscan.features.component.dialog.SuccessPopup
 import com.syafi.skinscan.features.component.view.CustomButton
 import com.syafi.skinscan.features.component.view.CustomTextField
@@ -33,7 +31,6 @@ import com.syafi.skinscan.util.Resource
 import com.syafi.skinscan.util.Route
 import com.syafi.skinscan.util.reduceFileImage
 import com.syafi.skinscan.util.uriToFile
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
@@ -106,9 +103,10 @@ fun UploadForm(
                         imageFire.name,
                         reqImageFile
                     )
-                    viewModel.getPrediction(bearerToken, multipartBody, reqTitleBody)
 
                     scope.launch {
+                        viewModel.getPrediction(bearerToken, multipartBody, reqTitleBody)
+
                         viewModel.predictionResponse.value?.collect {
                             when (it) {
                                 is Resource.Error -> {
@@ -118,8 +116,10 @@ fun UploadForm(
                                 is Resource.Loading -> viewModel.setLoadingState(true)
                                 is Resource.Success -> {
                                     viewModel.setLoadingState(false)
+                                    val id= it.data?.data?.id.toString()
+                                    Log.i("iddd", "UploadForm: $id")
                                     navController.navigate(Route.RESULT_DETAIL(
-                                        it.data?.predictionResult?.id as String,
+                                        id,
                                         Route.HISTORY_SCREEN
                                     ))
                                 }

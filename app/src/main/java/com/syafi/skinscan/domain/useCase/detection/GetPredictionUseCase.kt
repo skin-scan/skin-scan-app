@@ -1,5 +1,6 @@
 package com.syafi.skinscan.domain.useCase.detection
 
+import android.util.Log
 import com.syafi.skinscan.data.remote.response.detection.prediction.PredictionResponse
 import com.syafi.skinscan.data.repository.DetectionRepository
 import com.syafi.skinscan.util.Resource
@@ -23,6 +24,7 @@ class GetPredictionUseCase @Inject constructor(
 
             try {
                 val resp = repo.getPrediction(token, multipartBody, reqTitleBody)
+                Log.i("iddd", "invoke: ${resp.data}")
                 send(Resource.Success(resp))
             } catch (e: Exception) {
                 send(Resource.Error(e.message ?: e.toString()))
