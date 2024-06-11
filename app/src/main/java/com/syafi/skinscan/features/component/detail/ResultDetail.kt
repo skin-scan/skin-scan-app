@@ -3,6 +3,7 @@ package com.syafi.skinscan.features.component.detail
 import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -27,6 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.data.remote.response.detection.detail.DetailedDetection
@@ -52,6 +54,9 @@ fun ResultDetail(
     val detectionData by viewModel.detectionData
     val context = LocalContext.current
     val scope= rememberCoroutineScope()
+
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
 
     LaunchedEffect(key1 = viewModel.token.value) {
         viewModel.setLoadingState(true)

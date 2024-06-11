@@ -123,10 +123,10 @@ fun HomeContent(
             }
         }
         Spacer(modifier = Modifier.height(32.dp))
-        LazyRow(Modifier.fillMaxSize().padding(start = 20.dp, bottom = 20.dp),
-            horizontalArrangement =
-        Arrangement
-            .Center) {
+        LazyRow(
+            Modifier.fillMaxSize().padding(bottom = 20.dp, start = 12.dp),
+            horizontalArrangement = if (detectionList.isEmpty()) Arrangement.Center else Arrangement.Start
+        ) {
 
             if (detectionList.isEmpty()) {
                 item {

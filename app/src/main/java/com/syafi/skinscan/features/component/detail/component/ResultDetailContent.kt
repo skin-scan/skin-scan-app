@@ -1,6 +1,7 @@
 package com.syafi.skinscan.features.component.detail.component
 
 import android.content.Context
+import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -73,13 +74,16 @@ fun ResultDetailContent(
                     Text(text = detectionData?.medicalName ?: "", style = Type.textsmRegular())
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    Text(
-                        text = stringResource(R.string.common_name),
-                        style = Type.textsmSemiBold()
-                    )
-                    Text(text = detectionData?.commonName ?: "", style = Type.textsmRegular())
-                    Spacer(modifier = Modifier.height(16.dp))
-
+                    if (detectionData?.commonName != null) {
+                        if (detectionData.commonName.isNotEmpty()) {
+                            Text(
+                                text = stringResource(R.string.common_name),
+                                style = Type.textsmSemiBold()
+                            )
+                            Text(text = detectionData?.commonName ?: "", style = Type.textsmRegular())
+                            Spacer(modifier = Modifier.height(16.dp))
+                        }
+                    }
 
                     Text(
                         text = stringResource(R.string.risk_assessment), style = Type
