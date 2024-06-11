@@ -1,6 +1,7 @@
 package com.syafi.skinscan.features.history.component
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,7 +27,7 @@ import com.syafi.skinscan.R
 import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.features.component.view.ScanResultCard
 import com.syafi.skinscan.features.history.HistoryViewModel
-import com.syafi.skinscan.ui.theme.Neutral50
+import com.syafi.skinscan.ui.theme.Neutral100
 import com.syafi.skinscan.ui.theme.Neutral800
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Primary900
@@ -51,7 +52,7 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel, de
             .padding(top = 20.dp)
             .fillMaxSize()
             .clip(RoundedCornerShape(topStart = 30.dp, topEnd = 30.dp))
-            .background(Neutral50)
+            .background(Neutral100)
             .padding(bottom = 10.dp)
     ) {
         TabRow(
@@ -87,9 +88,10 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel, de
             }
         }
         LazyVerticalGrid(
-            columns = GridCells.Adaptive(185.dp), modifier = Modifier.padding(horizontal = 20.dp,
-                vertical = 16.dp
-                )) {
+            columns = GridCells.Adaptive(185.dp),
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 16.dp),
+            horizontalArrangement = Arrangement.Center
+        ) {
             items(detectionResultList) {
                 ScanResultCard(
                     photo = it.image,

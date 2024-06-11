@@ -46,9 +46,9 @@ fun ScanResultCard(
     Card(
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(containerColor = Base50),
-        elevation = CardDefaults.elevatedCardElevation(4.dp),
+        elevation = CardDefaults.elevatedCardElevation(0.dp),
         modifier = Modifier
-            .padding(end = 12.dp, bottom = 12.dp)
+            .padding(end = 8.dp, bottom = 12.dp, start = 8.dp)
             .width(152.dp),
         onClick = { onClick() }
 

@@ -1,6 +1,7 @@
 package com.syafi.skinscan.features.upload.component
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -23,6 +24,7 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.features.upload.UploadViewModel
+import com.syafi.skinscan.ui.theme.Neutral200
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary100
 import com.syafi.skinscan.ui.theme.Primary700
@@ -38,8 +40,8 @@ fun ImagePreview(
 
 
     Card(
-        shape = RoundedCornerShape(10.dp),
-        elevation = CardDefaults.elevatedCardElevation(6.dp),
+        shape = RoundedCornerShape(15.dp),
+        elevation = CardDefaults.elevatedCardElevation(0.dp),
         colors = CardDefaults.cardColors(containerColor = Primary100),
         modifier = modifier
     ) {
@@ -47,13 +49,14 @@ fun ImagePreview(
             text = stringResource(R.string.image_preview),
             style = Type.textsmSemiBold(),
             color = Primary700,
-            modifier = Modifier.padding(20.dp)
+            modifier = Modifier.padding(horizontal = 20.dp, vertical = 12.dp)
         )
 
         Row(
             Modifier
                 .fillMaxWidth()
                 .background(Neutral50)
+                .border(1.dp, Neutral200)
                 .padding(20.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(20.dp)

@@ -1,6 +1,5 @@
 package com.syafi.skinscan.data.repository
 
-import android.util.Log
 import com.google.gson.Gson
 import com.syafi.skinscan.data.remote.ErrorParser
 import com.syafi.skinscan.data.remote.api.DetectionService
@@ -80,7 +79,6 @@ class DetectionRepository @Inject constructor(
 
         if (resp.isSuccessful) {
             resp.body()?.let {
-                Log.i("iddd", "getPrediction: ${it.data}")
                 return it
             }
         }

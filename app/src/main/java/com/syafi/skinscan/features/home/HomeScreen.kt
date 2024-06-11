@@ -27,6 +27,7 @@ import com.syafi.skinscan.features.component.view.Loading
 import com.syafi.skinscan.features.home.component.HomeChartCard
 import com.syafi.skinscan.features.home.component.HomeContent
 import com.syafi.skinscan.features.home.component.HomeGreet
+import com.syafi.skinscan.ui.theme.Neutral100
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary200
 import com.syafi.skinscan.ui.theme.Primary700
@@ -96,7 +97,7 @@ fun HomeScreen(navController: NavController, viewModel: HomeViewModel = hiltView
             HomeContent(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Neutral50, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp)),
+                    .background(Neutral100, RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp)),
                 navController,
                 detectionList
             )

@@ -2,6 +2,7 @@ package com.syafi.skinscan.features.upload
 
 import android.widget.Toast
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -30,6 +31,8 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
 import com.syafi.skinscan.features.upload.component.UploadForm
+import com.syafi.skinscan.ui.theme.Neutral100
+import com.syafi.skinscan.ui.theme.Neutral200
 import com.syafi.skinscan.ui.theme.Neutral50
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
@@ -59,7 +62,6 @@ fun UploadScreen(
         }
     }
 
-    val photoUri by viewModel.photoUri
 
     Column(
         Modifier
@@ -113,7 +115,7 @@ fun UploadScreen(
                     Modifier
                         .fillMaxSize()
                         .background(
-                            Neutral50,
+                            Neutral100,
                             shape = RoundedCornerShape(topEnd = 30.dp, topStart = 30.dp)
                         )
                         .padding(horizontal = 20.dp, vertical = 16.dp),

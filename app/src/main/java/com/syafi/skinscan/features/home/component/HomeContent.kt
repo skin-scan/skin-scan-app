@@ -41,8 +41,6 @@ import com.syafi.skinscan.features.component.view.ZeroState
 import com.syafi.skinscan.ui.theme.Primary700
 import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Route
-import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
 
 @Composable
 fun HomeContent(
@@ -130,7 +128,7 @@ fun HomeContent(
         Arrangement
             .Center) {
 
-            if (detectionList.size == 0) {
+            if (detectionList.isEmpty()) {
                 item {
                     ZeroState(navController = navController)
                 }

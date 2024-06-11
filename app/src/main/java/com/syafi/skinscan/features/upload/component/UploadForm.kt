@@ -2,7 +2,6 @@ package com.syafi.skinscan.features.upload.component
 
 import android.content.Context
 import android.net.Uri
-import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -117,7 +116,7 @@ fun UploadForm(
                                 is Resource.Success -> {
                                     viewModel.setLoadingState(false)
                                     val id= it.data?.data?.id.toString()
-                                    Log.i("iddd", "UploadForm: $id")
+                                    navController.popBackStack()
                                     navController.navigate(Route.RESULT_DETAIL(
                                         id,
                                         Route.HISTORY_SCREEN
