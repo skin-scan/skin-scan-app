@@ -60,12 +60,17 @@ fun ResultDetailContent(
                         .background(Neutral50)
                         .padding(20.dp),
                 ) {
-                    Text(
-                        text = stringResource(R.string.medical_name),
-                        style = Type.textsmSemiBold()
-                    )
-                    Text(text = detectionData?.medicalName ?: "", style = Type.textsmRegular())
-                    Spacer(modifier = Modifier.height(16.dp))
+
+                    if (detectionData?.medicalName != null) {
+                        if (detectionData.medicalName != stringResource(id = R.string.healthy)) {
+                            Text(
+                                text = stringResource(R.string.medical_name),
+                                style = Type.textsmSemiBold()
+                            )
+                            Text(text = detectionData.medicalName, style = Type.textsmRegular())
+                            Spacer(modifier = Modifier.height(16.dp))
+                        }
+                    }
 
                     if (detectionData?.commonName != null) {
                         if (detectionData.commonName.isNotEmpty()) {
