@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.syafi.skinscan.R
@@ -28,7 +29,13 @@ fun HomeGreet(name: String, modifier: Modifier = Modifier) {
         )
 
         Column(Modifier.padding(start = 20.dp, top= 50.dp).align(Alignment.TopStart)) {
-            Text(text = stringResource(R.string.greet, name), color = Neutral50, style = Type.displayxsSemiBold())
+            Text(
+                text = stringResource(R.string.greet, name),
+                color = Neutral50,
+                style = Type.displayxsSemiBold(),
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1
+            )
             Text(text = stringResource(R.string.are_ready), color = Neutral50, style = Type.textxsMedium())
         }
     }

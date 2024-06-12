@@ -79,7 +79,7 @@ class UploadViewModel @Inject constructor(
         _predictionResponse.value= predictionResult
     }
 
-    suspend fun getPrediction(
+    fun getPrediction(
         token: String,
         multipartBody: MultipartBody.Part,
         reqTitleBody: RequestBody,
