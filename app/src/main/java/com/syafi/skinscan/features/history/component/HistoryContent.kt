@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.syafi.skinscan.R
-import com.syafi.skinscan.data.remote.response.detection.Detection
 import com.syafi.skinscan.features.component.view.ScanResultCard
 import com.syafi.skinscan.features.history.HistoryViewModel
 import com.syafi.skinscan.ui.theme.Neutral100
@@ -35,7 +34,7 @@ import com.syafi.skinscan.ui.theme.Type
 import com.syafi.skinscan.util.Route
 
 @Composable
-fun HistoryContent(navController: NavController, viewModel: HistoryViewModel, detection: List<Detection>) {
+fun HistoryContent(navController: NavController, viewModel: HistoryViewModel) {
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
@@ -88,8 +87,8 @@ fun HistoryContent(navController: NavController, viewModel: HistoryViewModel, de
             }
         }
         LazyVerticalGrid(
-            columns = GridCells.Adaptive(185.dp),
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 16.dp),
+            columns = GridCells.Adaptive(135.dp),
+            modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp),
             horizontalArrangement = Arrangement.Center
         ) {
             items(detectionResultList) {

@@ -66,6 +66,7 @@ fun WelcomeScreen(
 
                     if (pagerState.currentPage == welcomeScreenDataList.size - 1) {
                         viewModel.setUserSession(true)
+                        navController.popBackStack()
                         navController.navigate(Route.LOGIN_SCREEN)
                     } else {
                         pagerState.animateScrollToPage(pagerState.currentPage + 1)

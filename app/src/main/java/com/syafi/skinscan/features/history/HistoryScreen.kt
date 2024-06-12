@@ -141,7 +141,7 @@ fun HistoryScreen(navController: NavController, viewModel: HistoryViewModel = hi
                         .fillMaxWidth()
                 )
 
-                HistoryContent(navController, viewModel, detectionList)
+                HistoryContent(navController, viewModel)
             }
         }
     }

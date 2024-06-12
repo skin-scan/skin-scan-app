@@ -13,17 +13,17 @@ data class ScreenData(
 val welcomeScreenDataList= listOf(
     ScreenData(
         R.drawable.img_welcome1,
-        "Welcome to SkinScan",
-        "Skinscan is developed by IT specialists and medical experts, matches professional dermatologist accuracy using advanced AI, revolutionizing skin health assessment."
+        "Selamat Datang di SkinScan!",
+        "SkinScan dikembangkan oleh spesialis IT dan ahli medis, menggunakan kecerdasan buatan (AI) canggih seperti dermatolog profesional, yang merevolusi penilaian kesehatan kulit."
     ),
     ScreenData(
         R.drawable.img_welcome2,
-        "Easy as Can Be!",
-        "Place your phone near the problem skin area for one minute, get a thorough assessment. No complicated procedures, just simplicity at your fingertips."
+        "Sangat Mudah Digunakan",
+        "Posisikan ponselmu di dekat area kulit yang bermasalah dan dapatkan penilaian menyeluruh. Tidak ada prosedur yang rumit, hanya mengandalkan di ujung jarimu saja."
     ),
     ScreenData(
         R.drawable.img_welcome3,
-        "Healthcare Anywhere!",
-        "SkinScan is accessible anytime, anywhere. Stay proactive about your skin health, even while on the go. Plus, our unbeatable pricing plans ensure quality care without breaking the bank."
+        "Fleksibel Menjaga Kulitmu",
+        "Tetaplah proaktif dalam menjaga kesehatan kulitmu, bahkan saat Kamu sedang bepergian, dengan SkinScan yang dapat diakses di mana saja dan kapan saja."
     ),
 )
