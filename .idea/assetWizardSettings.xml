@@ -81,7 +81,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\USER\Downloads\SkinScan Logo.svg" />
+                                                <entry key="imagePath" value="C:\Users\USER\Downloads\Logo-appic_launcher_foreground.svg" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -307,8 +307,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="img_zero_state" />
-                            <entry key="sourceFile" value="C:\Users\USER\Downloads\Frameimg_zero_state.svg" />
+                            <entry key="outputName" value="ic_launcher_foreground" />
+                            <entry key="sourceFile" value="C:\Users\USER\Downloads\SkinScan Logoic_foreground_launcher.svg" />
                           </map>
                         </option>
                       </PersistentState>
