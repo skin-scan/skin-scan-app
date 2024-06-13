@@ -32,7 +32,7 @@ fun createCustomTempFile(context: Context): File {
     return File.createTempFile(timeStamp, ".jpg", filesDir)
 }
 
-private const val MAXIMAL_SIZE = 1_000_000
+private const val MAXIMAL_SIZE = 5_000_000
 fun File.reduceFileImage(): File {
     val file = this
     val bitmap = BitmapFactory.decodeFile(file.path)

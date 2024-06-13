@@ -87,4 +87,11 @@
     <string name="please_wait">Mohon tunggu sebentar</string>
     <string name="prediction_success">Prediksi berhasil</string>
     <string name="healthy">Healthy</string>
+    <string name="lighting">pencahayaan</string>
+    <string name="good">baik</string>
+    <string name="_10_cm">10 cm</string>
+    <string name="focus">fokus</string>
+    <string name="centered">pusatkan</string>
+    <string name="close_up">close-up</string>
+    <string name="most_representatove">paling mewakili</string>
 </resources>
