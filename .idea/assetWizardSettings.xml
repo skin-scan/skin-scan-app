@@ -82,7 +82,7 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="C:\Users\USER\Downloads\Logo-appic_launcher_foreground.svg" />
-                                                <entry key="trimmed" value="true" />
+                                                <entry key="scalingPercent" value="119" />
                                               </map>
                                             </option>
                                           </PersistentState>
