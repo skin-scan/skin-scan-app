@@ -1,6 +1,5 @@
 package com.syafi.skinscan.features.analyze
 
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
@@ -16,7 +15,6 @@ import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -49,18 +47,13 @@ fun AnalyzeScreen(
         viewModel.setDialogState(true)
     }
 
-    LaunchedEffect(key1 = viewModel.photoUri.value) {
-
-        if (viewModel.photoUri.value != null) {
-            navController.navigate(Route.UPLOAD_SCREEN(viewModel.photoUri.value.toString()))
-        }
-    }
 
     val galleryIntent = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.PickVisualMedia(),
         onResult = { uri ->
             if (uri != null) {
                 viewModel.setPhotoUri(uri)
+                navController.navigate(Route.UPLOAD_SCREEN(viewModel.photoUri.value.toString()))
             } else {
                 Toast.makeText(
                     context,
@@ -75,7 +68,7 @@ fun AnalyzeScreen(
         contract = ActivityResultContracts.TakePicture(),
         onResult = {
             if (it) {
-
+                navController.navigate(Route.UPLOAD_SCREEN(viewModel.photoUri.value.toString()))
             } else {
                 Toast.makeText(
                     context,
